@@ -1,0 +1,17 @@
+<ion-header [translucent]="true">
+  <ion-toolbar>
+    <ion-title>
+      Users
+    </ion-title>
+  </ion-toolbar>
+    <ion-item>
+        <ion-label>Users</ion-label>
+        <button ion-button primary (click) ="showUsers()">ShowUsers</button>
+    </ion-item>
+</ion-header>
+
+<ion-content>
+  <ion-list no-lines>
+        <div>Id:{{users._id }}</div>
+  </ion-list>
+</ion-content>

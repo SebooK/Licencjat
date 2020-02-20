@@ -1,0 +1,107 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="ChangeListManager">
+    <list default="true" id="97a9ee69-3c24-4e32-83be-815b1fbc7989" name="Default Changelist" comment="" />
+    <option name="SHOW_DIALOG" value="false" />
+    <option name="HIGHLIGHT_CONFLICTS" value="true" />
+    <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
+    <option name="LAST_RESOLUTION" value="IGNORE" />
+  </component>
+  <component name="ComposerSettings">
+    <execution>
+      <executable />
+    </execution>
+  </component>
+  <component name="FileTemplateManagerImpl">
+    <option name="RECENT_TEMPLATES">
+      <list>
+        <option value="JavaScript File" />
+      </list>
+    </option>
+  </component>
+  <component name="ProjectId" id="1VI0Boow9eyr5VIa0yP4gzjvRzY" />
+  <component name="ProjectViewState">
+    <option name="hideEmptyMiddlePackages" value="true" />
+    <option name="showExcludedFiles" value="true" />
+    <option name="showLibraryContents" value="true" />
+  </component>
+  <component name="PropertiesComponent">
+    <property name="RunOnceActivity.ShowReadmeOnStart" value="true" />
+    <property name="WebServerToolWindowFactoryState" value="false" />
+    <property name="javascript.nodejs.core.library.configured.version" value="12.16.0" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$/.." />
+    <property name="nodejs_interpreter_path" value="node" />
+    <property name="nodejs_package_manager_path" value="npm" />
+    <property name="settings.editor.selected.configurable" value="settings.nodejs" />
+    <property name="ts.external.directory.path" value="C:\Users\Sebas\Desktop\Licencjat\blank\node_modules\typescript\lib" />
+  </component>
+  <component name="ServiceViewManager">
+    <option name="viewStates">
+      <list>
+        <serviceView>
+          <treeState>
+            <expand />
+            <select />
+          </treeState>
+        </serviceView>
+      </list>
+    </option>
+  </component>
+  <component name="SvnConfiguration">
+    <configuration />
+  </component>
+  <component name="TaskManager">
+    <task active="true" id="Default" summary="Default task">
+      <changelist id="97a9ee69-3c24-4e32-83be-815b1fbc7989" name="Default Changelist" comment="" />
+      <created>1576925168316</created>
+      <option name="number" value="Default" />
+      <option name="presentableId" value="Default" />
+      <updated>1576925168316</updated>
+      <workItem from="1576925169433" duration="4087000" />
+      <workItem from="1576953212390" duration="46000" />
+      <workItem from="1577114188221" duration="12539000" />
+      <workItem from="1577133306205" duration="118000" />
+      <workItem from="1581446598347" duration="903000" />
+      <workItem from="1581447552355" duration="1299000" />
+      <workItem from="1581780550134" duration="666000" />
+      <workItem from="1582130069167" duration="1968000" />
+      <workItem from="1582132631165" duration="5714000" />
+      <workItem from="1582138365950" duration="77000" />
+      <workItem from="1582138461960" duration="23000" />
+      <workItem from="1582140983964" duration="388000" />
+      <workItem from="1582141483596" duration="16000" />
+    </task>
+    <servers />
+  </component>
+  <component name="TypeScriptGeneratedFilesManager">
+    <option name="version" value="1" />
+  </component>
+  <component name="WindowStateProjectService">
+    <state x="1010" y="446" key="#com.intellij.refactoring.safeDelete.UnsafeUsagesDialog" timestamp="1577119280298">
+      <screen x="0" y="0" width="2560" height="1400" />
+    </state>
+    <state x="1010" y="446" key="#com.intellij.refactoring.safeDelete.UnsafeUsagesDialog/0.0.2560.1400/-1920.101.1920.1040@0.0.2560.1400" timestamp="1577119280298" />
+    <state x="987" y="369" key="FileChooserDialogImpl" timestamp="1582141498596">
+      <screen x="0" y="0" width="2560" height="1400" />
+    </state>
+    <state x="987" y="369" key="FileChooserDialogImpl/0.0.2560.1400/-1920.0.1920.1040@0.0.2560.1400" timestamp="1582141498596" />
+    <state x="-1180" y="375" key="FileChooserDialogImpl/0.0.2560.1400/-1920.101.1920.1040@-1920.101.1920.1040" timestamp="1576953254950" />
+    <state x="987" y="369" key="FileChooserDialogImpl/0.0.2560.1400/-1920.101.1920.1040@0.0.2560.1400" timestamp="1577133422688" />
+    <state x="781" y="342" key="SettingsEditor" timestamp="1577120744813">
+      <screen x="0" y="0" width="2560" height="1400" />
+    </state>
+    <state x="781" y="342" key="SettingsEditor/0.0.2560.1400/-1920.101.1920.1040@0.0.2560.1400" timestamp="1577120744813" />
+    <state x="981" y="525" key="com.intellij.ide.util.TipDialog" timestamp="1582138464572">
+      <screen x="0" y="0" width="2560" height="1400" />
+    </state>
+    <state x="981" y="525" key="com.intellij.ide.util.TipDialog/0.0.2560.1400/-1920.0.1920.1040@0.0.2560.1400" timestamp="1582138464572" />
+    <state x="936" y="330" key="run.anything.popup" timestamp="1577124797868">
+      <screen x="0" y="0" width="2560" height="1400" />
+    </state>
+    <state x="936" y="330" key="run.anything.popup/0.0.2560.1400/-1920.101.1920.1040@0.0.2560.1400" timestamp="1577124797868" />
+    <state x="943" y="315" width="672" height="678" key="search.everywhere.popup" timestamp="1582137977295">
+      <screen x="0" y="0" width="2560" height="1400" />
+    </state>
+    <state x="943" y="315" width="672" height="678" key="search.everywhere.popup/0.0.2560.1400/-1920.0.1920.1040@0.0.2560.1400" timestamp="1582137977295" />
+  </component>
+</project>
