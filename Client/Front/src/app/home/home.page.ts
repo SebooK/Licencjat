@@ -14,15 +14,7 @@ export class HomePage implements OnInit{
   }
 
   ngOnInit(): void {
-    this.showUsers();
-  }
-
-  showUsers(){
-
-    this.userServices.getUsers().then((data) => {
-      this.users = data;
-
-    });
 
   }
+
 }
