@@ -8,7 +8,7 @@ const httpOptions = {
     headers: new HttpHeaders({'Content-Type': 'application/json'})
 };
 
-const usersApiUrl = 'http://localhost:4000/api/users'
+const usersApiUrl = 'http://localhost:8000/api/workers'
 
 @Component({
   selector: 'app-root',
@@ -16,13 +16,13 @@ const usersApiUrl = 'http://localhost:4000/api/users'
   styleUrls: ['app.component.scss']
 })
 export class AppComponent {
-  users: any[] = [];
+  workers: any[] = [];
   constructor(
     private platform: Platform, private http: HttpClient) {
     this.getUsers()
         .subscribe((res: any) => {
-          this.users = res;
-          console.log(this.users);
+          this.workers = res;
+          console.log(this.workers);
         }, err => {
             console.log(err);
         });

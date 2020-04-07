@@ -8,6 +8,7 @@ const   debug = require('debug')('app:startup'),
         cors = require('cors'),
         bodyParser = require('body-parser');
 
+
 const indexRouter = require('./routes/index');
 
 var app = express();
@@ -17,7 +18,7 @@ app.use(logger('dev'));
 app.use(cors());
 app.use(express.json());
 app.use(bodyParser.json());
-app.use(express.urlencoded({ extended: false }));
+app.use(express.urlencoded({ extended: true }));
 app.use(express.static(path.join(__dirname, 'public')));
 
 app.use(cookieParser());

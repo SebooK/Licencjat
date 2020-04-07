@@ -1,6 +1,6 @@
 const express = require('express');
 const router = express.Router();
-
+const {userValidationRules, validate} = require('../controllers/validator.js');
 const orderController = require('../controllers').order;
 const workerController = require('../controllers').worker;
 const customerController = require('../controllers').customer;
@@ -23,7 +23,7 @@ router.delete('/api/orders/:id',orderController.delete);
 /* Worker Router */
 router.get('/api/workers',workerController.list);
 router.get('/api/workers/:id',workerController.getById);
-router.post('/api/workers',workerController.add);
+router.post('/api/workers',userValidationRules(),validate,workerController.add);
 router.put('/api/workers/:id',workerController.update);
 router.delete('/api/workers/:id',workerController.delete);
 

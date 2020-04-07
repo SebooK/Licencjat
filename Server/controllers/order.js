@@ -9,18 +9,21 @@ module.exports = {
                 include: [{
                     model:Customer,
                     as:'customer'
-
-                },{
-                    model:Order,
-                    as:'order',
                 }],
                 order: [
                     ['createdAt', 'DESC'],
-                    [{model: Order, as: 'order'}, 'createdAt', 'DESC'],
+                    [{model: Customer, as: 'customer'}, 'createdAt', 'DESC'],
                 ],
             })
-            .then( (order) => res.status(200).send(order))
-            .catch( (error) => {res.status(400).send(error);})
+            .then( (order) => {
+                if(!order) {
+                    return res.status(400).send({
+                        message:' Order List is Empty',
+                    })
+                }
+                return res.status(200).send(order)
+            })
+            .catch( (error) => res.status(400).send(error));
     },
 
     getById(req,res) {
@@ -45,7 +48,7 @@ module.exports = {
     add(req,res) {
         return Order
             .create({
-                workerId: req.body.worker,
+                workerId: req.body.workerId,
                 orderNumber: req.body.orderNumber,
                 cargo: req.body.cargo,
                 vehicle: req.body.vehicle,
@@ -89,7 +92,7 @@ module.exports = {
 
     delete(req,res) {
         return Order
-            .findByPk(req.body.id)
+            .findByPk(req.params.id)
             .then( order => {
                 if(!order) {
                     return res.status(400).send({
@@ -98,7 +101,9 @@ module.exports = {
                 }
                 return order
                     .destroy()
-                    .then( () => res.status(204).send())
+                    .then( () => res.status(204).send({
+                        message: "Order deleted"
+                    }))
                     .catch( (error) => res.status(400).send(error))
             })
             .catch( (error) => res.status(400).send(error));

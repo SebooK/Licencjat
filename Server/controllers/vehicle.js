@@ -7,14 +7,13 @@ module.exports = {
     list(req,res) {
         return Vehicle
             .findAll( {
-                include: [{
-                    model: SemiTrailer,
-                    as: 'semiTrailer',
-                }, {
+                include: [ {
                     model: Worker,
                     as: 'worker',
-                }
-                ],
+                },{
+                    model: SemiTrailer,
+                    as: 'semiTrailer',
+                }],
                 order: [
                     ['createdAt', 'DESC'],
                     [{ model:SemiTrailer, as:'semiTrailer'}, 'createdAt', 'DESC'],

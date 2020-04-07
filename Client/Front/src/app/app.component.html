@@ -1,13 +1,18 @@
 <ion-app>
   <ion-router-outlet>
-    <ion-card *ngFor="let user of users">
+    <ion-card *ngFor="let worker of workers">
       <ion-card-content>
         <p>
-          Name: {{user.userName}}
+          Name: {{worker.username}}
         </p>
-
         <p>
-          FirstName: {{user.firstName}}
+          FirstName: {{worker.firstname}}
+        </p>
+        <p>
+          LastName: {{worker.lastname}}
+        </p>
+        <p>
+          Role: {{worker.role}}
         </p>
       </ion-card-content>
     </ion-card>
