@@ -1,17 +1,17 @@
-const   debug = require('debug')('app:startup'),
-        express = require('express'),
-        config = require('config'),
+const   express = require('express'),
         path = require('path'),
         cookieParser = require('cookie-parser'),
         logger = require('morgan'),
         helmet = require('helmet'),
         cors = require('cors'),
-        bodyParser = require('body-parser');
+        bodyParser = require('body-parser'),
+        error = require('./middleware/error.js');
+        require('./startup/config');
 
 
 const indexRouter = require('./routes/index');
 
-var app = express();
+const app = express();
 
 
 app.use(logger('dev'));
@@ -20,16 +20,14 @@ app.use(express.json());
 app.use(bodyParser.json());
 app.use(express.urlencoded({ extended: true }));
 app.use(express.static(path.join(__dirname, 'public')));
-
 app.use(cookieParser());
 app.use(helmet());
-
 app.use('/', indexRouter);
-
+app.use(error);
 
 // catch 404 and forward to error handler
-app.use(function(req, res, next) {
-    res.status(404).send({ error: 'Not found' })
+app.use(function(err,req, res, next) {
+    res.status(404).send({ error: err })
 });
 
 // error handler

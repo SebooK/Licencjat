@@ -1,31 +1,35 @@
 const express = require('express');
 const router = express.Router();
-const {userValidationRules, validate} = require('../controllers/validator.js');
+const auth = require('../middleware/auth');
+const role = require('../middleware/role');
 const orderController = require('../controllers').order;
 const workerController = require('../controllers').worker;
 const customerController = require('../controllers').customer;
 const vehicleController = require('../controllers').vehicle;
 const semiTrailerController = require('../controllers').semiTrailer;
-
+const authController = require('../controllers/auth');
 /* GET home page. */
 router.get('/', function(req, res, next) {
 
     res.render('index', { title: 'Express' });
-});
 
+});
+/* Auth Router*/
+router.post('/api/login',authController.login);
 /* Orders Router */
 router.get('/api/orders',orderController.list);
 router.get('/api/orders/:id',orderController.getById);
-router.post('/api/orders',orderController.add);
+router.post('/api/orders', auth,orderController.add);
 router.put('/api/orders/:id',orderController.update);
-router.delete('/api/orders/:id',orderController.delete);
+router.delete('/api/orders/:id',[auth,role],orderController.delete);
 
 /* Worker Router */
+router.get('/api/workers/me',auth,workerController.getUserData);
 router.get('/api/workers',workerController.list);
 router.get('/api/workers/:id',workerController.getById);
-router.post('/api/workers',userValidationRules(),validate,workerController.add);
+router.post('/api/workers',workerController.add);
 router.put('/api/workers/:id',workerController.update);
-router.delete('/api/workers/:id',workerController.delete);
+router.delete('/api/workers/:id',[auth,role],workerController.delete);
 
 /* Customer Router */
 router.get('/api/customers',customerController.list);

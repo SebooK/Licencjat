@@ -2,7 +2,7 @@ const Customer = require('../models').Customer;
 const Order = require('../models').Order;
 
 module.exports = {
-    list(req,res) {
+    list(req,res,next) {
         return Customer
             .findAll( {
                 include: [{
@@ -15,8 +15,7 @@ module.exports = {
                 ],
             })
             .then( (customer) => res.status(200).send(customer))
-            .catch( (error) => {res.status(400).send(error);
-            console.log(error)})
+            .catch(next);
     },
 
     getById(req,res) {
@@ -41,15 +40,15 @@ module.exports = {
             });
     },
 
-    add(req,res) {
+     add(req,res,next) {
         return Customer
             .create({
                 companyName: req.body.companyName,
                 companyAddress: req.body.companyAddress,
-                companyPhone: req.body.semiTrailerType,
+                companyPhone: req.body.companyPhone,
             })
             .then((customer) => res.status(201).send(customer))
-            .catch((error) => res.status(400).send(error));
+            .catch(next);
     },
 
     update(req,res) {

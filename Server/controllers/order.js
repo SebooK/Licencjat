@@ -8,8 +8,12 @@ module.exports = {
             .findAll( {
                 include: [{
                     model:Customer,
-                    as:'customer'
-                }],
+                    as:'customer',
+                },{
+                    model:Worker,
+                    as:'worker'
+                }
+                ],
                 order: [
                     ['createdAt', 'DESC'],
                     [{model: Customer, as: 'customer'}, 'createdAt', 'DESC'],
@@ -23,7 +27,7 @@ module.exports = {
                 }
                 return res.status(200).send(order)
             })
-            .catch( (error) => res.status(400).send(error));
+            .catch( (error) => {res.status(400).json({error:error}); console.log(error)});
     },
 
     getById(req,res) {
