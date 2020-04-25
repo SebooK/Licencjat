@@ -1,0 +1,12 @@
+<ion-header>
+  <ion-toolbar color="primary">
+    <ion-title>Witaj {{user?.firstname}}</ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content padding>
+  <ion-button expand="full" (click)="logout()">Logout</ion-button>
+  <ion-button expand="full" (click)="workersPage()">Workers</ion-button>
+  <ion-button expand="full" (click)="vehiclePage()">Vehicle</ion-button>
+
+</ion-content>

@@ -1,0 +1,30 @@
+<ion-header>
+  <ion-toolbar>
+    <ion-buttons slot="start">
+      <ion-back-button default-href="/workers"></ion-back-button>
+    </ion-buttons>
+    <ion-title>{{details?.firstname}} {{details?.lastname}}</ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content padding>
+  <ion-card>
+      <ion-item>
+        <ion-icon name="at-outline" slot="start"></ion-icon>
+        <ion-label>{{details?.email}}</ion-label>
+      </ion-item>
+  </ion-card>
+  <ion-card>
+    <ion-card-title color="primary">
+      Szczegóły zamówienia
+    </ion-card-title>
+    <ion-item *ngFor="let orders of details?.orders">
+      <ion-label>{{orders.orderNumber}}</ion-label>
+    </ion-item>
+  </ion-card>
+  <ion-fab vertical="bottom" horizontal="end" slot="fixed">
+    <ion-fab-button (click)="editWorkerModal()">
+      <ion-icon name="create-outline"></ion-icon>
+    </ion-fab-button>
+  </ion-fab>
+</ion-content>
