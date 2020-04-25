@@ -8,6 +8,7 @@ const customerController = require('../controllers').customer;
 const vehicleController = require('../controllers').vehicle;
 const semiTrailerController = require('../controllers').semiTrailer;
 const authController = require('../controllers/auth');
+const paginate = require('../middleware/paginate');
 /* GET home page. */
 router.get('/', function(req, res, next) {
 
@@ -23,10 +24,10 @@ router.post('/api/orders', auth,orderController.add);
 router.put('/api/orders/:id',orderController.update);
 router.delete('/api/orders/:id',[auth,role],orderController.delete);
 
-/* Worker Router */
-router.get('/api/workers/me',auth,workerController.getUserData);
-router.get('/api/workers',workerController.list);
-router.get('/api/workers/:id',workerController.getById);
+/* Worker Router */  //Paginacja zrobić jako middleware
+router.get('/api/workers/me',auth,paginate(workerController),workerController.getUserData);
+router.get('/api/workers/:page',workerController.list);
+router.get('/api/workers/worker/:id',workerController.getById);
 router.post('/api/workers',workerController.add);
 router.put('/api/workers/:id',workerController.update);
 router.delete('/api/workers/:id',[auth,role],workerController.delete);
