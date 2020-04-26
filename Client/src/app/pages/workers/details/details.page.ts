@@ -2,7 +2,6 @@ import {Component, Input, OnInit} from '@angular/core';
 import {environment} from "../../../../environments/environment";
 import {HttpClient} from "@angular/common/http";
 import {AlertController, ModalController, Platform} from "@ionic/angular";
-import {tap, catchError} from "rxjs/operators";
 import {WorkersService} from "../../../services/workers.service";
 import {Router, ActivatedRoute} from "@angular/router";
 import {AddPage} from "../add/add.page";
@@ -51,4 +50,3 @@ export class DetailsPage implements OnInit {
   }
 
 }
-

@@ -40,8 +40,8 @@ router.put('/api/customers/:id',customerController.update);
 router.delete('/api/customers/:id',customerController.delete);
 
 /* Vehicles Router */
-router.get('/api/vehicles',vehicleController.list);
-router.get('/api/vehicles/:id',vehicleController.getById);
+router.get('/api/vehicles/:page',vehicleController.list);
+router.get('/api/vehicle/:id',vehicleController.getById);
 router.post('/api/vehicles',vehicleController.add);
 router.put('/api/vehicles/:id',vehicleController.update);
 router.delete('/api/vehicles/:id',vehicleController.delete);
