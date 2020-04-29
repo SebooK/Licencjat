@@ -3,9 +3,10 @@ import {HttpClient, HttpHeaders} from "@angular/common/http";
 import {Platform, ToastController} from "@ionic/angular";
 import {environment} from "../../environments/environment";
 import {AlertController} from "@ionic/angular";
-import {tap, catchError} from "rxjs/operators";
+import {tap, catchError, map} from "rxjs/operators";
 import {Observable, of} from "rxjs";
 import {AuthService} from "./auth.service";
+import {Worker} from "../models/worker.model"
 @Injectable({
     providedIn: 'root'
 })
@@ -24,10 +25,17 @@ export class WorkersService {
         private toastController: ToastController,
         private auth:AuthService) { }
 
-    getWorkers(page): Observable<any> {
-        return this.http.get<any>(`${this.workersUrl}/${page}`)
+    getMe(id): Observable<Worker> {
+        return this.http.get<Worker>(`${this.workersUrl}/me`).pipe(
+            tap(),
+            catchError(this.handleError<Worker>('GetMe'))
+        )
+    }
+
+    getWorkers(page): Observable<Worker[]> {
+        return this.http.get<Worker[]>(`${this.workersUrl}/${page}`)
             .pipe(
-                tap(_ => console.log('fetched workers')),
+                map(data => data['result'].map(res => Object.assign(new Worker(), res))),
                 catchError(this.handleError<Worker[]>('getWorkers', []))
             );
     }
@@ -57,7 +65,13 @@ export class WorkersService {
         const url =  `${this.workersUrl}/${id}`;
         return this.http.put<Worker>(url,data,this.httpOptions).pipe(
             tap( res =>{
-                console.log('Worker edited:' + data);
+                console.log('Worker edited:' + res);
+                return this.toastController.create({
+                    message:'User was edited successfully',
+                    duration:3000,
+                    position:'top',
+                    color:"success"
+                }).then( toast => { toast.present();})
             }),
             catchError(this.handleError<Worker>(''))
         )}
@@ -86,6 +100,7 @@ export class WorkersService {
                  duration:3000,
                  position:"top"
              }).then(r => r.present());
+             console.log(error);
             return of(result  as T);
         }
     }

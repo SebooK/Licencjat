@@ -1,13 +1,16 @@
 <ion-header>
   <ion-toolbar color="primary">
-    <ion-title>Vehicles</ion-title>
+    <ion-buttons slot="start">
+      <ion-back-button default-href="/home"></ion-back-button>
+    </ion-buttons>
+    <ion-title>Pojazdy</ion-title>
   </ion-toolbar>
 </ion-header>
 
 <ion-content padding>
   <ion-list>
     <ion-item-sliding *ngFor="let vehicle of vehicles">
-      <ion-item color="medium" [routerLink]="['details',vehicle.id]">
+      <ion-item color="secondary" [routerLink]="['details',vehicle.id]">
         <ion-label>Numer: {{vehicle.vehicleNumber}} Nr.Rejestracji {{vehicle.registrationNumber}}</ion-label>
       </ion-item>
       <ion-item-options side="end">

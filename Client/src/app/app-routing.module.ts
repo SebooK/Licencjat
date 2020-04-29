@@ -1,6 +1,7 @@
 import {AuthGuardService} from "./services/auth-guard.service";
 import { NgModule } from '@angular/core';
 import { PreloadAllModules, RouterModule, Routes } from '@angular/router';
+import {MeResolverService} from "./resolver/me/me-resolver.service";
 
 const routes: Routes = [
   { path: '', redirectTo: 'login', pathMatch: 'full' },
@@ -11,7 +12,10 @@ const routes: Routes = [
   {
     path: 'home',
     loadChildren: () => import('./pages/home/home.module').then( m => m.HomePageModule),
-    canActivate: [AuthGuardService]
+    canActivate: [AuthGuardService],
+    resolve: {
+      user: MeResolverService
+    }
   },
   {
     path: 'workers',
@@ -28,12 +32,18 @@ const routes: Routes = [
   },
   {
     path: 'vehicles',
-    loadChildren: () => import('./pages/vehicles/vehicles.module').then( m => m.VehiclesPageModule)
+    loadChildren: () => import('./pages/vehicles/vehicles.module').then( m => m.VehiclesPageModule),
+    canActivate: [AuthGuardService]
   },
   {
     path: 'semi-trailers',
     loadChildren: () => import('./pages/semi-trailers/semi-trailers.module').then( m => m.SemiTrailersPageModule)
   },
+  {
+    path: 'me',
+    loadChildren: () => import('./pages/me/me.module').then( m => m.MePageModule)
+  },
+
 ];
 
 @NgModule({

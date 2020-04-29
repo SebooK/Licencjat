@@ -2,7 +2,7 @@ import {Component, Input, OnInit} from '@angular/core';
 import {ModalController, NavParams, ToastController} from "@ionic/angular";
 import {FormGroup, FormBuilder, Validators, FormArray} from "@angular/forms";
 import {WorkersService} from "../../../services/workers.service";
-import {last} from "rxjs/operators";
+
 
 @Component({
   selector: 'app-add',
@@ -77,7 +77,7 @@ export class AddPage implements OnInit {
     console.log(this.workersForm.value);
     if(this.hasData() == true){
       this.workersService.editWorker(this.navParams.get('id'),this.workersForm.value).subscribe()
-      return this.modalController.create
+      return this.modalController.dismiss();
     }
     else{
       this.workersService

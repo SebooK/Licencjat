@@ -99,7 +99,7 @@ module.exports = {
         });
         let username = await Worker.findOne({
             where: {username: req.body.username}
-        })
+        });
         if (user || username) {
             return res.status(400).json({errors: 'Worker already registered with this username or email'})
         } else {
@@ -174,6 +174,7 @@ module.exports = {
                 return res.status(200).send(worker);
             })
             .catch(error => {
+                console.log(error);
                 return res.status(400).send(error);
 
             })

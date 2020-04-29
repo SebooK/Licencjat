@@ -31,7 +31,7 @@ module.exports = {
                             [{model: SemiTrailer, as: 'semiTrailer'}, 'createdAt', 'DESC'],
                         ],
                     })
-                    .then((vehicles) => res.status(200).json({'result': vehicles, 'count': data.count, 'pages': pages}))
+                    .then((vehicles) => res.status(200).send({'result': vehicles, 'count': data.count, 'pages': pages}))
                     .catch((error) => {
                         res.status(400).send(error);
                     })

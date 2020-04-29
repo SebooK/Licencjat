@@ -24,12 +24,12 @@ router.post('/api/orders', auth,orderController.add);
 router.put('/api/orders/:id',orderController.update);
 router.delete('/api/orders/:id',[auth,role],orderController.delete);
 
-/* Worker Router */  //Paginacja zrobić jako middleware
-router.get('/api/workers/me',auth,paginate(workerController),workerController.getUserData);
+/* Worker Router */
+router.get('/api/workers/me',auth,workerController.getUserData);
 router.get('/api/workers/:page',workerController.list);
 router.get('/api/workers/worker/:id',workerController.getById);
 router.post('/api/workers',workerController.add);
-router.put('/api/workers/:id',workerController.update);
+router.put('/api/workers/:id',auth,workerController.update);
 router.delete('/api/workers/:id',[auth,role],workerController.delete);
 
 /* Customer Router */

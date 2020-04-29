@@ -5,12 +5,11 @@ const   express = require('express'),
         helmet = require('helmet'),
         cors = require('cors'),
         bodyParser = require('body-parser'),
-        error = require('./middleware/error.js');
+        error = require('./middleware/error.js'),
+        config = require('config');
         require('./startup/config');
 
-
 const indexRouter = require('./routes/index');
-
 const app = express();
 
 

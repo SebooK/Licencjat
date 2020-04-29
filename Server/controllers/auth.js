@@ -6,11 +6,10 @@ const config = require('config');
 module.exports = {
    async login (req,res) {
         const {error} = validate(req.body);
-        if(error) return res.status(400).send(error.details[0].message);
+        if(error) return res.status(400).send(error);
        let user = await Worker.findOne({
            where: {username: req.body.username}
        });
-
        if(!user) return res.status(400).send('Wrong username');
 
        const validPassword = await bcrypt.compare(req.body.password, user.password);

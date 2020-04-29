@@ -1,9 +1,13 @@
 import {Component, OnInit} from '@angular/core';
-import {AlertController} from "@ionic/angular";
+import {AlertController, LoadingController} from "@ionic/angular";
 import {VehiclesService} from "../../services/vehicles.service";
 import {environment} from "../../../environments/environment";
 import {ModalController} from "@ionic/angular";
 import {AddPage} from "./add/add.page";
+import {Vehicle} from "../../models/vehicle.model";
+import {Router} from "@angular/router";
+import {LoadingService} from "../../services/loading.service";
+
 
 @Component({
     selector: 'app-vehicles',
@@ -12,13 +16,16 @@ import {AddPage} from "./add/add.page";
 })
 export class VehiclesPage implements OnInit {
     url = environment.url;
-    vehicles = [];
+    vehicles: Vehicle[];
     page = 1;
-
     constructor(private vehicleService: VehiclesService,
                 private alertController: AlertController,
-                private modalController: ModalController) {
+                private modalController: ModalController,
+                private loadingController:LoadingService,
+                private router: Router) {
+
         this.displayVehicles(event);
+
     }
 
     ngOnInit() {
@@ -29,11 +36,13 @@ export class VehiclesPage implements OnInit {
         this.vehicleService
             .getVehicles(this.page)
             .subscribe(result => {
-                this.vehicles = this.vehicles.concat(result['result']);
+                this.vehicles = result
+                 console.log(result);
                 if (event) {
                     event.taget.complete();
                 }
             });
+
     }
 
     displayMore(event) {
@@ -72,4 +81,5 @@ export class VehiclesPage implements OnInit {
         });
         await alert.present();
     }
+
 }
