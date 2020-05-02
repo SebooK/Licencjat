@@ -1,0 +1,28 @@
+<ion-header>
+  <ion-toolbar color="primary">
+    <ion-buttons slot="end">
+      <ion-button (click)="closeModal()">
+        <ion-icon name="close-outline"></ion-icon>
+      </ion-button>
+    </ion-buttons>
+    <ion-title>{{hasData() == true ? 'Edytuj' : 'Dodaj'}} Naczepę</ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content padding>
+  <form [formGroup]="semiTrailerForm" (ngSubmit)="onSubmit()">
+    <ion-item>
+      <ion-label position="floating">Numer rejestracji</ion-label>
+      <ion-input type="text" formControlName="registrationNumber"></ion-input>
+    </ion-item>
+    <ion-item>
+      <ion-select placeholder="Rodzaj naczepy" formControlName="semiTrailerType">
+        <ion-select-option *ngFor="let type of semiType" value="{{type}}">{{type}}
+        </ion-select-option>
+      </ion-select>
+    </ion-item>
+
+    <ion-button expand="full" type="submit"
+                [disabled]="!semiTrailerForm.valid">{{ hasData() == true ? 'Edit' : 'Add'}}</ion-button>
+  </form>
+</ion-content>

@@ -1,0 +1,33 @@
+<ion-header>
+    <ion-toolbar color="primary">
+        <ion-title>About me</ion-title>
+      <ion-button slot="end" (click)="close()">
+        <ion-icon name="close-outline"></ion-icon>
+      </ion-button>
+    </ion-toolbar>
+</ion-header>
+
+<ion-content>
+    <ion-list>
+        <ion-item>
+            <ion-label position="fixed">Imie: </ion-label>
+            <ion-input type="text" readonly>{{me.firstname}}</ion-input>
+        </ion-item>
+        <ion-item>
+            <ion-label position="fixed">Nazwisko: </ion-label>
+            <ion-input type="text" readonly>{{me.lastname}}</ion-input>
+        </ion-item>
+        <ion-item>
+            <ion-label position="fixed">Nazwa użytkownika: </ion-label>
+            <ion-input type="text" readonly>{{me.username}}</ion-input>
+        </ion-item>
+        <ion-item>
+            <ion-label position="fixed">Email: </ion-label>
+            <ion-input type="text" readonly>{{me.email}}</ion-input>
+        </ion-item>
+        <ion-item>
+            <ion-label position="fixed">Typ konta: </ion-label>
+            <ion-input type="text" readonly>{{me.role}}</ion-input>
+        </ion-item>
+    </ion-list>
+</ion-content>
