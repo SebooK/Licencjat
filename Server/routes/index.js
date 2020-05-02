@@ -43,14 +43,14 @@ router.delete('/api/customers/:id',customerController.delete);
 router.get('/api/vehicles/:page',vehicleController.list);
 router.get('/api/vehicle/:id',vehicleController.getById);
 router.post('/api/vehicles',vehicleController.add);
-router.put('/api/vehicles/:id',vehicleController.update);
+router.put('/api/vehicle/:id',vehicleController.update);
 router.delete('/api/vehicles/:id',vehicleController.delete);
 
 /* SemiTrailers Router */
-router.get('/api/semiTrailers',semiTrailerController.list);
-router.get('/api/semiTrailers/:id',semiTrailerController.getById);
+router.get('/api/semiTrailers/:page',semiTrailerController.list);
+router.get('/api/semiTrailer/:id',semiTrailerController.getById);
 router.post('/api/semiTrailers',semiTrailerController.add);
-router.put('/api/semiTrailers/:id',semiTrailerController.update);
+router.put('/api/semiTrailer/:id',semiTrailerController.update);
 router.delete('/api/semiTrailers/:id',semiTrailerController.delete);
 
 

@@ -3,6 +3,7 @@ import {Routes, RouterModule} from '@angular/router';
 
 import {VehiclesPage} from './vehicles.page';
 import {VehicleResolverService} from "../../resolver/vehicle-resolver.service";
+import {AuthGuardService} from "../../services/Auth/auth-guard.service";
 
 const routes: Routes = [
     {
@@ -16,6 +17,11 @@ const routes: Routes = [
             vehicleDetails: VehicleResolverService
         },
         loadChildren: () => import('./details/details.module').then(m => m.DetailsPageModule),
+    },
+    {
+        path: 'add',
+        loadChildren: () => import('./add/add.module').then(m => m.AddPageModule),
+        canActivate: [AuthGuardService]
     }
 
 ];

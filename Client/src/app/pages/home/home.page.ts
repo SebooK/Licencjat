@@ -1,10 +1,9 @@
 import { Component, OnInit } from '@angular/core';
-import {AuthService} from "../../services/auth.service";
+import {AuthService} from "../../services/Auth/auth.service";
 import {Storage} from "@ionic/storage";
 import {ModalController, ToastController} from "@ionic/angular";
-import {FormGroup} from "@angular/forms";
 import {ActivatedRoute, Router} from "@angular/router";
-import {WorkersService} from "../../services/workers.service";
+import {WorkersService} from "../../services/Workers/workers.service";
 import {Worker} from "../../models/worker.model"
 import {MePage} from "../me/me.page";
 @Component({
@@ -43,10 +42,16 @@ export class HomePage implements OnInit {
   vehiclePage() {
     return this.route.navigate(['vehicles']);
   }
+  semiTrailerPage() {
+    return this.route.navigate(['semi-trailers']);
+  }
 
   async aboutMe() {
     const modal = await this.modalController.create({
-      component: MePage
+      component: MePage,
+      componentProps: {
+        user: this.user
+      }
     });
     return await modal.present();
   }

@@ -1,8 +1,8 @@
 <ion-header>
   <ion-toolbar color="primary">
-    <ion-title>Witaj {{user.firstname}} {{user.lastname}}</ion-title>
+    <ion-title>Witaj </ion-title>
     <ion-button slot="end" size="default" shape="round" expand="full" class="me-details" (click)="aboutMe()">
-      <ion-icon name="person-outline"></ion-icon>
+      <ion-icon name="person-outline"></ion-icon> {{user.firstname}} {{user.lastname}}
     </ion-button>
   </ion-toolbar>
 
@@ -11,6 +11,7 @@
 <ion-content padding>
   <ion-button expand="full" (click)="workersPage()">Workers</ion-button>
   <ion-button expand="full" (click)="vehiclePage()">Vehicle</ion-button>
-  <ion-button expand="full" (click)="ordersPage()">Vehicle</ion-button>
+  <ion-button expand="full" (click)="ordersPage()">Orders</ion-button>
+  <ion-button expand="full" (click)="semiTrailerPage()">SemiTrailers</ion-button>
   <ion-button expand="full" (click)="logout()">Logout</ion-button>
 </ion-content>

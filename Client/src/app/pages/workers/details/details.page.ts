@@ -2,7 +2,7 @@ import {Component, Input, OnInit} from '@angular/core';
 import {environment} from "../../../../environments/environment";
 import {HttpClient} from "@angular/common/http";
 import {AlertController, LoadingController, ModalController, Platform} from "@ionic/angular";
-import {WorkersService} from "../../../services/workers.service";
+import {WorkersService} from "../../../services/Workers/workers.service";
 import {Router, ActivatedRoute} from "@angular/router";
 import {AddPage} from "../add/add.page";
 import {Worker} from "../../../models/worker.model";

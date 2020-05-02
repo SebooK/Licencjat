@@ -5,10 +5,11 @@ import {ModalController, AlertController, ToastController} from "@ionic/angular"
 
 import {environment} from "../../../environments/environment";
 import {Router} from "@angular/router";
-import {WorkersService} from "../../services/workers.service";
+import {WorkersService} from "../../services/Workers/workers.service";
 import {AddPage} from "./add/add.page";
 import {Worker} from "../../models/worker.model"
-import {LoadingService} from "../../services/loading.service";
+import {LoadingService} from "../../services/Loading/loading.service";
+import {filter, map} from "rxjs/operators";
 
 
 @Component({
@@ -40,9 +41,9 @@ export class WorkersPage implements OnInit {
     displayWorkers(event?) {
         this.workersService
             .getWorkers(this.page)
+           
             .subscribe(result => {
                 this.workers = result;
-
                 if (event) {
                     event.target.complete();
                 }
@@ -50,7 +51,7 @@ export class WorkersPage implements OnInit {
     }
 
     displayMore(event) {
-        console.log(event);
+        console.log(event);+
         this.page++;
         this.displayWorkers();
 

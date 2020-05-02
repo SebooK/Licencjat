@@ -14,7 +14,7 @@ import {HTTP_INTERCEPTORS, HttpClientModule} from '@angular/common/http';
 import { Storage, IonicStorageModule } from '@ionic/storage';
 import {JwtModule, JWT_OPTIONS, JwtInterceptor} from '@auth0/angular-jwt';
 import {ReactiveFormsModule} from "@angular/forms";
-import {AuthInterceptor} from "./services/auth.interceptor";
+import {AuthInterceptor} from "./services/Auth/auth.interceptor";
 
 
 export function jwtOptionsFactory(storage) {

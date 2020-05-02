@@ -23,6 +23,9 @@ module.exports = {
       workerId: {
         type: Sequelize.INTEGER
       },
+      semiTrailerId: {
+        type:Sequelize.INTEGER
+      },
       createdAt: {
         allowNull: false,
         type: Sequelize.DATE

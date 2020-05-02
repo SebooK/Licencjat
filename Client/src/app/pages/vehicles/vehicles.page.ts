@@ -1,12 +1,12 @@
 import {Component, OnInit} from '@angular/core';
-import {AlertController, LoadingController} from "@ionic/angular";
-import {VehiclesService} from "../../services/vehicles.service";
+import {AlertController} from "@ionic/angular";
+import {VehiclesService} from "../../services/Vehicles/vehicles.service";
 import {environment} from "../../../environments/environment";
 import {ModalController} from "@ionic/angular";
 import {AddPage} from "./add/add.page";
 import {Vehicle} from "../../models/vehicle.model";
 import {Router} from "@angular/router";
-import {LoadingService} from "../../services/loading.service";
+import {LoadingService} from "../../services/Loading/loading.service";
 
 
 @Component({
@@ -36,13 +36,12 @@ export class VehiclesPage implements OnInit {
         this.vehicleService
             .getVehicles(this.page)
             .subscribe(result => {
-                this.vehicles = result
-                 console.log(result);
+                this.vehicles = result;
+                 console.log(this.vehicles);
                 if (event) {
                     event.taget.complete();
                 }
             });
-
     }
 
     displayMore(event) {
@@ -54,6 +53,8 @@ export class VehiclesPage implements OnInit {
             event.target.disabled = true;
         }
     }
+
+
 
     async addVehicles() {
         const modal = await this.modalController.create({

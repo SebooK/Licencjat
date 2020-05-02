@@ -6,12 +6,14 @@ module.exports = (sequelize, DataTypes) => {
     vehicleNumber: DataTypes.STRING,
     vehicleType: DataTypes.STRING,
     localization: DataTypes.STRING,
-    workerId: DataTypes.INTEGER
+    workerId: DataTypes.INTEGER,
+    semiTrailerId:DataTypes.INTEGER
   }, {});
   Vehicle.associate = function(models) {
-    Vehicle.hasOne(models.SemiTrailer, {
-      foreignKey: 'vehicleId',
-      as: 'semiTrailer'
+    Vehicle.belongsTo(models.SemiTrailer, {
+      foreignKey: 'semiTrailerId',
+      as:'semiTrailer',
+      allowNull:false
     });
     Vehicle.belongsTo(models.Worker, {
       foreignKey: 'workerId',

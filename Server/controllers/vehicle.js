@@ -1,7 +1,7 @@
 const SemiTrailer = require('../models').SemiTrailer;
 const Vehicle = require('../models').Vehicle;
 const Worker = require('../models').Worker;
-
+const SemiTrailerController = require('./semiTrailer');
 const options = {
     offset: 0,
     limit: 15
@@ -22,18 +22,18 @@ module.exports = {
                             as: 'worker',
                         }, {
                             model: SemiTrailer,
-                            as: 'semiTrailer',
+                            as:'semiTrailer'
                         }],
                         limit: options.limit,
                         offset: options.offset,
                         order: [
                             ['createdAt', 'DESC'],
-                            [{model: SemiTrailer, as: 'semiTrailer'}, 'createdAt', 'DESC'],
                         ],
                     })
                     .then((vehicles) => res.status(200).send({'result': vehicles, 'count': data.count, 'pages': pages}))
                     .catch((error) => {
-                        res.status(400).send(error);
+                        res.status(400).send(error)
+                        console.log(error);
                     })
             })
             .catch(error => res.status(500).send(error));
@@ -64,6 +64,7 @@ module.exports = {
     },
 
     add(req, res) {
+
         return Vehicle
             .create({
                 registrationNumber: req.body.registrationNumber,
@@ -71,19 +72,16 @@ module.exports = {
                 vehicleType: req.body.vehicleType,
                 localization: req.body.localization,
                 workerId: req.body.workerId,
+                SemiTrailerId: req.body.semiTrailerId
             })
             .then((vehicle) => res.status(201).send(vehicle))
             .catch((error) => res.status(400).send(error));
+
     },
 
     update(req, res) {
         return Vehicle
-            .findByPk(req.params.id, {
-                include: [{
-                    model: Vehicle,
-                    as: 'vehicle',
-                }],
-            })
+            .findByPk(req.params.id)
             .then(vehicle => {
                 if (!vehicle) {
                     return res.status(404).send({
@@ -99,9 +97,15 @@ module.exports = {
                         workerId: req.body.workerId,
                     })
                     .then(() => res.status(200).send(vehicle))
-                    .catch((error) => res.status(400).send(error))
+                    .catch((error) => {
+                        res.status(400).send(error);
+                        console.log(error)
+                    })
             })
-            .catch((error) => res.status(400).send(error));
+            .catch((error) => {
+                res.status(400).send(error);
+                console.log(error)
+            });
     },
 
     delete(req, res) {

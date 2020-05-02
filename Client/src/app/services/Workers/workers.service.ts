@@ -1,12 +1,12 @@
 import { Injectable } from '@angular/core';
 import {HttpClient, HttpHeaders} from "@angular/common/http";
 import {Platform, ToastController} from "@ionic/angular";
-import {environment} from "../../environments/environment";
+import {environment} from "../../../environments/environment";
 import {AlertController} from "@ionic/angular";
 import {tap, catchError, map} from "rxjs/operators";
 import {Observable, of} from "rxjs";
-import {AuthService} from "./auth.service";
-import {Worker} from "../models/worker.model"
+import {AuthService} from "../Auth/auth.service";
+import {Worker} from "../../models/worker.model"
 @Injectable({
     providedIn: 'root'
 })

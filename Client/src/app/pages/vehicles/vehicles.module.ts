@@ -7,6 +7,8 @@ import {IonicModule} from '@ionic/angular';
 import {VehiclesPageRoutingModule} from './vehicles-routing.module';
 
 import {VehiclesPage} from './vehicles.page';
+import {AddPage} from "./add/add.page";
+import {NgArrayPipesModule} from "ngx-pipes";
 
 @NgModule({
     imports: [
@@ -14,9 +16,11 @@ import {VehiclesPage} from './vehicles.page';
         FormsModule,
         IonicModule,
         VehiclesPageRoutingModule,
-        ReactiveFormsModule
+        ReactiveFormsModule,
+        NgArrayPipesModule,
     ],
-    declarations: [VehiclesPage]
+    declarations: [VehiclesPage,AddPage],
+    entryComponents: [AddPage]
 })
 export class VehiclesPageModule {
 }

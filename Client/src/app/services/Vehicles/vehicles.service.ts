@@ -1,12 +1,11 @@
 import {Injectable} from '@angular/core';
 import {HttpClient, HttpHeaders} from "@angular/common/http";
 import {ToastController} from "@ionic/angular";
-import {environment} from "../../environments/environment";
+import {environment} from "../../../environments/environment";
 import {AlertController} from "@ionic/angular";
 import {tap, catchError, map} from "rxjs/operators";
 import {Observable, of} from "rxjs";
-import {AuthService} from "./auth.service";
-import {Vehicle} from "../models/vehicle.model";
+import {Vehicle} from "../../models/vehicle.model";
 
 @Injectable({
     providedIn: 'root'
@@ -23,8 +22,7 @@ export class VehiclesService {
     constructor(
         private http: HttpClient,
         private alertController: AlertController,
-        private toastController: ToastController,
-        private auth: AuthService) {
+        private toastController: ToastController) {
     }
 
     getVehicles(page): Observable<Vehicle[]> {
@@ -60,7 +58,7 @@ export class VehiclesService {
     }
 
     editVehicle(id, data): Observable<any> {
-        const url = `${this.vehiclesUrl}/${id}`;
+        const url = `${this.url}/api/vehicle/${id}`;
         return this.http.put<any>(url, data, this.httpOptions).pipe(
             tap(res => {
                 console.log('Vehicle edited:' + data);
@@ -91,7 +89,7 @@ export class VehiclesService {
         return (error: any): Observable<T> => {
             this.toastController.create({
                 header: 'Error',
-                message: error.error,
+                message: error,
                 color: 'danger',
                 duration: 3000,
                 position: "top"

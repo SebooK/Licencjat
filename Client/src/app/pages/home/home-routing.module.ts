@@ -1,8 +1,7 @@
 import { NgModule } from '@angular/core';
 import { Routes, RouterModule } from '@angular/router';
-
 import { HomePage } from './home.page';
-import {MePage} from "../me/me.page";
+import {MeResolverService} from "../../resolver/me/me-resolver.service";
 
 const routes: Routes = [
   {
@@ -11,7 +10,11 @@ const routes: Routes = [
   },
   {
     path: 'me',
-    loadChildren: () => import ('../me/me.module').then(m => m.MePageModule)
+    resolve: {
+      user:MeResolverService
+    },
+    loadChildren: () => import ('../me/me.module').then(m => m.MePageModule),
+
   }
 ];
 

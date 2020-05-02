@@ -3,7 +3,7 @@ import {Routes, RouterModule} from '@angular/router';
 
 import {WorkersPage} from './workers.page';
 import {WorkerResolverService} from "../../resolver/worker-resolver.service";
-import {AuthGuardService} from "../../services/auth-guard.service";
+import {AuthGuardService} from "../../services/Auth/auth-guard.service";
 
 const routes: Routes = [
     {
