@@ -1,7 +1,8 @@
 import {Order} from "./order.model"
+import {Deserializable} from "./deserializable.model";
 
 
-export interface Customer {
+export class Customer implements Deserializable {
     id: number;
     companyName: string;
     companyAddress: string;
@@ -10,4 +11,8 @@ export interface Customer {
     updatedAt: string;
     order: Order[];
 
+    deserialize(input: any): this {
+        Object.assign(this,input);
+        return this;
+    }
 }

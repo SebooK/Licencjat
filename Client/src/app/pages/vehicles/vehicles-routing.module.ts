@@ -2,7 +2,7 @@ import {NgModule} from '@angular/core';
 import {Routes, RouterModule} from '@angular/router';
 
 import {VehiclesPage} from './vehicles.page';
-import {VehicleResolverService} from "../../resolver/vehicle-resolver.service";
+import {VehicleResolverService} from "../../resolver/Vehicles/vehicle-resolver.service";
 import {AuthGuardService} from "../../services/Auth/auth-guard.service";
 
 const routes: Routes = [

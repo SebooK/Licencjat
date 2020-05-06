@@ -1,7 +1,8 @@
 import {Worker} from "./worker.model";
 import {Customer} from "./customer.model";
+import {Deserializable} from "./deserializable.model";
 
-export class Order {
+export class Order implements Deserializable{
     id: number;
     workerId: number;
     orderNumber: number;
@@ -15,7 +16,8 @@ export class Order {
     customer: Customer;
     worker: Worker
 
-    deserialize(orders: any) {
-        return undefined;
+    deserialize(input: any): this {
+        Object.assign(this,input);
+        return this;
     }
 }

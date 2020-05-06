@@ -1,8 +1,8 @@
 import {Injectable} from '@angular/core';
-import {VehiclesService} from "../services/Vehicles/vehicles.service";
+import {VehiclesService} from "../../services/Vehicles/vehicles.service";
 import {Resolve, ActivatedRouteSnapshot} from "@angular/router";
-import {Vehicle} from "../models/vehicle.model";
-import {LoadingService} from "../services/Loading/loading.service";
+import {Vehicle} from "../../models/vehicle.model";
+import {LoadingService} from "../../services/Loading/loading.service";
 import {tap} from "rxjs/operators";
 
 @Injectable({

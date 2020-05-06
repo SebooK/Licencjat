@@ -18,10 +18,10 @@ router.get('/', function(req, res, next) {
 /* Auth Router*/
 router.post('/api/login',authController.login);
 /* Orders Router */
-router.get('/api/orders',orderController.list);
-router.get('/api/orders/:id',orderController.getById);
+router.get('/api/orders/:page',orderController.list);
+router.get('/api/order/:id',orderController.getById);
 router.post('/api/orders', auth,orderController.add);
-router.put('/api/orders/:id',orderController.update);
+router.put('/api/order/:id',orderController.update);
 router.delete('/api/orders/:id',[auth,role],orderController.delete);
 
 /* Worker Router */
@@ -33,10 +33,10 @@ router.put('/api/workers/:id',auth,workerController.update);
 router.delete('/api/workers/:id',[auth,role],workerController.delete);
 
 /* Customer Router */
-router.get('/api/customers',customerController.list);
-router.get('/api/customers/:id',customerController.getById);
+router.get('/api/customers/:page',customerController.list);
+router.get('/api/customer/:id',customerController.getById);
 router.post('/api/customers',customerController.add);
-router.put('/api/customers/:id',customerController.update);
+router.put('/api/customer/:id',customerController.update);
 router.delete('/api/customers/:id',customerController.delete);
 
 /* Vehicles Router */

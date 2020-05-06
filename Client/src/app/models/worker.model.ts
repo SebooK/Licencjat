@@ -16,6 +16,7 @@ export class Worker implements Deserializable {
     orders: Order[];
 
     deserialize(input: any): this {
-        return Object.assign(this,input);
-}
+        Object.assign(this,input);
+        return this;
+    }
 }

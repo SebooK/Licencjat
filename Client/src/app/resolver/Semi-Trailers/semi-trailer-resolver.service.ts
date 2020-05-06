@@ -1,16 +1,16 @@
 import {Injectable} from '@angular/core';
-import {WorkersService} from "../services/Workers/workers.service";
 import {Resolve, ActivatedRouteSnapshot} from "@angular/router";
-import {LoadingService} from "../services/Loading/loading.service";
+import {LoadingService} from "../../services/Loading/loading.service";
 import {tap} from "rxjs/operators";
-import {Worker} from "../models/worker.model"
+import {SemiTrailer} from "../../models/semiTrailers.model";
+import {SemiTrailerService} from "../../services/semiTrailers/semi-trailer.service";
 
 @Injectable({
     providedIn: 'root'
 })
-export class WorkerResolverService implements Resolve<Worker> {
+export class SemiTrailerResolverService implements Resolve<SemiTrailer> {
 
-    constructor(private workersService: WorkersService,
+    constructor(private semiTrailerService: SemiTrailerService,
                 private loadingController: LoadingService) {
     }
 
@@ -18,9 +18,8 @@ export class WorkerResolverService implements Resolve<Worker> {
         let id = route.paramMap.get('id');
 
         this.loadingController.present();
-        return this.workersService.getWorker(id).pipe(
+        return this.semiTrailerService.getSemiTrailer(id).pipe(
             tap(() => this.loadingController.dismiss())
         )
     }
-
 }

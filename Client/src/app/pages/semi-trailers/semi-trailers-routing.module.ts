@@ -3,7 +3,7 @@ import { Routes, RouterModule } from '@angular/router';
 
 import { SemiTrailersPage } from './semi-trailers.page';
 import {AuthGuardService} from "../../services/Auth/auth-guard.service";
-import {SemiTrailerResolverService} from "../../resolver/semi-trailer-resolver.service";
+import {SemiTrailerResolverService} from "../../resolver/Semi-Trailers/semi-trailer-resolver.service";
 
 const routes: Routes = [
   {

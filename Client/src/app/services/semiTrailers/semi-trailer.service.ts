@@ -42,7 +42,7 @@ export class SemiTrailerService {
         return this.http.post<any>(this.semiTrailersUrl, data, this.httpOptions).pipe(
             tap(res => {
                 return this.toastController.create({
-                    message: 'Vehicle was added successfully',
+                    message: 'Semi Trailer was added successfully',
                     duration: 3000,
                     position: 'top',
                     color: "success"

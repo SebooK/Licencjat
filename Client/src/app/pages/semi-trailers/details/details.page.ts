@@ -5,7 +5,7 @@ import {ActivatedRoute, Router} from "@angular/router";
 import {LoadingService} from "../../../services/Loading/loading.service";
 import {SemiTrailerService} from "../../../services/semiTrailers/semi-trailer.service";
 import {SemiTrailer} from "../../../models/semiTrailers.model";
-import {AddPage} from "../../semi-trailers/add/add.page";
+import {AddPage} from "../../orders/add/add.page";
 
 @Component({
   selector: 'app-details',

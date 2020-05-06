@@ -1,6 +1,6 @@
 import { TestBed } from '@angular/core/testing';
 
-import { WorkerResolverService } from './data-resolver.service';
+import { WorkerResolverService } from './worker-resolver.service';
 
 describe('DataResolverService', () => {
   beforeEach(() => TestBed.configureTestingModule({}));

@@ -24,7 +24,6 @@ export class AddPage implements OnInit {
     };
 
 
-
     constructor(private modalController: ModalController,
                 private formBuilder: FormBuilder,
                 private vehiclesService: VehiclesService,

@@ -16,6 +16,7 @@ export class Vehicle implements Deserializable{
     semiTrailer : SemiTrailer;
 
     deserialize(input: any): this {
-        return Object.assign(this,input);
+        Object.assign(this,input);
+        return this;
     }
 }
