@@ -1,0 +1,30 @@
+<ion-header>
+    <ion-toolbar color="primary">
+        <ion-buttons slot="end">
+            <ion-button (click)="closeModal()">
+                <ion-icon name="close-outline"></ion-icon>
+            </ion-button>
+        </ion-buttons>
+        <ion-title>{{hasData() == true ? 'Edytuj' : 'Dodaj'}} Klienta/Firmę</ion-title>
+    </ion-toolbar>
+</ion-header>
+
+<ion-content padding>
+    <form [formGroup]="customerForm" (ngSubmit)="onSubmit()">
+        <ion-item>
+            <ion-label position="floating">Nazwa</ion-label>
+            <ion-input type="text" formControlName="companyName"></ion-input>
+        </ion-item>
+        <ion-item>
+            <ion-label position="floating">Adres</ion-label>
+            <ion-input type="text" formControlName="companyAddress"></ion-input>
+        </ion-item>
+        <ion-item>
+            <ion-label position="floating">Numer telefonu</ion-label>
+            <ion-input type="text" formControlName="companyPhone"></ion-input>
+        </ion-item>
+
+        <ion-button expand="full" type="submit"
+                    [disabled]="!customerForm.valid">{{ hasData() == true ? 'Edit' : 'Add'}}</ion-button>
+    </form>
+</ion-content>
