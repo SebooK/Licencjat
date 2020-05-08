@@ -22,9 +22,9 @@ export class LoadingService {
         });
     }
 
-    async dismiss() {
+    dismiss() {
 
-      return await this.loadingController.dismiss().then( () => console.log('dismissed'));
+      return  this.loadingController.dismiss().then( () => console.log('dismissed'));
     }
 }
 

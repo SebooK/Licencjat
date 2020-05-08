@@ -3,7 +3,7 @@ import {VehiclesService} from "../../services/Vehicles/vehicles.service";
 import {Resolve, ActivatedRouteSnapshot} from "@angular/router";
 import {Vehicle} from "../../models/vehicle.model";
 import {LoadingService} from "../../services/Loading/loading.service";
-import {tap} from "rxjs/operators";
+import {finalize, tap} from "rxjs/operators";
 
 @Injectable({
     providedIn: 'root'
@@ -19,9 +19,8 @@ export class VehicleResolverService implements Resolve<Vehicle> {
 
         this.loadingController.present();
         return this.vehiclesService.getVehicle(id).pipe(
-            tap(() => {
-                this.loadingController.dismiss()
-            })
-        )
+            tap(),
+            finalize(() => this.loadingController.dismiss()))
+
     }
 }

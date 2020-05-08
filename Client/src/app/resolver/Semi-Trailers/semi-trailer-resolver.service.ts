@@ -1,7 +1,7 @@
 import {Injectable} from '@angular/core';
 import {Resolve, ActivatedRouteSnapshot} from "@angular/router";
 import {LoadingService} from "../../services/Loading/loading.service";
-import {tap} from "rxjs/operators";
+import {finalize, tap} from "rxjs/operators";
 import {SemiTrailer} from "../../models/semiTrailers.model";
 import {SemiTrailerService} from "../../services/semiTrailers/semi-trailer.service";
 
@@ -19,7 +19,8 @@ export class SemiTrailerResolverService implements Resolve<SemiTrailer> {
 
         this.loadingController.present();
         return this.semiTrailerService.getSemiTrailer(id).pipe(
-            tap(() => this.loadingController.dismiss())
+            tap(),
+            finalize(() => this.loadingController.dismiss())
         )
     }
 }

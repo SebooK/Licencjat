@@ -294,3 +294,40 @@ Error: Unknown attribute "semiTrailerId" passed as targetKey, define this attrib
     at Object.<anonymous> (C:\Users\Sebas\Desktop\Licencjat\Server\controllers\index.js:1:15)
     at Module._compile (internal/modules/cjs/loader.js:1157:30)
     at Object.Module._extensions..js (internal/modules/cjs/loader.js:1177:10)
+2020-05-06T20:09:15.338Z [error]: main - uncaughtException: app is not defined
+ReferenceError: app is not defined
+    at Object.<anonymous> (C:\Users\Sebas\Desktop\Licencjat\Server\routes\index.js:30:1)
+    at Module._compile (internal/modules/cjs/loader.js:1157:30)
+    at Object.Module._extensions..js (internal/modules/cjs/loader.js:1177:10)
+    at Module.load (internal/modules/cjs/loader.js:1001:32)
+    at Function.Module._load (internal/modules/cjs/loader.js:900:14)
+    at Module.require (internal/modules/cjs/loader.js:1043:19)
+    at require (internal/modules/cjs/helpers.js:77:18)
+    at Object.<anonymous> (C:\Users\Sebas\Desktop\Licencjat\Server\app.js:12:21)
+    at Module._compile (internal/modules/cjs/loader.js:1157:30)
+    at Object.Module._extensions..js (internal/modules/cjs/loader.js:1177:10)
+    at Module.load (internal/modules/cjs/loader.js:1001:32)
+    at Function.Module._load (internal/modules/cjs/loader.js:900:14)
+    at Function.executeUserEntryPoint [as runMain] (internal/modules/run_main.js:74:12)
+    at internal/main/run_main_module.js:18:47
+2020-05-06T20:09:39.579Z [error]: main - uncaughtException: corsOptions is not defined
+ReferenceError: corsOptions is not defined
+    at Object.<anonymous> (C:\Users\Sebas\Desktop\Licencjat\Server\app.js:17:23)
+    at Module._compile (internal/modules/cjs/loader.js:1157:30)
+    at Object.Module._extensions..js (internal/modules/cjs/loader.js:1177:10)
+    at Module.load (internal/modules/cjs/loader.js:1001:32)
+    at Function.Module._load (internal/modules/cjs/loader.js:900:14)
+    at Function.executeUserEntryPoint [as runMain] (internal/modules/run_main.js:74:12)
+    at internal/main/run_main_module.js:18:47
+2020-05-07T23:34:11.741Z [error]: main - uncaughtException: Cannot read property 'headers' of undefined
+TypeError: Cannot read property 'headers' of undefined
+    at C:\Users\Sebas\Desktop\Licencjat\Server\node_modules\cors\lib\index.js:219:32
+    at optionsCallback (C:\Users\Sebas\Desktop\Licencjat\Server\node_modules\cors\lib\index.js:199:9)
+    at corsMiddleware (C:\Users\Sebas\Desktop\Licencjat\Server\node_modules\cors\lib\index.js:204:7)
+    at Object.<anonymous> (C:\Users\Sebas\Desktop\Licencjat\Server\app.js:45:9)
+    at Module._compile (internal/modules/cjs/loader.js:1157:30)
+    at Object.Module._extensions..js (internal/modules/cjs/loader.js:1177:10)
+    at Module.load (internal/modules/cjs/loader.js:1001:32)
+    at Function.Module._load (internal/modules/cjs/loader.js:900:14)
+    at Function.executeUserEntryPoint [as runMain] (internal/modules/run_main.js:74:12)
+    at internal/main/run_main_module.js:18:47

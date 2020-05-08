@@ -2,7 +2,7 @@ import {Injectable} from '@angular/core';
 import {WorkersService} from "../../services/Workers/workers.service";
 import {Resolve, ActivatedRouteSnapshot} from "@angular/router";
 import {LoadingService} from "../../services/Loading/loading.service";
-import {tap} from "rxjs/operators";
+import {finalize, tap} from "rxjs/operators";
 import {Worker} from "../../models/worker.model"
 
 @Injectable({
@@ -19,7 +19,8 @@ export class WorkerResolverService implements Resolve<Worker> {
 
         this.loadingController.present();
         return this.workersService.getWorker(id).pipe(
-            tap(() => this.loadingController.dismiss())
+            tap(),
+            finalize(() => this.loadingController.dismiss())
         )
     }
 

@@ -1,11 +1,12 @@
 import {Component, OnInit} from '@angular/core';
 import {AuthService} from "../../services/Auth/auth.service";
 import {Storage} from "@ionic/storage";
-import {ModalController, ToastController} from "@ionic/angular";
+import {ModalController} from "@ionic/angular";
 import {ActivatedRoute, Router} from "@angular/router";
 import {WorkersService} from "../../services/Workers/workers.service";
 import {Worker} from "../../models/worker.model"
 import {MePage} from "../me/me.page";
+import {LoadingService} from "../../services/Loading/loading.service";
 
 @Component({
     selector: 'app-home',
@@ -17,7 +18,6 @@ export class HomePage implements OnInit {
 
     constructor(private authService: AuthService,
                 private storage: Storage,
-                private toastController: ToastController,
                 private route: Router,
                 private workersService: WorkersService,
                 private activatedRoute: ActivatedRoute,

@@ -8,12 +8,10 @@ const customerController = require('../controllers').customer;
 const vehicleController = require('../controllers').vehicle;
 const semiTrailerController = require('../controllers').semiTrailer;
 const authController = require('../controllers/auth');
-const paginate = require('../middleware/paginate');
+
 /* GET home page. */
 router.get('/', function(req, res, next) {
-
-    res.render('index', { title: 'Express' });
-
+    res.send('Witaj strona główna backend')
 });
 /* Auth Router*/
 router.post('/api/login',authController.login);
