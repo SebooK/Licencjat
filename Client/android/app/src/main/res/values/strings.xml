@@ -1,0 +1,10 @@
+<?xml version='1.0' encoding='utf-8'?>
+<resources>
+    <string name="app_name">Licencjat</string>
+    <string name="title_activity_main">Licencjat</string>
+    <string name="package_name">com.example.lic</string>
+    <string name="custom_url_scheme">com.example.lic</string>
+    <string name="mauron85_bgloc_account_name">Licencjat</string>
+    <string name="mauron85_bgloc_account_type">com.example.lic.account</string>
+    <string name="mauron85_bgloc_content_authority">com.example.lic</string>
+</resources>

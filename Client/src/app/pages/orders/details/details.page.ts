@@ -6,6 +6,7 @@ import {ActivatedRoute, Router} from "@angular/router";
 import {LoadingService} from "../../../services/Loading/loading.service";
 import {AddPage} from "../add/add.page";
 import {OrdersService} from "../../../services/Orders/orders.service";
+import mapboxgl from 'mapbox-gl/dist/mapbox-gl.js'
 
 @Component({
     selector: 'app-details',
@@ -23,6 +24,19 @@ export class DetailsPage implements OnInit {
                 private activatedRoute: ActivatedRoute,
                 private modalController: ModalController,
                 private loading: LoadingService) {
+    }
+
+    ionViewDidEnter() {
+        mapboxgl.accessToken = 'pk.eyJ1Ijoic2ViYTk3ODEiLCJhIjoiY2thOWU3YWswMGx4bjJ6bXR3dzB0bWRtaCJ9.eblrxW8xIgV_5Ads1bz4SA';
+        var map = new mapboxgl.Map({
+            style: 'mapbox://styles/mapbox/light-v9',
+            center: [-74.0066, 40.7135],
+            zoom: 16,
+            pitch: 80,
+            minZoom: 7.5, //restrict map zoom - buildings not visible beyond 13
+            maxZoom: 17,
+            container: 'map'
+        })
     }
 
     ngOnInit() {
