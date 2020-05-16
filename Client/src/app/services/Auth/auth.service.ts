@@ -53,7 +53,7 @@ export class AuthService {
     }
 
     login(credentials) {
-        this.loadingController.present();
+       // this.loadingController.present();
         return this.http.post(`${this.url}/api/login`, credentials).pipe(
             tap(res => {
                 this.storage.set(TOKEN_KEY, res['JSON-Web-Token']);
@@ -62,7 +62,7 @@ export class AuthService {
                 console.log(this.user);
             }),
             finalize(() => {
-                this.loadingController.dismiss();
+               // this.loadingController.dismiss();
                 this.toastController.create({
                     message: 'log in successfully',
                     duration: 1000,

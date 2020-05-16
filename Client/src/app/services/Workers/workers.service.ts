@@ -27,7 +27,7 @@ export class WorkersService {
 
     getMe(id): Observable<Worker> {
         return this.http.get<Worker>(`${this.workersUrl}/me`).pipe(
-            tap(),
+            tap( res => console.log(res)),
             catchError(this.handleError<Worker>('GetMe'))
         )
     }

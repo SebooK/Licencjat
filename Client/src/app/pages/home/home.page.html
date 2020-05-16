@@ -15,4 +15,14 @@
   <ion-button expand="full" (click)="ordersPage()">Orders</ion-button>
   <ion-button expand="full" (click)="customersPage()">Customers</ion-button>
   <ion-button expand="full" (click)="logout()">Logout</ion-button>
+  <ion-button expand="full" (click)="start()">StartTracking</ion-button>
+  <ion-button expand="full" (click)="stop()" color="danger" >StopTracking</ion-button>
+  <ion-list>
+    <ion-item>
+      <ion-label>Latitude: {{locationTracker.lat}}</ion-label>
+    </ion-item>
+    <ion-item>
+      <ion-label>Longitude: {{locationTracker.lng}}</ion-label>
+    </ion-item>
+  </ion-list>
 </ion-content>

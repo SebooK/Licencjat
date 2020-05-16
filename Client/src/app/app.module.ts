@@ -9,13 +9,17 @@ import {StatusBar} from '@ionic-native/status-bar/ngx';
 import {AppComponent} from './app.component';
 import {AddPage} from "./pages/workers/add/add.page";
 import {AppRoutingModule} from './app-routing.module';
+import {HTTP} from "@ionic-native/http/ngx";
+import {BackgroundGeolocation} from "@ionic-native/background-geolocation/ngx";
+import {LocationTrackerService} from "./services/location/location-tracker.service";
+import {Geolocation} from "@ionic-native/geolocation/ngx";
 
 import {HTTP_INTERCEPTORS, HttpClientModule} from '@angular/common/http';
 import {Storage, IonicStorageModule} from '@ionic/storage';
 import {JwtModule, JWT_OPTIONS} from '@auth0/angular-jwt';
 import {ReactiveFormsModule} from "@angular/forms";
 import {AuthInterceptor} from "./services/Auth/auth.interceptor";
-import { HTTP } from "@ionic-native/http/ngx";
+
 
 export function jwtOptionsFactory(storage) {
     return {
@@ -40,12 +44,14 @@ export function jwtOptionsFactory(storage) {
             }
         }), ReactiveFormsModule],
     providers: [
+        LocationTrackerService,
+        BackgroundGeolocation,
+        Geolocation,
         StatusBar,
         SplashScreen,
         HTTP,
         {provide: RouteReuseStrategy, useClass: IonicRouteStrategy},
         {provide: HTTP_INTERCEPTORS, useClass: AuthInterceptor, multi: true},
-
     ],
     bootstrap: [AppComponent]
 })

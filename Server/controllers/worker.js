@@ -166,6 +166,13 @@ module.exports = {
     async getUserData(req, res) {
         return Worker
             .findByPk(req.worker.id, {
+                include: [{
+                    model: Vehicle,
+                    as: 'vehicle'
+                }, {
+                    model: Order,
+                    as: 'orders'
+                }],
                 attributes: {
                     exclude: ['password']
                 }

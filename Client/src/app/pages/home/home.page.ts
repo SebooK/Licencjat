@@ -1,12 +1,25 @@
 import {Component, OnInit} from '@angular/core';
 import {AuthService} from "../../services/Auth/auth.service";
 import {Storage} from "@ionic/storage";
-import {ModalController} from "@ionic/angular";
+import {ModalController, ToastController} from "@ionic/angular";
 import {ActivatedRoute, Router} from "@angular/router";
 import {WorkersService} from "../../services/Workers/workers.service";
 import {Worker} from "../../models/worker.model"
 import {MePage} from "../me/me.page";
-import {LoadingService} from "../../services/Loading/loading.service";
+import {LocationTrackerService} from "../../services/location/location-tracker.service";
+import {VehiclesService} from "../../services/Vehicles/vehicles.service";
+import {Plugins} from '@capacitor/core';
+import {
+    BackgroundGeolocation,
+    BackgroundGeolocationConfig,
+    BackgroundGeolocationEvents,
+    BackgroundGeolocationResponse
+} from "@ionic-native/background-geolocation/ngx";
+
+
+const {LocalNotifications} = Plugins;
+
+declare var window;
 
 @Component({
     selector: 'app-home',
@@ -14,20 +27,38 @@ import {LoadingService} from "../../services/Loading/loading.service";
     styleUrls: ['./home.page.scss'],
 })
 export class HomePage implements OnInit {
-
-
+    arr: any;
+    locations: any;
+    config: BackgroundGeolocationConfig = {
+        desiredAccuracy: 10,
+        stationaryRadius: 20,
+        distanceFilter: 30,
+        debug: true, //  enable this hear sounds for background-geolocation life-cycle.
+        stopOnTerminate: false, // enable this to clear background location settings when the app terminates,
+        interval: 1000,
+        notificationTitle: 'Background tracking',
+        notificationText: 'enabled'
+    };
     constructor(private authService: AuthService,
                 private storage: Storage,
                 private route: Router,
                 private workersService: WorkersService,
+                private vehiclesService: VehiclesService,
                 private activatedRoute: ActivatedRoute,
-                private modalController: ModalController) {
+                private modalController: ModalController,
+                private toastController: ToastController,
+                private  backgroundGeolocation: BackgroundGeolocation,
+                private locationTracker:LocationTrackerService) {
+        this.locations = [];
+        this.arr = [];
     }
 
     private user: Worker;
 
     ngOnInit() {
         this.user = this.activatedRoute.snapshot.data['user'];
+        console.log(this.user.vehicle.id)
+
 
     }
 
@@ -52,16 +83,66 @@ export class HomePage implements OnInit {
     }
 
     customersPage() {
-      return this.route.navigate(['customers']);
+        return this.route.navigate(['customers']);
     }
 
-    async aboutMe() {
-        const modal = await this.modalController.create({
+    aboutMe() {
+        const modal =this.modalController.create({
             component: MePage,
             componentProps: {
                 user: this.user
             }
-        });
-        return await modal.present();
+        }).then( me => me.present());
+        console.log(this.user);
+
+    }
+/*
+    startTracking() {
+        this.backgroundGeolocation.configure(this.config).then(() => {
+            this.backgroundGeolocation
+                .on(BackgroundGeolocationEvents.location)
+                .subscribe((location: BackgroundGeolocationResponse) => {
+                  console.log(location);
+                  this.arr.push.apply(location);
+                })
+        })
+        this.backgroundGeolocation.start();
+    }
+
+    stopTrack() {
+        this.backgroundGeolocation.stop();
+    }
+
+    getLocation() {
+       console.log(this.arr);
+    }
+
+    clearLocations() {
+        localStorage.removeItem('location');
+    }
+
+    localizationToast(data) {
+        this.toastController.create({
+            color: "success",
+            message: data,
+            duration: 5000,
+            position: "middle"
+        }).then(toast => toast.present());
+    }
+
+    sendGps(location) {
+        if (location.speed == undefined) {
+            location.speed = 0;
+        }
+
+    }
+
+ */
+
+    start() {
+        this.locationTracker.startTracking()
+    }
+    stop() {
+        this.locationTracker.stopTracking();
     }
 }
