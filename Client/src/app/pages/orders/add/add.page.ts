@@ -5,7 +5,9 @@ import {OrdersService} from "../../../services/Orders/orders.service";
 import {WorkersService} from "../../../services/Workers/workers.service";
 import {CustomersService} from "../../../services/Customers/customers.service";
 import {Customer} from "../../../models/customer.model";
-import {Worker} from "../../../models/worker.model"
+import {Worker} from "../../../models/worker.model";
+import *  as MapboxGeocoder  from '@mapbox/mapbox-gl-geocoder'
+import {environment} from "../../../../environments/environment";
 
 @Component({
     selector: 'app-add',
@@ -33,7 +35,8 @@ export class AddPage implements OnInit {
                 private ordersServices: OrdersService,
                 private navParams: NavParams,
                 private workersService: WorkersService,
-                private customersService: CustomersService) {
+                private customersService: CustomersService,
+                ) {
     }
 
     ngOnInit() {
@@ -42,9 +45,10 @@ export class AddPage implements OnInit {
         } else {
             this.editOrderForm();
         }
+
         this.getWorkers();
         this.getCustomers();
-
+        this.geocoder();
     }
 
     hasData() {
@@ -77,12 +81,12 @@ export class AddPage implements OnInit {
     editOrderForm() {
         this.ordersForm = this.formBuilder.group({
             workerId: [`${this.details.workerId}`, Validators.required],
-            orderNumber: [`${this.details.workerId}`, Validators.required],
-            cargo: [`${this.details.workerId}`, Validators.required],
-            vehicle: [`${this.details.workerId}`, Validators.required],
-            customerId: [`${this.details.workerId}`, Validators.required],
-            loadingPlace: [`${this.details.workerId}`, Validators.required],
-            unloadingPlace: [`${this.details.workerId}`, Validators.required]
+            orderNumber: [`${this.details.orderNumber}`, Validators.required],
+            cargo: [`${this.details.cargo}`, Validators.required],
+            vehicle: [`${this.details.vehicle}`, Validators.required],
+            customerId: [`${this.details.customerId}`, Validators.required],
+            loadingPlace: [`${this.details.loadingPlace}`, Validators.required],
+            unloadingPlace: [`${this.details.unloadingPlace}`, Validators.required]
         });
     }
 
@@ -117,5 +121,12 @@ export class AddPage implements OnInit {
     getCustomers() {
         this.customersService.getCustomers(this.page)
             .subscribe(result => this.customers = result);
+    }
+    geocoder() {
+        var geocoder = new MapboxGeocoder({
+            accessToken: environment.mapBoxAccessToken,
+            types: 'country,region,place,postcode,locality,neighborhood'
+        });
+        geocoder.addTo('#geocoder')
     }
 }

@@ -96,48 +96,6 @@ export class HomePage implements OnInit {
         console.log(this.user);
 
     }
-/*
-    startTracking() {
-        this.backgroundGeolocation.configure(this.config).then(() => {
-            this.backgroundGeolocation
-                .on(BackgroundGeolocationEvents.location)
-                .subscribe((location: BackgroundGeolocationResponse) => {
-                  console.log(location);
-                  this.arr.push.apply(location);
-                })
-        })
-        this.backgroundGeolocation.start();
-    }
-
-    stopTrack() {
-        this.backgroundGeolocation.stop();
-    }
-
-    getLocation() {
-       console.log(this.arr);
-    }
-
-    clearLocations() {
-        localStorage.removeItem('location');
-    }
-
-    localizationToast(data) {
-        this.toastController.create({
-            color: "success",
-            message: data,
-            duration: 5000,
-            position: "middle"
-        }).then(toast => toast.present());
-    }
-
-    sendGps(location) {
-        if (location.speed == undefined) {
-            location.speed = 0;
-        }
-
-    }
-
- */
 
     start() {
         this.locationTracker.startTracking()

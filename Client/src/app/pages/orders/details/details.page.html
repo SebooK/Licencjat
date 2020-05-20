@@ -44,8 +44,9 @@
             </ion-label>
         </ion-item>
     </ion-list>
-    <div id='map'></div>
-
+    <ion-item>
+        <ion-button expand="full" (click)="showRoute()">Show Route</ion-button>
+    </ion-item>
     <ion-fab vertical="bottom" horizontal="end" slot="fixed">
         <ion-fab-button (click)="editOrder()">
             <ion-icon name="create-outline"></ion-icon>

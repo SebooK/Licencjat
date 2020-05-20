@@ -7,7 +7,12 @@ const routes: Routes = [
     {
         path: '',
         component: DetailsPage
-    }
+    },
+  {
+    path: 'map',
+    loadChildren: () => import('./map/map.module').then( m => m.MapPageModule),
+
+  }
 ];
 
 @NgModule({

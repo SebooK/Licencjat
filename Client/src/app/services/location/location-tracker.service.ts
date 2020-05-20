@@ -21,7 +21,7 @@ export class LocationTrackerService {
 
     }
 
-    startTracking() {
+     startTracking() {
         //Background Tracking
         let config = {
             desiredAccuracy: 0,

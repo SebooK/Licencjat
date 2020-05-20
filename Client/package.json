@@ -34,6 +34,8 @@
     "@ionic-native/status-bar": "^5.0.0",
     "@ionic/angular": "^5.0.0",
     "@ionic/storage": "^2.2.0",
+    "@mapbox/mapbox-gl-directions": "^4.0.3",
+    "@mapbox/mapbox-gl-geocoder": "^4.5.1",
     "cordova-android-play-services-gradle-release": "^4.0.0",
     "cordova-plugin-advanced-http": "^2.4.1",
     "cordova-plugin-androidx-adapter": "^1.1.1",

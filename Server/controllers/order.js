@@ -84,7 +84,7 @@ module.exports = {
 
     update(req, res) {
         return Order
-            .findByPk(req.body.id, {
+            .findByPk(req.params.id, {
                 include: [{
                     model: Customer,
                     as: 'customer',

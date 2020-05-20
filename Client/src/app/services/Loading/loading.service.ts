@@ -24,7 +24,7 @@ export class LoadingService {
 
     dismiss() {
 
-      return  this.loadingController.dismiss().then( () => console.log('dismissed'));
+      return  this.loadingController.dismiss();
     }
 }
 
