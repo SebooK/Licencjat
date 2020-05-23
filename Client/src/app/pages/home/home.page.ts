@@ -57,7 +57,7 @@ export class HomePage implements OnInit {
 
     ngOnInit() {
         this.user = this.activatedRoute.snapshot.data['user'];
-        console.log(this.user.vehicle.id)
+        console.log(this.user.id)
 
 
     }
@@ -93,12 +93,13 @@ export class HomePage implements OnInit {
                 user: this.user
             }
         }).then( me => me.present());
-        console.log(this.user);
 
     }
 
     start() {
-        this.locationTracker.startTracking()
+        console.log(this.user.vehicle.id);
+        this.locationTracker.startTracking(this.user.vehicle.id);
+
     }
     stop() {
         this.locationTracker.stopTracking();

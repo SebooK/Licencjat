@@ -4,8 +4,9 @@ import {
     BackgroundGeolocationEvents,
     BackgroundGeolocationResponse
 } from '@ionic-native/background-geolocation/ngx';
-import {Geolocation, Geoposition} from '@ionic-native/geolocation/ngx';
-import {filter} from 'rxjs/operators'
+import {Geolocation} from '@ionic-native/geolocation/ngx';
+import {HttpClient} from "@angular/common/http";
+import {VehiclesService} from "../Vehicles/vehicles.service";
 
 @Injectable({
     providedIn: 'root'
@@ -14,14 +15,20 @@ export class LocationTrackerService {
     public watch: any;
     public lat: number = 0;
     public lng: number = 0;
-
+    private userLocation: {
+        lng: number,
+        lat: number,
+        speed: number;
+    };
     constructor(public zone: NgZone,
                 public backgroundGeolocation: BackgroundGeolocation,
-                public geolocation: Geolocation) {
+                public geolocation: Geolocation,
+                private http: HttpClient,
+                private vehicleService: VehiclesService) {
 
     }
 
-     startTracking() {
+     startTracking(id) {
         //Background Tracking
         let config = {
             desiredAccuracy: 0,
@@ -42,6 +49,15 @@ export class LocationTrackerService {
                         this.lat = location.latitude;
                         this.lng = location.longitude;
                     });
+                    this.userLocation = {
+                        lng : this.lng,
+                        lat : this.lat,
+                        speed: location.speed
+                    }
+                    console.log(this.userLocation);
+
+                    //zmienic trrzeba lat i  lng przypisac a nie cały obiekt
+                    this.sendLocation(this.userLocation,id)
                 })
         })
             .catch(err => {
@@ -70,6 +86,16 @@ export class LocationTrackerService {
         });
 
  */
+    }
+
+    sendLocation(location,id) {
+        if(location.speed == undefined) {
+            location.speed = 0;
+        }
+
+        this.vehicleService.editVehicle(id,{
+            localization: `${location.lat} ${location.lng}`
+        }).subscribe()
     }
 
     stopTracking() {

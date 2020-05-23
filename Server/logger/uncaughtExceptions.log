@@ -331,3 +331,51 @@ TypeError: Cannot read property 'headers' of undefined
     at Function.Module._load (internal/modules/cjs/loader.js:900:14)
     at Function.executeUserEntryPoint [as runMain] (internal/modules/run_main.js:74:12)
     at internal/main/run_main_module.js:18:47
+2020-05-22T23:34:17.732Z [error]: main - uncaughtException: Cannot parse config file: 'C:\Users\Sebas\Desktop\Licencjat\Server\config\custom-environment-variables.json': SyntaxError: Unexpected token l in JSON at position 39
+Error: Cannot parse config file: 'C:\Users\Sebas\Desktop\Licencjat\Server\config\custom-environment-variables.json': SyntaxError: Unexpected token l in JSON at position 39
+    at Config.util.parseFile (C:\Users\Sebas\Desktop\Licencjat\Server\node_modules\config\lib\config.js:794:11)
+    at C:\Users\Sebas\Desktop\Licencjat\Server\node_modules\config\lib\config.js:1083:26
+    at Array.forEach (<anonymous>)
+    at Config.util.getCustomEnvVars (C:\Users\Sebas\Desktop\Licencjat\Server\node_modules\config\lib\config.js:1082:16)
+    at Config.util.loadFileConfigs (C:\Users\Sebas\Desktop\Licencjat\Server\node_modules\config\lib\config.js:644:28)
+    at new Config (C:\Users\Sebas\Desktop\Licencjat\Server\node_modules\config\lib\config.js:116:27)
+    at Object.<anonymous> (C:\Users\Sebas\Desktop\Licencjat\Server\node_modules\config\lib\config.js:1441:31)
+    at Module._compile (internal/modules/cjs/loader.js:1157:30)
+    at Object.Module._extensions..js (internal/modules/cjs/loader.js:1177:10)
+    at Module.load (internal/modules/cjs/loader.js:1001:32)
+2020-05-22T23:34:33.599Z [error]: main - uncaughtException: Cannot parse config file: 'C:\Users\Sebas\Desktop\Licencjat\Server\config\custom-environment-variables.json': SyntaxError: Unexpected token l in JSON at position 39
+Error: Cannot parse config file: 'C:\Users\Sebas\Desktop\Licencjat\Server\config\custom-environment-variables.json': SyntaxError: Unexpected token l in JSON at position 39
+    at Config.util.parseFile (C:\Users\Sebas\Desktop\Licencjat\Server\node_modules\config\lib\config.js:794:11)
+    at C:\Users\Sebas\Desktop\Licencjat\Server\node_modules\config\lib\config.js:1083:26
+    at Array.forEach (<anonymous>)
+    at Config.util.getCustomEnvVars (C:\Users\Sebas\Desktop\Licencjat\Server\node_modules\config\lib\config.js:1082:16)
+    at Config.util.loadFileConfigs (C:\Users\Sebas\Desktop\Licencjat\Server\node_modules\config\lib\config.js:644:28)
+    at new Config (C:\Users\Sebas\Desktop\Licencjat\Server\node_modules\config\lib\config.js:116:27)
+    at Object.<anonymous> (C:\Users\Sebas\Desktop\Licencjat\Server\node_modules\config\lib\config.js:1441:31)
+    at Module._compile (internal/modules/cjs/loader.js:1157:30)
+    at Object.Module._extensions..js (internal/modules/cjs/loader.js:1177:10)
+    at Module.load (internal/modules/cjs/loader.js:1001:32)
+2020-05-22T23:34:38.696Z [error]: main - uncaughtException: Cannot parse config file: 'C:\Users\Sebas\Desktop\Licencjat\Server\config\custom-environment-variables.json': SyntaxError: Unexpected token l in JSON at position 36
+Error: Cannot parse config file: 'C:\Users\Sebas\Desktop\Licencjat\Server\config\custom-environment-variables.json': SyntaxError: Unexpected token l in JSON at position 36
+    at Config.util.parseFile (C:\Users\Sebas\Desktop\Licencjat\Server\node_modules\config\lib\config.js:794:11)
+    at C:\Users\Sebas\Desktop\Licencjat\Server\node_modules\config\lib\config.js:1083:26
+    at Array.forEach (<anonymous>)
+    at Config.util.getCustomEnvVars (C:\Users\Sebas\Desktop\Licencjat\Server\node_modules\config\lib\config.js:1082:16)
+    at Config.util.loadFileConfigs (C:\Users\Sebas\Desktop\Licencjat\Server\node_modules\config\lib\config.js:644:28)
+    at new Config (C:\Users\Sebas\Desktop\Licencjat\Server\node_modules\config\lib\config.js:116:27)
+    at Object.<anonymous> (C:\Users\Sebas\Desktop\Licencjat\Server\node_modules\config\lib\config.js:1441:31)
+    at Module._compile (internal/modules/cjs/loader.js:1157:30)
+    at Object.Module._extensions..js (internal/modules/cjs/loader.js:1177:10)
+    at Module.load (internal/modules/cjs/loader.js:1001:32)
+2020-05-22T23:34:52.070Z [error]: main - uncaughtException: Cannot parse config file: 'C:\Users\Sebas\Desktop\Licencjat\Server\config\custom-environment-variables.json': SyntaxError: Unexpected token l in JSON at position 36
+Error: Cannot parse config file: 'C:\Users\Sebas\Desktop\Licencjat\Server\config\custom-environment-variables.json': SyntaxError: Unexpected token l in JSON at position 36
+    at Config.util.parseFile (C:\Users\Sebas\Desktop\Licencjat\Server\node_modules\config\lib\config.js:794:11)
+    at C:\Users\Sebas\Desktop\Licencjat\Server\node_modules\config\lib\config.js:1083:26
+    at Array.forEach (<anonymous>)
+    at Config.util.getCustomEnvVars (C:\Users\Sebas\Desktop\Licencjat\Server\node_modules\config\lib\config.js:1082:16)
+    at Config.util.loadFileConfigs (C:\Users\Sebas\Desktop\Licencjat\Server\node_modules\config\lib\config.js:644:28)
+    at new Config (C:\Users\Sebas\Desktop\Licencjat\Server\node_modules\config\lib\config.js:116:27)
+    at Object.<anonymous> (C:\Users\Sebas\Desktop\Licencjat\Server\node_modules\config\lib\config.js:1441:31)
+    at Module._compile (internal/modules/cjs/loader.js:1157:30)
+    at Object.Module._extensions..js (internal/modules/cjs/loader.js:1177:10)
+    at Module.load (internal/modules/cjs/loader.js:1001:32)

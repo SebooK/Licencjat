@@ -62,6 +62,7 @@ export class VehiclesService {
         return this.http.put<any>(url, data, this.httpOptions).pipe(
             tap(res => {
                 console.log('Vehicle edited:' + data);
+                console.log(res)
             }),
             catchError(this.handleError<any>(''))
         )

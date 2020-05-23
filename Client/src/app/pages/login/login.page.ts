@@ -12,7 +12,7 @@ export class LoginPage implements OnInit {
 
   credentialsForm: FormGroup;
 
-  constructor(private formBuilder: FormBuilder, private authService: AuthService, private alertController:AlertController) { }
+  constructor(private formBuilder: FormBuilder, private authService: AuthService) { }
 
   ngOnInit() {
 
@@ -22,7 +22,7 @@ export class LoginPage implements OnInit {
     });
   }
   onSubmit() {
-    this.authService.login(this.credentialsForm.value).subscribe();
+    this.authService.login(this.credentialsForm.value).subscribe( res => console.log(res));
 
   }
 

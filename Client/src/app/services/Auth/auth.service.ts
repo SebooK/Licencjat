@@ -59,10 +59,6 @@ export class AuthService {
                 this.storage.set(TOKEN_KEY, res['JSON-Web-Token']);
                 this.user = this.helper.decodeToken(res['JSON-Web-Token']);
                 this.authenticationState.next(true);
-                console.log(this.user);
-            }),
-            finalize(() => {
-               // this.loadingController.dismiss();
                 this.toastController.create({
                     message: 'log in successfully',
                     duration: 1000,
@@ -71,10 +67,10 @@ export class AuthService {
                 }).then(toast => toast.present());
             }),
             catchError(e => {
-                console.log(e.error);
+                console.log(e);
                 this.showAlert(e.error);
 
-                throw new Error(e);
+                throw new Error(e.error);
             })
         )
     }
@@ -84,8 +80,8 @@ export class AuthService {
             this.authenticationState.next(false);
             return this.toastController.create({
                 message: 'log out successfully',
-                duration: 3000,
-                position: 'top',
+                duration: 1000,
+                position: 'bottom',
                 color: "success"
             }).then(toast => toast.present());
         })
