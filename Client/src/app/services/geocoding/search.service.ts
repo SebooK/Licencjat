@@ -11,7 +11,7 @@ import {environment} from "../../../environments/environment";
 export class SearchService {
 
     url = 'https://api.mapbox.com/geocoding/v5/mapbox.places';
-    routeUrl = 'https://api.mapbox.com/directions/v5/mapbox/driving-traffic/';
+    routeUrl = 'https://api.mapbox.com/directions/v5/mapbox/driving/';
     limit = 'limit=1&';
     private address;
 
@@ -37,13 +37,14 @@ export class SearchService {
     }
 
     getRouteCoordinates(start, end) {
-
+           // console.log(`${this.routeUrl}${start[0]},${start[1]};${end[0]},${end[1]}?geometries=geojson&access_token=${environment.mapBoxAccessToken}`)
         return this.http
-            .get(`${this.routeUrl}${start[0]},${start[1]};${end[0]},${end[1]}?steps=true&geometries=geojson&access_token=${environment.mapBoxAccessToken}`)
+            .get(`${this.routeUrl}${start[0]},${start[1]};${end[0]},${end[1]}?alternatives=true&geometries=geojson&steps=true&access_token=${environment.mapBoxAccessToken}`)
             .pipe(
                 map(res => {
-                    let json = JSON.parse(JSON.stringify(res))
-                    let data = json.routes[0];
+                        console.log(res);
+                    let json = JSON.parse(JSON.stringify(res));
+                    let data = json.routes[1];
                     let route = data.geometry.coordinates;
                     let geojson = {
                         type: 'Feature',
@@ -53,7 +54,7 @@ export class SearchService {
                             coordinates: route
                         }
                     };
-                    console.log(geojson)
+                    console.log(geojson);
                     return geojson
                 }),
                 catchError(this.handleError<any>('getRoute'))

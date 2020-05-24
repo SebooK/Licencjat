@@ -28,7 +28,7 @@ export class AuthService {
                 private loadingController: LoadingService,
                 private toastController: ToastController) {
         this.plt.ready().then(() => {
-            this.checkToken();
+           this.checkToken();
         });
     }
 
@@ -56,9 +56,11 @@ export class AuthService {
        // this.loadingController.present();
         return this.http.post(`${this.url}/api/login`, credentials).pipe(
             tap(res => {
+
                 this.storage.set(TOKEN_KEY, res['JSON-Web-Token']);
                 this.user = this.helper.decodeToken(res['JSON-Web-Token']);
                 this.authenticationState.next(true);
+                console.log(this.user);
                 this.toastController.create({
                     message: 'log in successfully',
                     duration: 1000,
@@ -68,9 +70,9 @@ export class AuthService {
             }),
             catchError(e => {
                 console.log(e);
-                this.showAlert(e.error);
+                this.showAlert(e);
 
-                throw new Error(e.error);
+                throw new Error(e);
             })
         )
     }

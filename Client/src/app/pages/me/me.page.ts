@@ -16,14 +16,14 @@ export class MePage implements OnInit {
                 private navParams: NavParams,
                 private toastController: ToastController) {
     }
-
+n
     ngOnInit() {
         this.getData();
         console.log(this.me);
     }
 
     getData() {
-        this.me = this.navParams.get('user')
+        this.me = this.navParams.get('user');
     }
 
     close() {
