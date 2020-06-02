@@ -38,7 +38,7 @@ router.put('/api/customer/:id',customerController.update);
 router.delete('/api/customers/:id',customerController.delete);
 
 /* Vehicles Router */
-router.get('/api/vehicles/:page',vehicleController.list);
+router.get('/api/vehicles/:page',auth,vehicleController.list);
 router.get('/api/vehicle/:id',vehicleController.getById);
 router.post('/api/vehicles',vehicleController.add);
 router.put('/api/vehicle/:id',vehicleController.update);

@@ -42,6 +42,7 @@ const routes: Routes = [
   {
     path: 'me',
     loadChildren: () => import('./pages/me/me.module').then( m => m.MePageModule),
+
   },
 
 ];

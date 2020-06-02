@@ -25,7 +25,7 @@ export class WorkersService {
         private toastController: ToastController,
         private auth:AuthService) { }
 
-    getMe(id): Observable<Worker> {
+    getMe(): Observable<Worker> {
         return this.http.get<Worker>(`${this.workersUrl}/me`).pipe(
             tap( res => console.log(res)),
             catchError(this.handleError<Worker>('GetMe'))

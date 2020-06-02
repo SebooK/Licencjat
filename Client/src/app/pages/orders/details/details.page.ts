@@ -9,6 +9,7 @@ import {OrdersService} from "../../../services/Orders/orders.service";
 
 import {SearchService} from "../../../services/geocoding/search.service";
 import {MapPage} from "./map/map.page";
+import {VehiclesService} from "../../../services/Vehicles/vehicles.service";
 
 @Component({
     selector: 'app-details',
@@ -20,7 +21,7 @@ export class DetailsPage implements OnInit {
     private details: Order;
     private start;
     private end;
-    private route;
+    private vehicle;
     constructor(private http: HttpClient,
                 private alertController: AlertController,
                 private ordersServices: OrdersService,
@@ -28,14 +29,16 @@ export class DetailsPage implements OnInit {
                 private activatedRoute: ActivatedRoute,
                 private modalController: ModalController,
                 private loading: LoadingService,
-                private search: SearchService) {
+                private search: SearchService,
+                private vehicleService: VehiclesService) {
     }
 
     ngOnInit() {
         console.log(this.activatedRoute.snapshot.data['orderDetails']);
         this.details = this.activatedRoute.snapshot.data['orderDetails'];
-        this.search.forwardGeocode(this.details.loadingPlace).subscribe( res => this.start = res );
+        this.search.forwardGeocode(this.details.loadingPlace).subscribe( res => this.start = res);
         this.search.forwardGeocode(this.details.unloadingPlace).subscribe(res => this.end = res);
+        this.vehicleService.getVehicle(this.details.vehicle).subscribe(res =>this.vehicle = res);
     }
 
 
@@ -66,7 +69,7 @@ export class DetailsPage implements OnInit {
     async showRoute() {
         const modal = await this.modalController.create({
             component: MapPage,
-            componentProps: {unloadingPlace: this.start, loadingPlace: this.end},
+            componentProps: {unloadingPlace: this.start, loadingPlace: this.end, vehicle:this.vehicle},
 
         });
         modal.onDidDismiss().then( () => this.displayOrderDetails());

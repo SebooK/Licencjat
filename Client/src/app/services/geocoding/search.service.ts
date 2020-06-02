@@ -37,7 +37,6 @@ export class SearchService {
     }
 
     getRouteCoordinates(start, end) {
-           // console.log(`${this.routeUrl}${start[0]},${start[1]};${end[0]},${end[1]}?geometries=geojson&access_token=${environment.mapBoxAccessToken}`)
         return this.http
             .get(`${this.routeUrl}${start[0]},${start[1]};${end[0]},${end[1]}?alternatives=true&geometries=geojson&steps=true&access_token=${environment.mapBoxAccessToken}`)
             .pipe(

@@ -6,8 +6,10 @@ const express = require('express'),
     cors = require('cors'),
     bodyParser = require('body-parser'),
     error = require('./middleware/error.js'),
-    config = require('config');
+    config = require('config'),
+    jwt = require('jsonwebtoken');
 require('./startup/config');
+
 
 const indexRouter = require('./routes/index');
 const app = express();
@@ -44,6 +46,7 @@ app.use(function (err, req, res, next) {
         next();
     } else {
         res.redirect('https://' + req.headers.host + req.url);
+        console.log(res.redirect('https://' + req.headers.host + req.url))
     }
     res.locals.message = err.message;
     res.locals.error = req.app.get('env') === 'development' ? err : {};

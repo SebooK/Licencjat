@@ -1,7 +1,6 @@
-'use strict';
 const bcrypt = require('bcrypt');
 const jwt = require('jsonwebtoken');
-const config = require('config');
+const config = require('../config/custom-environment-variables.json');
 module.exports = (sequelize, DataTypes) => {
   const Worker = sequelize.define('Worker', {
     id: { type: DataTypes.INTEGER, primaryKey:true, autoIncrement:true, allowNull:false},
@@ -9,9 +8,6 @@ module.exports = (sequelize, DataTypes) => {
       type:DataTypes.STRING,
       unique:true,
       allowNull:false,
-      validate: {
-
-      }
     },
     password: {
       type:DataTypes.STRING,
@@ -70,7 +66,8 @@ module.exports = (sequelize, DataTypes) => {
     });
   };
   Worker.prototype.generateAuthToken = function () {
-    const token = jwt.sign({ id: this.id, role:this.role}, config.get('jwtPrivateKey'));
+    const token = jwt.sign({ id: this.id, role:this.role}, config.jwtPrivateKey);
+    console.log(token);
     return token;
   };
   return Worker;

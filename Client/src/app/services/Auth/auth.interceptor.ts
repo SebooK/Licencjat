@@ -1,4 +1,4 @@
-import { Injectable } from '@angular/core';
+import {Injectable} from '@angular/core';
 import {
     HttpRequest,
     HttpHandler,
@@ -6,15 +6,36 @@ import {
     HttpInterceptor
 } from '@angular/common/http';
 import {AuthService} from "./auth.service";
-import {Observable} from "rxjs";
+import {Observable, from} from "rxjs";
+import {mergeMap} from "rxjs/operators";
 
 @Injectable()
-export class AuthInterceptor implements HttpInterceptor {  constructor(public auth: AuthService) {}  intercept(request: HttpRequest<any>, next: HttpHandler): Observable<HttpEvent<any>> {
+export class AuthInterceptor implements HttpInterceptor {
+    constructor(public auth: AuthService) {
+    }
 
-    request = request.clone({
-        setHeaders: {
-            'x-auth-token':`Bearer ${this.auth.getToken()}`
-        }
-    });    return next.handle(request);
+    intercept(request: HttpRequest<any>, next: HttpHandler): Observable<HttpEvent<any>> {
+
+        request = request.clone({
+            setHeaders: {
+                Authorization:`${this.auth.getToken()}`
+            }
+        });
+        return next.handle(request);
+
+/*
+            return from(this.auth.getToken()).pipe(
+                mergeMap( (val) => {
+                    request = request.clone({
+                        setHeaders: {
+                            'Authorization':`${val}`
+                        }
+                });
+                    return next.handle(request);
+            }))
+ */
+    }
+
+
 }
-}
+

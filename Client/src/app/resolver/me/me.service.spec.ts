@@ -1,6 +1,6 @@
 import { TestBed } from '@angular/core/testing';
 
-import { MeResolverService } from './me.service';
+import { MeResolverService } from './me-resolver.service';
 
 describe('MeService', () => {
   beforeEach(() => TestBed.configureTestingModule({}));

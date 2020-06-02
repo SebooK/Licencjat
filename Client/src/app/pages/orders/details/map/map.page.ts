@@ -17,8 +17,9 @@ export class MapPage implements OnInit {
     directions;
     startCoordinates: any[];
     endCoordinates: any[];
+    vehiclePosition: number[];
+    vehicle;
     private map;
-    private geo;
     private loading: boolean = false;
     constructor(private navParams: NavParams,
                 private modalController: ModalController,
@@ -30,12 +31,13 @@ export class MapPage implements OnInit {
     ngOnInit() {
         this.hasData();
         this.getData();
+        this.vehicle = this.vehicle.localization;
+        this.getVehiclePosition()
     }
 
     ionViewDidEnter() {
         mapboxgl.accessToken = environment.mapBoxAccessToken;
-       // this.getRoute();
-        this.initMap()
+        this.initMap();
     }
     close() {
         this.modalController.dismiss();
@@ -44,9 +46,8 @@ export class MapPage implements OnInit {
     hasData() {
         this.startPosition = this.navParams.get('loadingPlace');
         this.endPosition = this.navParams.get('unloadingPlace');
-        if ((this.startPosition || this.endPosition) === undefined) {
-            return false
-        } else return true
+        this.vehicle = this.navParams.get('vehicle');
+        return (this.startPosition || this.endPosition || this.vehiclePosition) !== undefined;
     }
 
     getData() {
@@ -56,10 +57,7 @@ export class MapPage implements OnInit {
     }
 
     getRoute() {
-        return this.searchService.getRouteCoordinates(this.startCoordinates, this.endCoordinates).subscribe( res => {
-            //console.log(res);
-        });
-
+        return this.searchService.getRouteCoordinates(this.startCoordinates, this.endCoordinates).subscribe();
     }
 
     setDirection() {
@@ -72,6 +70,11 @@ export class MapPage implements OnInit {
         this.map.fitBounds(bounds, {padding:100, duration:1000})
     }
 
+    getVehiclePosition() {
+        this.vehiclePosition = Array.from(this.vehicle.split(' '), Number)
+        console.log(this.vehiclePosition)
+    }
+
     initMap() {
 
         this.map = new mapboxgl.Map({
@@ -81,6 +84,10 @@ export class MapPage implements OnInit {
             minZoom: 7.5, //restrict map zoom - buildings not visible beyond 13
             container: 'map'
         });
+
+        const marker = new mapboxgl.Marker()
+            .setLngLat([this.vehiclePosition[1],this.vehiclePosition[0]])
+            .addTo(this.map);
 
 
         this.map.addControl(new mapboxgl.GeolocateControl({

@@ -48,8 +48,8 @@ export class AuthService {
         });
     }
 
-    getToken() {
-        return this.storage.get(TOKEN_KEY);
+    getToken() : string {
+        return localStorage.getItem(TOKEN_KEY)
     }
 
     login(credentials) {
@@ -57,7 +57,7 @@ export class AuthService {
         return this.http.post(`${this.url}/api/login`, credentials).pipe(
             tap(res => {
 
-                this.storage.set(TOKEN_KEY, res['JSON-Web-Token']);
+                localStorage.setItem(TOKEN_KEY, res['JSON-Web-Token']);
                 this.user = this.helper.decodeToken(res['JSON-Web-Token']);
                 this.authenticationState.next(true);
                 console.log(this.user);

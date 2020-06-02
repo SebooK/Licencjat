@@ -7,6 +7,7 @@ const options = {
     offset: 0,
     limit: 15
 };
+
 module.exports = {
     list(req, res) {
         return Worker
@@ -67,7 +68,7 @@ module.exports = {
         });
         let username = await Worker.findOne({
             where: {username: req.body.username}
-        })
+        });
         if (user || username) {
             return res.status(400).json({errors: 'Worker already registered with this username or email'})
         } else {
@@ -87,7 +88,7 @@ module.exports = {
                         .send(_.pick(worker, ['username', 'email', 'password']))
                 })
                 .catch((error) => {
-                    res.status(400).send(error)
+                    res.status(400).send(error);
                     console.log(error);
                 });
         }
@@ -186,5 +187,4 @@ module.exports = {
 
             })
     }
-
 };

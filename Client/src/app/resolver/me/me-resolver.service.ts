@@ -13,8 +13,7 @@ export class MeResolverService implements Resolve<Worker> {
     }
 
     resolve(route: ActivatedRouteSnapshot) {
-      let id = route.paramMap.get('id');
-      return this.workersService.getMe(id);
+      return this.workersService.getMe();
 
     }
 }
