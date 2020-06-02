@@ -45,7 +45,6 @@ export class VehiclesPage implements OnInit {
     }
 
     displayMore(event) {
-        console.log(event);
         this.page++;
         this.displayVehicles(event);
 
@@ -80,7 +79,8 @@ export class VehiclesPage implements OnInit {
                 }
             }]
         });
-        await alert.present();
+        alert.onDidDismiss().then(() => this.displayMore(event));
+        return await alert.present();
     }
 
 }

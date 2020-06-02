@@ -39,10 +39,8 @@ export class DetailsPage implements OnInit {
         this.vehiclesService.getVehicle(id).subscribe(result => {
             this.details = result;
             console.log(this.details);
-            this.loading.dismiss();
         }, error => {
             console.log(error);
-            this.loading.dismiss();
         });
     }
 
@@ -53,7 +51,7 @@ export class DetailsPage implements OnInit {
             componentProps: this.details
 
         });
-        modal.onDidDismiss().then(res => this.displayVehicleDetails());
+        modal.onDidDismiss().then( () => this.displayVehicleDetails());
         return await modal.present();
     }
 

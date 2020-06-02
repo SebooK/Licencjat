@@ -86,7 +86,8 @@ export class WorkersPage implements OnInit {
                     }
                 }]
         });
+        alert.onDidDismiss().then( () => this.displayWorkers());
 
-        await alert.present();
+        return await alert.present();
     }
 }

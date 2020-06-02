@@ -17,10 +17,8 @@ export class VehicleResolverService implements Resolve<Vehicle> {
     resolve(route: ActivatedRouteSnapshot) {
         let id = route.paramMap.get('id');
 
-        this.loadingController.present();
-        return this.vehiclesService.getVehicle(id).pipe(
-            tap(),
-            finalize(() => this.loadingController.dismiss()))
+
+        return this.vehiclesService.getVehicle(id)
 
     }
 }

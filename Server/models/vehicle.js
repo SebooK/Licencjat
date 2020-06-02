@@ -2,13 +2,13 @@
 module.exports = (sequelize, DataTypes) => {
   const Vehicle = sequelize.define('Vehicle', {
     id: { type: DataTypes.INTEGER, primaryKey: true, autoIncrement: true, allowNull: false },
-    registrationNumber: DataTypes.STRING,
-    vehicleNumber: DataTypes.STRING,
-    vehicleType: DataTypes.STRING,
+    registrationNumber: {type:DataTypes.STRING, allowNull:false, trim:true},
+    vehicleNumber:{type:DataTypes.STRING, allowNull:false, trim:true},
+    vehicleType: {type:DataTypes.STRING, allowNull:false, trim:true},
     localization: DataTypes.STRING,
-    workerId: DataTypes.INTEGER,
-    semiTrailerId:DataTypes.INTEGER
-  }, {});
+    workerId: {type: DataTypes.INTEGER, allowNull:false},
+    semiTrailerId:{type:DataTypes.INTEGER, allowNull: false}
+    },{});
   Vehicle.associate = function(models) {
     Vehicle.belongsTo(models.SemiTrailer, {
       foreignKey: 'semiTrailerId',

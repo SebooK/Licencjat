@@ -57,7 +57,9 @@ module.exports = {
                 semiTrailerType: req.body.semiTrailerType
             })
             .then((semiTrailer) => res.status(201).send(semiTrailer))
-            .catch((error) => res.status(400).send(error));
+            .catch((error) => res.status(400).send(
+                error.message
+            ));
     },
 
     update(req, res) {
@@ -76,7 +78,8 @@ module.exports = {
                 }
                 return semiTrailer
                     .update({
-                        registrationNumber: req.body.registrationNumber
+                        registrationNumber: req.body.registrationNumber,
+                        semiTrailerType: req.body.semiTrailerType
                     })
                     .then(() => res.status(200).send(semiTrailer))
                     .catch((error) => res.status(400).send(error))

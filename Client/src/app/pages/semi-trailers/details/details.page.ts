@@ -34,10 +34,8 @@ export class DetailsPage implements OnInit {
     this.semiTrailerService.getSemiTrailer(id).subscribe(result => {
       this.details = result;
       console.log(this.details);
-      this.loading.dismiss();
     }, error => {
       console.log(error);
-      this.loading.dismiss();
     });
   }
 

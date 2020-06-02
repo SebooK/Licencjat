@@ -72,7 +72,7 @@ module.exports = {
                 vehicleType: req.body.vehicleType,
                 localization: req.body.localization,
                 workerId: req.body.workerId,
-                SemiTrailerId: req.body.semiTrailerId
+                semiTrailerId: req.body.semiTrailerId
             })
             .then((vehicle) => res.status(201).send(vehicle))
             .catch((error) => res.status(400).send(error));
@@ -95,6 +95,7 @@ module.exports = {
                         vehicleType: req.body.vehicleType,
                         localization: req.body.localization,
                         workerId: req.body.workerId,
+                        semiTrailerId: req.body.semiTrailerId
                     })
                     .then(() => res.status(200).send(vehicle))
                     .catch((error) => {

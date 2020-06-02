@@ -72,6 +72,7 @@ export class SemiTrailersPage implements OnInit {
                 }
             }]
         });
+        alert.onDidDismiss().then( () => this.displayMore(event));
         await alert.present();
     }
 }
