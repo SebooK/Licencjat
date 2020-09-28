@@ -41,7 +41,7 @@ export class SearchService {
             .get(`${this.routeUrl}${start[0]},${start[1]};${end[0]},${end[1]}?alternatives=true&geometries=geojson&steps=true&access_token=${environment.mapBoxAccessToken}`)
             .pipe(
                 map(res => {
-                        console.log(res);
+                    console.log(res);
                     let json = JSON.parse(JSON.stringify(res));
                     let data = json.routes[1];
                     let route = data.geometry.coordinates;

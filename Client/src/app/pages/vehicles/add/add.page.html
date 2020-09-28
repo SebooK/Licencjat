@@ -11,6 +11,13 @@
 
 <ion-content padding>
     <form [formGroup]="vehicleForm" (ngSubmit)="onSubmit()">
+        <ion-select placeholder="Kierowca" formControlName="workerId">
+            <ion-select-option *ngFor="let worker of workers | filterBy: ['role']: 0"
+                               value="{{worker.id}}">{{worker.firstname}}</ion-select-option>
+        </ion-select>
+        <ion-select placeholder="Przyczepa" formControlName="semiTrailerId">
+            <ion-select-option *ngFor="let semi of semiTrailers" value="{{semi.id}}">{{semi.registrationNumber}}</ion-select-option>
+        </ion-select>
         <ion-item>
             <ion-label position="floating">Numer rejestracji</ion-label>
             <ion-input type="text" formControlName="registrationNumber"></ion-input>
@@ -27,12 +34,6 @@
             <ion-label position="floating">Lokalizacja</ion-label>
             <ion-input type="text" formControlName="localization"></ion-input>
         </ion-item>
-
-        <ion-select placeholder="Kierowca" formControlName="workerId">
-            <ion-select-option *ngFor="let worker of workers | filterBy: ['role']: 0"
-                               value="{{worker.id}}">{{worker.firstname}}</ion-select-option>
-        </ion-select>
-
         <ion-button expand="full" type="submit"
                     [disabled]="!vehicleForm.valid">{{ hasData() == true ? 'Edit' : 'Add'}}</ion-button>
     </form>

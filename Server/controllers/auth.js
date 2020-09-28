@@ -16,7 +16,7 @@ module.exports = {
         const validPassword = await bcrypt.compare(req.body.password, user.password);
         if (!validPassword) return res.status(400).send('Invalid password');
         const token = user.generateAuthToken();
-        console.log(token)
+        console.log(token);
         res.json({"JSON-Web-Token": token});
         next();
     }

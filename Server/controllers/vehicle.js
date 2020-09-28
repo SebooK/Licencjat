@@ -32,12 +32,11 @@ module.exports = {
                     })
                     .then((vehicles) => res.status(200).send({'result': vehicles, 'count': data.count, 'pages': pages}))
                     .catch((error) => {
-                        res.status(400).send(error)
+                        res.status(400).send(error);
                         console.log(error);
                     })
             })
             .catch(error => res.status(500).send(error));
-
     },
 
     getById(req, res) {

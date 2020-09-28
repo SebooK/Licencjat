@@ -36,7 +36,7 @@ export class VehiclesService {
     getVehicle(id): Observable<Vehicle> {
         const url = `${this.url}/api/vehicle/${id}`;
         return this.http.get<Vehicle>(url).pipe(
-            map(res => Object.assign(new Vehicle(),res)),  // res => res.map(data => new Vehicle().deserializable(data) <- tak bylo w poradniku ale nie działa
+            map(res => Object.assign(new Vehicle(),res)),
             catchError(this.handleError<Vehicle>(`Get Vehicle id=${id}`))
         )
     }

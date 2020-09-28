@@ -4,6 +4,8 @@ import {Form, FormBuilder, FormGroup, Validators} from "@angular/forms";
 import {VehiclesService} from "../../../services/Vehicles/vehicles.service";
 import {WorkersService} from "../../../services/Workers/workers.service";
 import {Worker} from "../../../models/worker.model";
+import {SemiTrailerService} from "../../../services/semiTrailers/semi-trailer.service";
+import {SemiTrailer} from "../../../models/semiTrailers.model";
 
 
 @Component({
@@ -14,6 +16,7 @@ import {Worker} from "../../../models/worker.model";
 export class AddPage implements OnInit {
     vehicleForm: FormGroup;
     workers: Worker[];
+    semiTrailers: SemiTrailer[];
     page = 1;
     details: {
         registrationNumber: string,
@@ -29,7 +32,7 @@ export class AddPage implements OnInit {
                 private vehiclesService: VehiclesService,
                 private workersService: WorkersService,
                 private navParams: NavParams,
-                private toastController: ToastController) {
+                private semiTrailerService:SemiTrailerService) {
     }
 
     ngOnInit() {
@@ -40,6 +43,7 @@ export class AddPage implements OnInit {
         }
 
         this.getWorkerData();
+        this.getSemiTrailerData();
     }
 
     hasData() {
@@ -64,7 +68,8 @@ export class AddPage implements OnInit {
             vehicleNumber: [``, Validators.required],
             vehicleType: [``, Validators.required],
             localization: [``, Validators.required],
-            workerId: [``, Validators.required]
+            workerId: [``, Validators.required],
+            semiTrailerId: [``,Validators.required]
         })
     }
 
@@ -106,5 +111,11 @@ export class AddPage implements OnInit {
             .subscribe(result => {
                 this.workers = result
             });
+    }
+    getSemiTrailerData() {
+        this.semiTrailerService.getSemiTrailers(this.page)
+            .subscribe(result => {
+                this.semiTrailers = result
+            })
     }
 }

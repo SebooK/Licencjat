@@ -29,6 +29,7 @@ declare var window;
 export class HomePage implements OnInit {
     arr: any;
     locations: any;
+    isTracking: boolean = false;
     config: BackgroundGeolocationConfig = {
         desiredAccuracy: 10,
         stationaryRadius: 20,
@@ -39,6 +40,7 @@ export class HomePage implements OnInit {
         notificationTitle: 'Background tracking',
         notificationText: 'enabled'
     };
+
     constructor(private authService: AuthService,
                 private storage: Storage,
                 private route: Router,
@@ -48,7 +50,7 @@ export class HomePage implements OnInit {
                 private modalController: ModalController,
                 private toastController: ToastController,
                 private  backgroundGeolocation: BackgroundGeolocation,
-                private locationTracker:LocationTrackerService) {
+                private locationTracker: LocationTrackerService) {
         this.locations = [];
         this.arr = [];
     }
@@ -58,8 +60,6 @@ export class HomePage implements OnInit {
     ngOnInit() {
         this.user = this.activatedRoute.snapshot.data['user'];
         console.log(this.user.id)
-
-
     }
 
     logout() {
@@ -87,21 +87,23 @@ export class HomePage implements OnInit {
     }
 
     aboutMe() {
-        const modal =this.modalController.create({
+        const modal = this.modalController.create({
             component: MePage,
             componentProps: {
                 user: this.user
             }
-        }).then( me => me.present());
+        }).then(me => me.present());
 
     }
 
     start() {
         console.log(this.user.vehicle.id);
         this.locationTracker.startTracking(this.user.vehicle.id);
-
+        this.isTracking =true
     }
+
     stop() {
         this.locationTracker.stopTracking();
+        this.isTracking = false
     }
 }

@@ -21,6 +21,7 @@ export class MapPage implements OnInit {
     vehicle;
     private map;
     private loading: boolean = false;
+
     constructor(private navParams: NavParams,
                 private modalController: ModalController,
                 private searchService: SearchService,
@@ -39,6 +40,7 @@ export class MapPage implements OnInit {
         mapboxgl.accessToken = environment.mapBoxAccessToken;
         this.initMap();
     }
+
     close() {
         this.modalController.dismiss();
     }
@@ -47,13 +49,14 @@ export class MapPage implements OnInit {
         this.startPosition = this.navParams.get('loadingPlace');
         this.endPosition = this.navParams.get('unloadingPlace');
         this.vehicle = this.navParams.get('vehicle');
+        console.log(this.vehicle);
         return (this.startPosition || this.endPosition || this.vehiclePosition) !== undefined;
     }
 
     getData() {
         this.startCoordinates = this.startPosition['center'];
         this.endCoordinates = this.endPosition['center'];
-        console.log(this.startCoordinates,this.endCoordinates)
+        console.log(this.startCoordinates, this.endCoordinates)
     }
 
     getRoute() {
@@ -61,13 +64,13 @@ export class MapPage implements OnInit {
     }
 
     setDirection() {
-        this.directions.setOrigin([this.startCoordinates[0],this.startCoordinates[1]]);
+        this.directions.setOrigin([this.startCoordinates[0], this.startCoordinates[1]]);
 
         let bounds = new mapboxgl.LngLatBounds();
         bounds.extend(this.startCoordinates);
         bounds.extend(this.endCoordinates);
         this.directions.setDestination(this.endCoordinates);
-        this.map.fitBounds(bounds, {padding:100, duration:1000})
+        this.map.fitBounds(bounds, {padding: 100, duration: 1000})
     }
 
     getVehiclePosition() {
@@ -86,7 +89,7 @@ export class MapPage implements OnInit {
         });
 
         const marker = new mapboxgl.Marker()
-            .setLngLat([this.vehiclePosition[1],this.vehiclePosition[0]])
+            .setLngLat([this.vehiclePosition[1], this.vehiclePosition[0]])
             .addTo(this.map);
 
 
@@ -98,11 +101,11 @@ export class MapPage implements OnInit {
             showUserLocation: true
         }));
 
-        this.directions = new MapboxDirections ({
+        this.directions = new MapboxDirections({
             accessToken: mapboxgl.accessToken,
             unit: 'metric',
             profile: 'mapbox/driving',
-            alternatives:true,
+            alternatives: true,
             annotations: true,
             interactive: false,
             controls: {
@@ -113,7 +116,7 @@ export class MapPage implements OnInit {
         });
         this.map.addControl(this.directions);
         this.map.addControl(new mapboxgl.NavigationControl());
-                let self = this;
+        let self = this;
         this.map.on("load", function () {
             self.map.setLayoutProperty('country-label', 'text-field', [
                 'format',
@@ -132,108 +135,6 @@ export class MapPage implements OnInit {
             ]);
             self.setDirection();
         });
-
-        /*
-        this.startPosition = new MapboxDirections({
-            accessToken: mapboxgl.accessToken,
-            unit: 'metric',
-            profile: 'mapbox/driving-traffic',
-            interactive: 'false',
-            controls: {
-                inputs: false,
-                instructions: false,
-                profileSwitcher: false
-            }
-        });
-
-        let self = this;
-        this.map.on("load", function () {
-            self.map.setLayoutProperty('country-label', 'text-field', [
-                'format',
-                ['get', 'name_en'],
-                {'font-scale': 1.2},
-                '\n',
-                {},
-                ['get', 'name'],
-                {
-                    'font-scale': 0.8,
-                    'text-font': [
-                        'literal',
-                        ['DIN Offc Pro Italic', 'Arial Unicode MS Regular']
-                    ]
-                }
-            ]);
-            self.map.addLayer({
-                id: 'start',
-                type: 'circle',
-                source: {
-                    type: 'geojson',
-                    data: {
-                        type: 'FeatureCollection',
-                        features: [{
-                            type: 'Feature',
-                            properties: {},
-                            geometry: {
-                                type: 'Point',
-                                coordinates: self.startCoordinates
-                            }
-                        }
-                        ]
-                    }
-                },
-                paint: {
-                    'circle-radius': 10,
-                    'circle-color': '#3887be'
-                }
-            });
-            self.map.addLayer({
-                id: 'end',
-                type: 'circle',
-                source: {
-                    type: 'geojson',
-                    data: {
-                        type: 'FeatureCollection',
-                        features: [{
-                            type: 'Feature',
-                            properties: {},
-                            geometry: {
-                                type: 'Point',
-                                coordinates: self.endCoordinates
-                            }
-                        }
-                        ]
-                    }
-                },
-                paint: {
-                    'circle-radius': 10,
-                    'circle-color': '#f30'
-                }
-            });
-            self.map.addLayer({
-                id: 'route',
-                type: 'line',
-                source: {
-                    type: 'geojson',
-                    data: {
-                        type: 'Feature',
-                        properties: {},
-                        geometry: {
-                            type: 'LineString',
-                            coordinates: self.geo.geometry.coordinates
-                        }
-                    }
-                },
-                layout: {
-                    'line-join': 'round',
-                    'line-cap': 'round'
-                },
-                paint: {
-                    'line-color': '#3887be',
-                    'line-width': 5,
-                    'line-opacity': 0.75
-                }
-            });
-        });
-*/
+        
     }
 }

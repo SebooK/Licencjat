@@ -13,10 +13,8 @@ export class MePage implements OnInit {
 
     constructor(private modalController: ModalController,
                 private formBuilder: FormBuilder,
-                private navParams: NavParams,
-                private toastController: ToastController) {
+                private navParams: NavParams) {
     }
-n
     ngOnInit() {
         this.getData();
         console.log(this.me);

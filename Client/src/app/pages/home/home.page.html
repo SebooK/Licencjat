@@ -1,28 +1,39 @@
 <ion-header>
-  <ion-toolbar color="primary">
-    <ion-title>Witaj </ion-title>
-    <ion-button slot="end" size="default" shape="round" expand="full" class="me-details" (click)="aboutMe()">
-      <ion-icon name="person-outline"></ion-icon> {{user.firstname}} {{user.lastname}}
-    </ion-button>
-  </ion-toolbar>
+    <ion-toolbar color="primary">
+        <ion-button slot='start' size="default" shape="round" class="me-details" (click)="aboutMe()">
+            <ion-icon name="person-outline"></ion-icon>
+            Witaj {{user.firstname}} {{user.lastname}}
+        </ion-button>
+        <ion-button slot='end' expand="full" shape="round" (click)="logout()">
+            <ion-icon name="log-out-outline"></ion-icon>
+        </ion-button>
+    </ion-toolbar>
 
 </ion-header>
 
 <ion-content padding>
-  <ion-button expand="full" (click)="workersPage()">Workers</ion-button>
-  <ion-button expand="full" (click)="vehiclePage()">Vehicle</ion-button>
-  <ion-button expand="full" (click)="semiTrailerPage()">SemiTrailers</ion-button>
-  <ion-button expand="full" (click)="ordersPage()">Orders</ion-button>
-  <ion-button expand="full" (click)="customersPage()">Customers</ion-button>
-  <ion-button expand="full" (click)="logout()">Logout</ion-button>
-  <ion-button expand="full" (click)="start()">StartTracking</ion-button>
-  <ion-button expand="full" (click)="stop()" color="danger" >StopTracking</ion-button>
-  <ion-list>
-    <ion-item>
-      <ion-label>Latitude: {{locationTracker.lat}}</ion-label>
-    </ion-item>
-    <ion-item>
-      <ion-label>Longitude: {{locationTracker.lng}}</ion-label>
-    </ion-item>
-  </ion-list>
+    <div *ngIf="user.role ==1">
+        <ion-button expand="full" (click)="workersPage()">Workers</ion-button>
+        <ion-button expand="full" (click)="vehiclePage()">Vehicle</ion-button>
+        <ion-button expand="full" (click)="semiTrailerPage()">SemiTrailers</ion-button>
+        <ion-button expand="full" (click)="customersPage()">Customers</ion-button>
+    </div>
+    <div>
+        <ion-button expand="full" (click)="ordersPage()">Orders</ion-button>
+    </div>
+    <div *ngIf="user.role ==0">
+        <ion-button expand="full" (click)="start()" [disabled]="isTracking == true">StartTracking</ion-button>
+        <ion-button expand="full" (click)="stop()" [disabled]="isTracking == false" color="danger">StopTracking
+        </ion-button>
+        <ion-list>
+            <ion-item>
+                <ion-label>Latitude: {{locationTracker.lat}}</ion-label>
+            </ion-item>
+            <ion-item>
+                <ion-label>Longitude: {{locationTracker.lng}}</ion-label>
+            </ion-item>
+        </ion-list>
+    </div>
+
+
 </ion-content>
