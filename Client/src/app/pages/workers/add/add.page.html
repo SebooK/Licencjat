@@ -1,0 +1,49 @@
+<ion-header>
+    <ion-toolbar color="primary">
+        <ion-buttons slot="start">
+            <ion-button (click)="closeModal()" color="light">
+                <ion-icon name="close-outline"></ion-icon>
+            </ion-button>
+        </ion-buttons>
+        <ion-title>{{hasData() == true ? 'Edycja' : 'Dodaj'}} pracownika</ion-title>
+    </ion-toolbar>
+</ion-header>
+
+<ion-content padding>
+    <form [formGroup]="workersForm" (ngSubmit)="onSubmit()">
+        <ion-item>
+            <ion-label position="floating">Username</ion-label>
+            <ion-input type="text" formControlName="username"></ion-input>
+        </ion-item>
+
+        <ion-item>
+            <ion-label position="floating">Password</ion-label>
+            <ion-input type="password" formControlName="password"></ion-input>
+        </ion-item>
+        <ion-item>
+            <ion-label position="floating">Email</ion-label>
+            <ion-input type="email" formControlName="email"></ion-input>
+        </ion-item>
+        <ion-item>
+            <ion-label position="floating">Firstname</ion-label>
+            <ion-input type="text" formControlName="firstname"></ion-input>
+        </ion-item>
+        <ion-item>
+            <ion-label position="floating">Lastname</ion-label>
+            <ion-input type="text" formControlName="lastname"></ion-input>
+        </ion-item>
+
+        <ion-item>
+            <ion-label>
+                Worker Type
+            </ion-label>
+            <ion-select placeholder="Select One" formControlName="role">
+                <ion-select-option value="0">Kierowca</ion-select-option>
+                <ion-select-option value="1">Spedytor</ion-select-option>
+            </ion-select>
+        </ion-item>
+
+        <ion-button expand="full" type="submit"
+                    [disabled]="!workersForm.valid">{{ hasData() == true ? 'Edit' : 'Add'}}</ion-button>
+    </form>
+</ion-content>

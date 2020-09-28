@@ -1,0 +1,54 @@
+<ion-header>
+    <ion-toolbar color="primary">
+        <ion-buttons slot="end">
+            <ion-button (click)="closeModal()">
+                <ion-icon name="close-outline"></ion-icon>
+            </ion-button>
+        </ion-buttons>
+        <ion-title>{{hasData() == true ? 'Edytuj' : 'Dodaj'}} Zlecenie</ion-title>
+    </ion-toolbar>
+</ion-header>
+
+<ion-content padding>
+    <form [formGroup]="ordersForm" (ngSubmit)="onSubmit()">
+        <ion-item>
+            <ion-select placeholder="Pracownik" formControlName="workerId">
+                <ion-select-option *ngFor="let worker of workers | filterBy: ['role']:0"
+                                   value="{{worker.id}}">{{worker.firstname}} {{worker.lastname}}
+                </ion-select-option>
+            </ion-select>
+        </ion-item>
+
+        <ion-item>
+            <ion-select placeholder="Klient" formControlName="customerId">
+                <ion-select-option *ngFor="let customer of customers" value="{{customer.id}}">{{customer.companyName}}
+                </ion-select-option>
+            </ion-select>
+        </ion-item>
+
+        <ion-item>
+            <ion-label position="floating">Numer zlecenia</ion-label>
+            <ion-input type="text" formControlName="orderNumber"></ion-input>
+        </ion-item>
+        <ion-item>
+            <ion-label position="floating">Ładunek</ion-label>
+            <ion-input type="text" formControlName="cargo"></ion-input>
+        </ion-item>
+        <ion-item>
+            <ion-label position="floating">Pojazd</ion-label>
+            <ion-input type="text" [disabled] formControlName="vehicle"></ion-input>
+        </ion-item>
+        <ion-item>
+            <ion-label position="floating">Miejsce załadunku</ion-label>
+            <ion-input type="text" formControlName="loadingPlace" ></ion-input>
+
+        </ion-item>
+        <ion-item>
+            <ion-label position="floating">Miejsce rozładunku</ion-label>
+            <ion-input type="text" formControlName="unloadingPlace"></ion-input>
+        </ion-item>
+
+        <ion-button expand="full" type="submit"
+                    [disabled]="!ordersForm.valid">{{ hasData() == true ? 'Edit' : 'Add'}}</ion-button>
+    </form>
+</ion-content>

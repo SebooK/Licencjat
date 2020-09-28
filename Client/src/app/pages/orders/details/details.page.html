@@ -1,0 +1,56 @@
+<ion-header>
+    <ion-toolbar>
+        <ion-buttons slot="start">
+            <ion-back-button default-href="/vehicles"></ion-back-button>
+        </ion-buttons>
+        <ion-title>Zamówienie {{details.id}}</ion-title>
+    </ion-toolbar>
+</ion-header>
+
+<ion-content padding>
+    <ion-list>
+        <ion-list-header color="primary">Dane Zlecenia</ion-list-header>
+        <ion-item>
+            <ion-label>
+                Ładunek: {{details.cargo}}
+            </ion-label>
+        </ion-item>
+        <ion-item>
+            <ion-label>
+                Miejsce załadunku: {{details.loadingPlace}}
+            </ion-label>
+        </ion-item>
+        <ion-item>
+            <ion-label>
+                Miejsce rozładunku: {{details.unloadingPlace}}
+            </ion-label>
+        </ion-item>
+    </ion-list>
+    <ion-list *ngIf="details.customer !== null">
+        <ion-list-header color="primary">Dane Firmy/Klienta</ion-list-header>
+        <ion-item>
+            <ion-label>
+                Nazwa firmy/klienta: {{details.customer.companyName}}
+            </ion-label>
+        </ion-item>
+        <ion-item>
+            <ion-label>
+                Numer telefonu: {{details.customer.companyPhone}}
+            </ion-label>
+        </ion-item>
+        <ion-item>
+            <ion-label>
+                Adres: {{details.customer.companyAddress}}
+            </ion-label>
+        </ion-item>
+    </ion-list>
+    <ion-item>
+        <ion-button expand="full" (click)="showRoute()">Show Route</ion-button>
+    </ion-item>
+    <ion-fab vertical="bottom" horizontal="end" slot="fixed">
+        <ion-fab-button (click)="editOrder()">
+            <ion-icon name="create-outline"></ion-icon>
+        </ion-fab-button>
+    </ion-fab>
+
+</ion-content>

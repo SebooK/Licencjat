@@ -1,0 +1,47 @@
+<ion-header>
+    <ion-toolbar color="primary">
+        <ion-buttons slot="start">
+            <ion-back-button default-href="/workers"></ion-back-button>
+        </ion-buttons>
+        <ion-title>{{details.firstname}} {{details.lastname}}</ion-title>
+    </ion-toolbar>
+</ion-header>
+
+<ion-content padding>
+    <ion-list>
+        <ion-item>
+            <ion-icon name="at-outline" slot="start"></ion-icon>
+            <ion-label>{{details.email}}</ion-label>
+        </ion-item>
+    </ion-list>
+    <ion-list-header color="primary">Szczegóły zamówień</ion-list-header>
+    <ion-list *ngFor="let order of details.orders">
+        <ion-item color="secondary">
+            <ion-label>
+                Numer zamówienia:{{order.orderNumber}}
+            </ion-label>
+        </ion-item>
+        <ion-item>
+            <ion-label>
+                Ładunek: {{order.cargo}}
+            </ion-label>
+        </ion-item>
+        <ion-item>
+            <ion-label>
+                Miejsce załadunku: {{order.loadingPlace}}
+            </ion-label>
+        </ion-item>
+        <ion-item>
+            <ion-label>
+                Miejsce rozładunku: {{order.unloadingPlace}}
+            </ion-label>
+        </ion-item>
+    </ion-list>
+
+
+    <ion-fab vertical="bottom" horizontal="end" slot="fixed">
+        <ion-fab-button (click)="editWorkerModal()">
+            <ion-icon name="create-outline"></ion-icon>
+        </ion-fab-button>
+    </ion-fab>
+</ion-content>

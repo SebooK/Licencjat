@@ -1,0 +1,959 @@
+2020-04-24T11:30:38.426Z [error]: main - uncaughtException: Unexpected identifier
+C:\Users\Sebas\Desktop\Licencjat\Server\middleware\role.js:3
+    console token = req.header('x-auth-token');
+            ^^^^^
+
+SyntaxError: Unexpected identifier
+    at wrapSafe (internal/modules/cjs/loader.js:1071:16)
+    at Module._compile (internal/modules/cjs/loader.js:1121:27)
+    at Object.Module._extensions..js (internal/modules/cjs/loader.js:1177:10)
+    at Module.load (internal/modules/cjs/loader.js:1001:32)
+    at Function.Module._load (internal/modules/cjs/loader.js:900:14)
+    at Module.require (internal/modules/cjs/loader.js:1043:19)
+    at require (internal/modules/cjs/helpers.js:77:18)
+    at Object.<anonymous> (C:\Users\Sebas\Desktop\Licencjat\Server\routes\index.js:4:14)
+    at Module._compile (internal/modules/cjs/loader.js:1157:30)
+    at Object.Module._extensions..js (internal/modules/cjs/loader.js:1177:10)
+2020-04-24T11:34:48.164Z [error]: main - uncaughtException: Unexpected token '=='
+C:\Users\Sebas\Desktop\Licencjat\Server\middleware\role.js:4
+    if( == 0) return res.status(403).send('Access denied.');
+        ^^
+
+SyntaxError: Unexpected token '=='
+    at wrapSafe (internal/modules/cjs/loader.js:1071:16)
+    at Module._compile (internal/modules/cjs/loader.js:1121:27)
+    at Object.Module._extensions..js (internal/modules/cjs/loader.js:1177:10)
+    at Module.load (internal/modules/cjs/loader.js:1001:32)
+    at Function.Module._load (internal/modules/cjs/loader.js:900:14)
+    at Module.require (internal/modules/cjs/loader.js:1043:19)
+    at require (internal/modules/cjs/helpers.js:77:18)
+    at Object.<anonymous> (C:\Users\Sebas\Desktop\Licencjat\Server\routes\index.js:4:14)
+    at Module._compile (internal/modules/cjs/loader.js:1157:30)
+    at Object.Module._extensions..js (internal/modules/cjs/loader.js:1177:10)
+2020-04-24T11:37:17.989Z [error]: main - uncaughtException: Unexpected token '=='
+C:\Users\Sebas\Desktop\Licencjat\Server\middleware\role.js:4
+    if( == 0) return res.status(403).send('Access denied.');
+        ^^
+
+SyntaxError: Unexpected token '=='
+    at wrapSafe (internal/modules/cjs/loader.js:1071:16)
+    at Module._compile (internal/modules/cjs/loader.js:1121:27)
+    at Object.Module._extensions..js (internal/modules/cjs/loader.js:1177:10)
+    at Module.load (internal/modules/cjs/loader.js:1001:32)
+    at Function.Module._load (internal/modules/cjs/loader.js:900:14)
+    at Module.require (internal/modules/cjs/loader.js:1043:19)
+    at require (internal/modules/cjs/helpers.js:77:18)
+    at Object.<anonymous> (C:\Users\Sebas\Desktop\Licencjat\Server\routes\index.js:4:14)
+    at Module._compile (internal/modules/cjs/loader.js:1157:30)
+    at Object.Module._extensions..js (internal/modules/cjs/loader.js:1177:10)
+2020-04-24T11:37:52.184Z [error]: main - uncaughtException: Unexpected token '=='
+C:\Users\Sebas\Desktop\Licencjat\Server\middleware\role.js:4
+    if( == 0) return res.status(403).send('Access denied.');
+        ^^
+
+SyntaxError: Unexpected token '=='
+    at wrapSafe (internal/modules/cjs/loader.js:1071:16)
+    at Module._compile (internal/modules/cjs/loader.js:1121:27)
+    at Object.Module._extensions..js (internal/modules/cjs/loader.js:1177:10)
+    at Module.load (internal/modules/cjs/loader.js:1001:32)
+    at Function.Module._load (internal/modules/cjs/loader.js:900:14)
+    at Module.require (internal/modules/cjs/loader.js:1043:19)
+    at require (internal/modules/cjs/helpers.js:77:18)
+    at Object.<anonymous> (C:\Users\Sebas\Desktop\Licencjat\Server\routes\index.js:4:14)
+    at Module._compile (internal/modules/cjs/loader.js:1157:30)
+    at Object.Module._extensions..js (internal/modules/cjs/loader.js:1177:10)
+2020-04-24T11:38:05.690Z [error]: main - uncaughtException: Unexpected token '=='
+C:\Users\Sebas\Desktop\Licencjat\Server\middleware\role.js:4
+    if( == 0) return res.status(403).send('Access denied.');
+        ^^
+
+SyntaxError: Unexpected token '=='
+    at wrapSafe (internal/modules/cjs/loader.js:1071:16)
+    at Module._compile (internal/modules/cjs/loader.js:1121:27)
+    at Object.Module._extensions..js (internal/modules/cjs/loader.js:1177:10)
+    at Module.load (internal/modules/cjs/loader.js:1001:32)
+    at Function.Module._load (internal/modules/cjs/loader.js:900:14)
+    at Module.require (internal/modules/cjs/loader.js:1043:19)
+    at require (internal/modules/cjs/helpers.js:77:18)
+    at Object.<anonymous> (C:\Users\Sebas\Desktop\Licencjat\Server\routes\index.js:4:14)
+    at Module._compile (internal/modules/cjs/loader.js:1157:30)
+    at Object.Module._extensions..js (internal/modules/cjs/loader.js:1177:10)
+2020-05-01T17:04:56.639Z [error]: main - uncaughtException: Unexpected identifier
+C:\Users\Sebas\Desktop\Licencjat\Server\controllers\vehicle.js:76
+                include : [ SemiTrailer as 'semiTrailer']
+                                        ^^
+
+SyntaxError: Unexpected identifier
+    at wrapSafe (internal/modules/cjs/loader.js:1071:16)
+    at Module._compile (internal/modules/cjs/loader.js:1121:27)
+    at Object.Module._extensions..js (internal/modules/cjs/loader.js:1177:10)
+    at Module.load (internal/modules/cjs/loader.js:1001:32)
+    at Function.Module._load (internal/modules/cjs/loader.js:900:14)
+    at Module.require (internal/modules/cjs/loader.js:1043:19)
+    at require (internal/modules/cjs/helpers.js:77:18)
+    at Object.<anonymous> (C:\Users\Sebas\Desktop\Licencjat\Server\controllers\index.js:4:17)
+    at Module._compile (internal/modules/cjs/loader.js:1157:30)
+    at Object.Module._extensions..js (internal/modules/cjs/loader.js:1177:10)
+    at Module.load (internal/modules/cjs/loader.js:1001:32)
+    at Function.Module._load (internal/modules/cjs/loader.js:900:14)
+    at Module.require (internal/modules/cjs/loader.js:1043:19)
+    at require (internal/modules/cjs/helpers.js:77:18)
+    at Object.<anonymous> (C:\Users\Sebas\Desktop\Licencjat\Server\routes\index.js:5:25)
+    at Module._compile (internal/modules/cjs/loader.js:1157:30)
+    at Object.Module._extensions..js (internal/modules/cjs/loader.js:1177:10)
+    at Module.load (internal/modules/cjs/loader.js:1001:32)
+    at Function.Module._load (internal/modules/cjs/loader.js:900:14)
+    at Module.require (internal/modules/cjs/loader.js:1043:19)
+    at require (internal/modules/cjs/helpers.js:77:18)
+    at Object.<anonymous> (C:\Users\Sebas\Desktop\Licencjat\Server\app.js:12:21)
+2020-05-01T17:25:03.097Z [error]: main - uncaughtException: Unexpected token '}'
+C:\Users\Sebas\Desktop\Licencjat\Server\controllers\vehicle.js:75
+            }, {
+            ^
+
+SyntaxError: Unexpected token '}'
+    at wrapSafe (internal/modules/cjs/loader.js:1071:16)
+    at Module._compile (internal/modules/cjs/loader.js:1121:27)
+    at Object.Module._extensions..js (internal/modules/cjs/loader.js:1177:10)
+    at Module.load (internal/modules/cjs/loader.js:1001:32)
+    at Function.Module._load (internal/modules/cjs/loader.js:900:14)
+    at Module.require (internal/modules/cjs/loader.js:1043:19)
+    at require (internal/modules/cjs/helpers.js:77:18)
+    at Object.<anonymous> (C:\Users\Sebas\Desktop\Licencjat\Server\controllers\index.js:4:17)
+    at Module._compile (internal/modules/cjs/loader.js:1157:30)
+    at Object.Module._extensions..js (internal/modules/cjs/loader.js:1177:10)
+    at Module.load (internal/modules/cjs/loader.js:1001:32)
+    at Function.Module._load (internal/modules/cjs/loader.js:900:14)
+    at Module.require (internal/modules/cjs/loader.js:1043:19)
+    at require (internal/modules/cjs/helpers.js:77:18)
+    at Object.<anonymous> (C:\Users\Sebas\Desktop\Licencjat\Server\routes\index.js:5:25)
+    at Module._compile (internal/modules/cjs/loader.js:1157:30)
+    at Object.Module._extensions..js (internal/modules/cjs/loader.js:1177:10)
+    at Module.load (internal/modules/cjs/loader.js:1001:32)
+    at Function.Module._load (internal/modules/cjs/loader.js:900:14)
+    at Module.require (internal/modules/cjs/loader.js:1043:19)
+    at require (internal/modules/cjs/helpers.js:77:18)
+    at Object.<anonymous> (C:\Users\Sebas\Desktop\Licencjat\Server\app.js:12:21)
+2020-05-01T17:47:08.478Z [error]: main - uncaughtException: Unexpected token '}'
+C:\Users\Sebas\Desktop\Licencjat\Server\controllers\vehicle.js:76
+            }, {
+            ^
+
+SyntaxError: Unexpected token '}'
+    at wrapSafe (internal/modules/cjs/loader.js:1071:16)
+    at Module._compile (internal/modules/cjs/loader.js:1121:27)
+    at Object.Module._extensions..js (internal/modules/cjs/loader.js:1177:10)
+    at Module.load (internal/modules/cjs/loader.js:1001:32)
+    at Function.Module._load (internal/modules/cjs/loader.js:900:14)
+    at Module.require (internal/modules/cjs/loader.js:1043:19)
+    at require (internal/modules/cjs/helpers.js:77:18)
+    at Object.<anonymous> (C:\Users\Sebas\Desktop\Licencjat\Server\controllers\index.js:4:17)
+    at Module._compile (internal/modules/cjs/loader.js:1157:30)
+    at Object.Module._extensions..js (internal/modules/cjs/loader.js:1177:10)
+    at Module.load (internal/modules/cjs/loader.js:1001:32)
+    at Function.Module._load (internal/modules/cjs/loader.js:900:14)
+    at Module.require (internal/modules/cjs/loader.js:1043:19)
+    at require (internal/modules/cjs/helpers.js:77:18)
+    at Object.<anonymous> (C:\Users\Sebas\Desktop\Licencjat\Server\routes\index.js:5:25)
+    at Module._compile (internal/modules/cjs/loader.js:1157:30)
+    at Object.Module._extensions..js (internal/modules/cjs/loader.js:1177:10)
+    at Module.load (internal/modules/cjs/loader.js:1001:32)
+    at Function.Module._load (internal/modules/cjs/loader.js:900:14)
+    at Module.require (internal/modules/cjs/loader.js:1043:19)
+    at require (internal/modules/cjs/helpers.js:77:18)
+    at Object.<anonymous> (C:\Users\Sebas\Desktop\Licencjat\Server\app.js:12:21)
+2020-05-01T18:07:17.782Z [error]: main - uncaughtException: Unexpected token '}'
+C:\Users\Sebas\Desktop\Licencjat\Server\controllers\vehicle.js:76
+            }, {
+            ^
+
+SyntaxError: Unexpected token '}'
+    at wrapSafe (internal/modules/cjs/loader.js:1071:16)
+    at Module._compile (internal/modules/cjs/loader.js:1121:27)
+    at Object.Module._extensions..js (internal/modules/cjs/loader.js:1177:10)
+    at Module.load (internal/modules/cjs/loader.js:1001:32)
+    at Function.Module._load (internal/modules/cjs/loader.js:900:14)
+    at Module.require (internal/modules/cjs/loader.js:1043:19)
+    at require (internal/modules/cjs/helpers.js:77:18)
+    at Object.<anonymous> (C:\Users\Sebas\Desktop\Licencjat\Server\controllers\index.js:4:17)
+    at Module._compile (internal/modules/cjs/loader.js:1157:30)
+    at Object.Module._extensions..js (internal/modules/cjs/loader.js:1177:10)
+    at Module.load (internal/modules/cjs/loader.js:1001:32)
+    at Function.Module._load (internal/modules/cjs/loader.js:900:14)
+    at Module.require (internal/modules/cjs/loader.js:1043:19)
+    at require (internal/modules/cjs/helpers.js:77:18)
+    at Object.<anonymous> (C:\Users\Sebas\Desktop\Licencjat\Server\routes\index.js:5:25)
+    at Module._compile (internal/modules/cjs/loader.js:1157:30)
+    at Object.Module._extensions..js (internal/modules/cjs/loader.js:1177:10)
+    at Module.load (internal/modules/cjs/loader.js:1001:32)
+    at Function.Module._load (internal/modules/cjs/loader.js:900:14)
+    at Module.require (internal/modules/cjs/loader.js:1043:19)
+    at require (internal/modules/cjs/helpers.js:77:18)
+    at Object.<anonymous> (C:\Users\Sebas\Desktop\Licencjat\Server\app.js:12:21)
+2020-05-01T18:07:23.890Z [error]: main - uncaughtException: Unexpected token ','
+C:\Users\Sebas\Desktop\Licencjat\Server\controllers\vehicle.js:75
+                semiTrailer:,
+                            ^
+
+SyntaxError: Unexpected token ','
+    at wrapSafe (internal/modules/cjs/loader.js:1071:16)
+    at Module._compile (internal/modules/cjs/loader.js:1121:27)
+    at Object.Module._extensions..js (internal/modules/cjs/loader.js:1177:10)
+    at Module.load (internal/modules/cjs/loader.js:1001:32)
+    at Function.Module._load (internal/modules/cjs/loader.js:900:14)
+    at Module.require (internal/modules/cjs/loader.js:1043:19)
+    at require (internal/modules/cjs/helpers.js:77:18)
+    at Object.<anonymous> (C:\Users\Sebas\Desktop\Licencjat\Server\controllers\index.js:4:17)
+    at Module._compile (internal/modules/cjs/loader.js:1157:30)
+    at Object.Module._extensions..js (internal/modules/cjs/loader.js:1177:10)
+    at Module.load (internal/modules/cjs/loader.js:1001:32)
+    at Function.Module._load (internal/modules/cjs/loader.js:900:14)
+    at Module.require (internal/modules/cjs/loader.js:1043:19)
+    at require (internal/modules/cjs/helpers.js:77:18)
+    at Object.<anonymous> (C:\Users\Sebas\Desktop\Licencjat\Server\routes\index.js:5:25)
+    at Module._compile (internal/modules/cjs/loader.js:1157:30)
+    at Object.Module._extensions..js (internal/modules/cjs/loader.js:1177:10)
+    at Module.load (internal/modules/cjs/loader.js:1001:32)
+    at Function.Module._load (internal/modules/cjs/loader.js:900:14)
+    at Module.require (internal/modules/cjs/loader.js:1043:19)
+    at require (internal/modules/cjs/helpers.js:77:18)
+    at Object.<anonymous> (C:\Users\Sebas\Desktop\Licencjat\Server\app.js:12:21)
+2020-05-02T09:18:18.291Z [error]: main - uncaughtException: Unexpected identifier
+C:\Users\Sebas\Desktop\Licencjat\Server\models\vehicle.js:17
+        allowNull:false
+        ^^^^^^^^^
+
+SyntaxError: Unexpected identifier
+    at wrapSafe (internal/modules/cjs/loader.js:1071:16)
+    at Module._compile (internal/modules/cjs/loader.js:1121:27)
+    at Object.Module._extensions..js (internal/modules/cjs/loader.js:1177:10)
+    at Module.load (internal/modules/cjs/loader.js:1001:32)
+    at Function.Module._load (internal/modules/cjs/loader.js:900:14)
+    at Module.require (internal/modules/cjs/loader.js:1043:19)
+    at require (internal/modules/cjs/helpers.js:77:18)
+    at Sequelize.import (C:\Users\Sebas\Desktop\Licencjat\Server\node_modules\sequelize\lib\sequelize.js:481:62)
+    at C:\Users\Sebas\Desktop\Licencjat\Server\models\index.js:24:38
+    at Array.forEach (<anonymous>)
+    at Object.<anonymous> (C:\Users\Sebas\Desktop\Licencjat\Server\models\index.js:23:4)
+    at Module._compile (internal/modules/cjs/loader.js:1157:30)
+    at Object.Module._extensions..js (internal/modules/cjs/loader.js:1177:10)
+    at Module.load (internal/modules/cjs/loader.js:1001:32)
+    at Function.Module._load (internal/modules/cjs/loader.js:900:14)
+    at Module.require (internal/modules/cjs/loader.js:1043:19)
+    at require (internal/modules/cjs/helpers.js:77:18)
+    at Object.<anonymous> (C:\Users\Sebas\Desktop\Licencjat\Server\controllers\order.js:1:16)
+    at Module._compile (internal/modules/cjs/loader.js:1157:30)
+    at Object.Module._extensions..js (internal/modules/cjs/loader.js:1177:10)
+    at Module.load (internal/modules/cjs/loader.js:1001:32)
+    at Function.Module._load (internal/modules/cjs/loader.js:900:14)
+2020-05-02T10:22:04.611Z [error]: main - uncaughtException: Unknown attribute "semiTrailerId" passed as targetKey, define this attribute on model "SemiTrailer" first
+Error: Unknown attribute "semiTrailerId" passed as targetKey, define this attribute on model "SemiTrailer" first
+    at new BelongsTo (C:\Users\Sebas\Desktop\Licencjat\Server\node_modules\sequelize\lib\associations\belongs-to.js:59:13)
+    at Function.<anonymous> (C:\Users\Sebas\Desktop\Licencjat\Server\node_modules\sequelize\lib\associations\mixin.js:105:25)
+    at Function.Vehicle.associate (C:\Users\Sebas\Desktop\Licencjat\Server\models\vehicle.js:13:13)
+    at C:\Users\Sebas\Desktop\Licencjat\Server\models\index.js:30:19
+    at Array.forEach (<anonymous>)
+    at Object.<anonymous> (C:\Users\Sebas\Desktop\Licencjat\Server\models\index.js:28:17)
+    at Module._compile (internal/modules/cjs/loader.js:1157:30)
+    at Object.Module._extensions..js (internal/modules/cjs/loader.js:1177:10)
+    at Module.load (internal/modules/cjs/loader.js:1001:32)
+    at Function.Module._load (internal/modules/cjs/loader.js:900:14)
+    at Module.require (internal/modules/cjs/loader.js:1043:19)
+    at require (internal/modules/cjs/helpers.js:77:18)
+    at Object.<anonymous> (C:\Users\Sebas\Desktop\Licencjat\Server\controllers\order.js:1:16)
+    at Module._compile (internal/modules/cjs/loader.js:1157:30)
+    at Object.Module._extensions..js (internal/modules/cjs/loader.js:1177:10)
+    at Module.load (internal/modules/cjs/loader.js:1001:32)
+    at Function.Module._load (internal/modules/cjs/loader.js:900:14)
+    at Module.require (internal/modules/cjs/loader.js:1043:19)
+    at require (internal/modules/cjs/helpers.js:77:18)
+    at Object.<anonymous> (C:\Users\Sebas\Desktop\Licencjat\Server\controllers\index.js:1:15)
+    at Module._compile (internal/modules/cjs/loader.js:1157:30)
+    at Object.Module._extensions..js (internal/modules/cjs/loader.js:1177:10)
+2020-05-02T10:22:40.029Z [error]: main - uncaughtException: Unknown attribute "semiTrailerId" passed as targetKey, define this attribute on model "SemiTrailer" first
+Error: Unknown attribute "semiTrailerId" passed as targetKey, define this attribute on model "SemiTrailer" first
+    at new BelongsTo (C:\Users\Sebas\Desktop\Licencjat\Server\node_modules\sequelize\lib\associations\belongs-to.js:59:13)
+    at Function.<anonymous> (C:\Users\Sebas\Desktop\Licencjat\Server\node_modules\sequelize\lib\associations\mixin.js:105:25)
+    at Function.Vehicle.associate (C:\Users\Sebas\Desktop\Licencjat\Server\models\vehicle.js:13:13)
+    at C:\Users\Sebas\Desktop\Licencjat\Server\models\index.js:30:19
+    at Array.forEach (<anonymous>)
+    at Object.<anonymous> (C:\Users\Sebas\Desktop\Licencjat\Server\models\index.js:28:17)
+    at Module._compile (internal/modules/cjs/loader.js:1157:30)
+    at Object.Module._extensions..js (internal/modules/cjs/loader.js:1177:10)
+    at Module.load (internal/modules/cjs/loader.js:1001:32)
+    at Function.Module._load (internal/modules/cjs/loader.js:900:14)
+    at Module.require (internal/modules/cjs/loader.js:1043:19)
+    at require (internal/modules/cjs/helpers.js:77:18)
+    at Object.<anonymous> (C:\Users\Sebas\Desktop\Licencjat\Server\controllers\order.js:1:16)
+    at Module._compile (internal/modules/cjs/loader.js:1157:30)
+    at Object.Module._extensions..js (internal/modules/cjs/loader.js:1177:10)
+    at Module.load (internal/modules/cjs/loader.js:1001:32)
+    at Function.Module._load (internal/modules/cjs/loader.js:900:14)
+    at Module.require (internal/modules/cjs/loader.js:1043:19)
+    at require (internal/modules/cjs/helpers.js:77:18)
+    at Object.<anonymous> (C:\Users\Sebas\Desktop\Licencjat\Server\controllers\index.js:1:15)
+    at Module._compile (internal/modules/cjs/loader.js:1157:30)
+    at Object.Module._extensions..js (internal/modules/cjs/loader.js:1177:10)
+2020-05-06T20:09:15.338Z [error]: main - uncaughtException: app is not defined
+ReferenceError: app is not defined
+    at Object.<anonymous> (C:\Users\Sebas\Desktop\Licencjat\Server\routes\index.js:30:1)
+    at Module._compile (internal/modules/cjs/loader.js:1157:30)
+    at Object.Module._extensions..js (internal/modules/cjs/loader.js:1177:10)
+    at Module.load (internal/modules/cjs/loader.js:1001:32)
+    at Function.Module._load (internal/modules/cjs/loader.js:900:14)
+    at Module.require (internal/modules/cjs/loader.js:1043:19)
+    at require (internal/modules/cjs/helpers.js:77:18)
+    at Object.<anonymous> (C:\Users\Sebas\Desktop\Licencjat\Server\app.js:12:21)
+    at Module._compile (internal/modules/cjs/loader.js:1157:30)
+    at Object.Module._extensions..js (internal/modules/cjs/loader.js:1177:10)
+    at Module.load (internal/modules/cjs/loader.js:1001:32)
+    at Function.Module._load (internal/modules/cjs/loader.js:900:14)
+    at Function.executeUserEntryPoint [as runMain] (internal/modules/run_main.js:74:12)
+    at internal/main/run_main_module.js:18:47
+2020-05-06T20:09:39.579Z [error]: main - uncaughtException: corsOptions is not defined
+ReferenceError: corsOptions is not defined
+    at Object.<anonymous> (C:\Users\Sebas\Desktop\Licencjat\Server\app.js:17:23)
+    at Module._compile (internal/modules/cjs/loader.js:1157:30)
+    at Object.Module._extensions..js (internal/modules/cjs/loader.js:1177:10)
+    at Module.load (internal/modules/cjs/loader.js:1001:32)
+    at Function.Module._load (internal/modules/cjs/loader.js:900:14)
+    at Function.executeUserEntryPoint [as runMain] (internal/modules/run_main.js:74:12)
+    at internal/main/run_main_module.js:18:47
+2020-05-07T23:34:11.741Z [error]: main - uncaughtException: Cannot read property 'headers' of undefined
+TypeError: Cannot read property 'headers' of undefined
+    at C:\Users\Sebas\Desktop\Licencjat\Server\node_modules\cors\lib\index.js:219:32
+    at optionsCallback (C:\Users\Sebas\Desktop\Licencjat\Server\node_modules\cors\lib\index.js:199:9)
+    at corsMiddleware (C:\Users\Sebas\Desktop\Licencjat\Server\node_modules\cors\lib\index.js:204:7)
+    at Object.<anonymous> (C:\Users\Sebas\Desktop\Licencjat\Server\app.js:45:9)
+    at Module._compile (internal/modules/cjs/loader.js:1157:30)
+    at Object.Module._extensions..js (internal/modules/cjs/loader.js:1177:10)
+    at Module.load (internal/modules/cjs/loader.js:1001:32)
+    at Function.Module._load (internal/modules/cjs/loader.js:900:14)
+    at Function.executeUserEntryPoint [as runMain] (internal/modules/run_main.js:74:12)
+    at internal/main/run_main_module.js:18:47
+2020-05-22T23:34:17.732Z [error]: main - uncaughtException: Cannot parse config file: 'C:\Users\Sebas\Desktop\Licencjat\Server\config\custom-environment-variables.json': SyntaxError: Unexpected token l in JSON at position 39
+Error: Cannot parse config file: 'C:\Users\Sebas\Desktop\Licencjat\Server\config\custom-environment-variables.json': SyntaxError: Unexpected token l in JSON at position 39
+    at Config.util.parseFile (C:\Users\Sebas\Desktop\Licencjat\Server\node_modules\config\lib\config.js:794:11)
+    at C:\Users\Sebas\Desktop\Licencjat\Server\node_modules\config\lib\config.js:1083:26
+    at Array.forEach (<anonymous>)
+    at Config.util.getCustomEnvVars (C:\Users\Sebas\Desktop\Licencjat\Server\node_modules\config\lib\config.js:1082:16)
+    at Config.util.loadFileConfigs (C:\Users\Sebas\Desktop\Licencjat\Server\node_modules\config\lib\config.js:644:28)
+    at new Config (C:\Users\Sebas\Desktop\Licencjat\Server\node_modules\config\lib\config.js:116:27)
+    at Object.<anonymous> (C:\Users\Sebas\Desktop\Licencjat\Server\node_modules\config\lib\config.js:1441:31)
+    at Module._compile (internal/modules/cjs/loader.js:1157:30)
+    at Object.Module._extensions..js (internal/modules/cjs/loader.js:1177:10)
+    at Module.load (internal/modules/cjs/loader.js:1001:32)
+2020-05-22T23:34:33.599Z [error]: main - uncaughtException: Cannot parse config file: 'C:\Users\Sebas\Desktop\Licencjat\Server\config\custom-environment-variables.json': SyntaxError: Unexpected token l in JSON at position 39
+Error: Cannot parse config file: 'C:\Users\Sebas\Desktop\Licencjat\Server\config\custom-environment-variables.json': SyntaxError: Unexpected token l in JSON at position 39
+    at Config.util.parseFile (C:\Users\Sebas\Desktop\Licencjat\Server\node_modules\config\lib\config.js:794:11)
+    at C:\Users\Sebas\Desktop\Licencjat\Server\node_modules\config\lib\config.js:1083:26
+    at Array.forEach (<anonymous>)
+    at Config.util.getCustomEnvVars (C:\Users\Sebas\Desktop\Licencjat\Server\node_modules\config\lib\config.js:1082:16)
+    at Config.util.loadFileConfigs (C:\Users\Sebas\Desktop\Licencjat\Server\node_modules\config\lib\config.js:644:28)
+    at new Config (C:\Users\Sebas\Desktop\Licencjat\Server\node_modules\config\lib\config.js:116:27)
+    at Object.<anonymous> (C:\Users\Sebas\Desktop\Licencjat\Server\node_modules\config\lib\config.js:1441:31)
+    at Module._compile (internal/modules/cjs/loader.js:1157:30)
+    at Object.Module._extensions..js (internal/modules/cjs/loader.js:1177:10)
+    at Module.load (internal/modules/cjs/loader.js:1001:32)
+2020-05-22T23:34:38.696Z [error]: main - uncaughtException: Cannot parse config file: 'C:\Users\Sebas\Desktop\Licencjat\Server\config\custom-environment-variables.json': SyntaxError: Unexpected token l in JSON at position 36
+Error: Cannot parse config file: 'C:\Users\Sebas\Desktop\Licencjat\Server\config\custom-environment-variables.json': SyntaxError: Unexpected token l in JSON at position 36
+    at Config.util.parseFile (C:\Users\Sebas\Desktop\Licencjat\Server\node_modules\config\lib\config.js:794:11)
+    at C:\Users\Sebas\Desktop\Licencjat\Server\node_modules\config\lib\config.js:1083:26
+    at Array.forEach (<anonymous>)
+    at Config.util.getCustomEnvVars (C:\Users\Sebas\Desktop\Licencjat\Server\node_modules\config\lib\config.js:1082:16)
+    at Config.util.loadFileConfigs (C:\Users\Sebas\Desktop\Licencjat\Server\node_modules\config\lib\config.js:644:28)
+    at new Config (C:\Users\Sebas\Desktop\Licencjat\Server\node_modules\config\lib\config.js:116:27)
+    at Object.<anonymous> (C:\Users\Sebas\Desktop\Licencjat\Server\node_modules\config\lib\config.js:1441:31)
+    at Module._compile (internal/modules/cjs/loader.js:1157:30)
+    at Object.Module._extensions..js (internal/modules/cjs/loader.js:1177:10)
+    at Module.load (internal/modules/cjs/loader.js:1001:32)
+2020-05-22T23:34:52.070Z [error]: main - uncaughtException: Cannot parse config file: 'C:\Users\Sebas\Desktop\Licencjat\Server\config\custom-environment-variables.json': SyntaxError: Unexpected token l in JSON at position 36
+Error: Cannot parse config file: 'C:\Users\Sebas\Desktop\Licencjat\Server\config\custom-environment-variables.json': SyntaxError: Unexpected token l in JSON at position 36
+    at Config.util.parseFile (C:\Users\Sebas\Desktop\Licencjat\Server\node_modules\config\lib\config.js:794:11)
+    at C:\Users\Sebas\Desktop\Licencjat\Server\node_modules\config\lib\config.js:1083:26
+    at Array.forEach (<anonymous>)
+    at Config.util.getCustomEnvVars (C:\Users\Sebas\Desktop\Licencjat\Server\node_modules\config\lib\config.js:1082:16)
+    at Config.util.loadFileConfigs (C:\Users\Sebas\Desktop\Licencjat\Server\node_modules\config\lib\config.js:644:28)
+    at new Config (C:\Users\Sebas\Desktop\Licencjat\Server\node_modules\config\lib\config.js:116:27)
+    at Object.<anonymous> (C:\Users\Sebas\Desktop\Licencjat\Server\node_modules\config\lib\config.js:1441:31)
+    at Module._compile (internal/modules/cjs/loader.js:1157:30)
+    at Object.Module._extensions..js (internal/modules/cjs/loader.js:1177:10)
+    at Module.load (internal/modules/cjs/loader.js:1001:32)
+2020-05-24T15:29:48.295Z [error]: main - uncaughtException: Cannot read property 'enable' of undefined
+TypeError: Cannot read property 'enable' of undefined
+    at Object.<anonymous> (C:\Users\Sebas\Desktop\Licencjat\Server\app.js:16:5)
+    at Module._compile (internal/modules/cjs/loader.js:1157:30)
+    at Object.Module._extensions..js (internal/modules/cjs/loader.js:1177:10)
+    at Module.load (internal/modules/cjs/loader.js:1001:32)
+    at Function.Module._load (internal/modules/cjs/loader.js:900:14)
+    at Function.executeUserEntryPoint [as runMain] (internal/modules/run_main.js:74:12)
+    at internal/main/run_main_module.js:18:47
+2020-05-24T18:50:30.698Z [error]: main - uncaughtException: Unexpected token ':'
+C:\Users\Sebas\Desktop\Licencjat\Server\controllers\order.js:57
+                model: Vehicle,
+                     ^
+
+SyntaxError: Unexpected token ':'
+    at wrapSafe (internal/modules/cjs/loader.js:1071:16)
+    at Module._compile (internal/modules/cjs/loader.js:1121:27)
+    at Object.Module._extensions..js (internal/modules/cjs/loader.js:1177:10)
+    at Module.load (internal/modules/cjs/loader.js:1001:32)
+    at Function.Module._load (internal/modules/cjs/loader.js:900:14)
+    at Module.require (internal/modules/cjs/loader.js:1043:19)
+    at require (internal/modules/cjs/helpers.js:77:18)
+    at Object.<anonymous> (C:\Users\Sebas\Desktop\Licencjat\Server\controllers\index.js:1:15)
+    at Module._compile (internal/modules/cjs/loader.js:1157:30)
+    at Object.Module._extensions..js (internal/modules/cjs/loader.js:1177:10)
+2020-06-01T09:52:26.457Z [error]: main - uncaughtException: Unexpected token '}'
+C:\Users\Sebas\Desktop\Licencjat\Server\middleware\auth.js:9
+}
+^
+
+SyntaxError: Unexpected token '}'
+    at wrapSafe (internal/modules/cjs/loader.js:1071:16)
+    at Module._compile (internal/modules/cjs/loader.js:1121:27)
+    at Object.Module._extensions..js (internal/modules/cjs/loader.js:1177:10)
+    at Module.load (internal/modules/cjs/loader.js:1001:32)
+    at Function.Module._load (internal/modules/cjs/loader.js:900:14)
+    at Module.require (internal/modules/cjs/loader.js:1043:19)
+    at require (internal/modules/cjs/helpers.js:77:18)
+    at Object.<anonymous> (C:\Users\Sebas\Desktop\Licencjat\Server\routes\index.js:3:14)
+    at Module._compile (internal/modules/cjs/loader.js:1157:30)
+    at Object.Module._extensions..js (internal/modules/cjs/loader.js:1177:10)
+2020-06-01T09:52:54.040Z [error]: main - uncaughtException: Unexpected token '}'
+C:\Users\Sebas\Desktop\Licencjat\Server\middleware\auth.js:9
+}
+^
+
+SyntaxError: Unexpected token '}'
+    at wrapSafe (internal/modules/cjs/loader.js:1071:16)
+    at Module._compile (internal/modules/cjs/loader.js:1121:27)
+    at Object.Module._extensions..js (internal/modules/cjs/loader.js:1177:10)
+    at Module.load (internal/modules/cjs/loader.js:1001:32)
+    at Function.Module._load (internal/modules/cjs/loader.js:900:14)
+    at Module.require (internal/modules/cjs/loader.js:1043:19)
+    at require (internal/modules/cjs/helpers.js:77:18)
+    at Object.<anonymous> (C:\Users\Sebas\Desktop\Licencjat\Server\routes\index.js:3:14)
+    at Module._compile (internal/modules/cjs/loader.js:1157:30)
+    at Object.Module._extensions..js (internal/modules/cjs/loader.js:1177:10)
+2020-06-01T10:01:26.976Z [error]: main - uncaughtException: opts is not defined
+ReferenceError: opts is not defined
+    at Object.<anonymous> (C:\Users\Sebas\Desktop\Licencjat\Server\middleware\auth.js:12:34)
+    at Module._compile (internal/modules/cjs/loader.js:1157:30)
+    at Object.Module._extensions..js (internal/modules/cjs/loader.js:1177:10)
+    at Module.load (internal/modules/cjs/loader.js:1001:32)
+    at Function.Module._load (internal/modules/cjs/loader.js:900:14)
+    at Module.require (internal/modules/cjs/loader.js:1043:19)
+    at require (internal/modules/cjs/helpers.js:77:18)
+    at Object.<anonymous> (C:\Users\Sebas\Desktop\Licencjat\Server\routes\index.js:3:14)
+    at Module._compile (internal/modules/cjs/loader.js:1157:30)
+    at Object.Module._extensions..js (internal/modules/cjs/loader.js:1177:10)
+    at Module.load (internal/modules/cjs/loader.js:1001:32)
+    at Function.Module._load (internal/modules/cjs/loader.js:900:14)
+    at Module.require (internal/modules/cjs/loader.js:1043:19)
+    at require (internal/modules/cjs/helpers.js:77:18)
+    at Object.<anonymous> (C:\Users\Sebas\Desktop\Licencjat\Server\app.js:12:21)
+    at Module._compile (internal/modules/cjs/loader.js:1157:30)
+    at Object.Module._extensions..js (internal/modules/cjs/loader.js:1177:10)
+    at Module.load (internal/modules/cjs/loader.js:1001:32)
+    at Function.Module._load (internal/modules/cjs/loader.js:900:14)
+    at Function.executeUserEntryPoint [as runMain] (internal/modules/run_main.js:74:12)
+    at internal/main/run_main_module.js:18:47
+2020-06-01T10:08:28.529Z [error]: main - uncaughtException: opts is not defined
+ReferenceError: opts is not defined
+    at Object.<anonymous> (C:\Users\Sebas\Desktop\Licencjat\Server\middleware\auth.js:12:34)
+    at Module._compile (internal/modules/cjs/loader.js:1157:30)
+    at Object.Module._extensions..js (internal/modules/cjs/loader.js:1177:10)
+    at Module.load (internal/modules/cjs/loader.js:1001:32)
+    at Function.Module._load (internal/modules/cjs/loader.js:900:14)
+    at Module.require (internal/modules/cjs/loader.js:1043:19)
+    at require (internal/modules/cjs/helpers.js:77:18)
+    at Object.<anonymous> (C:\Users\Sebas\Desktop\Licencjat\Server\routes\index.js:3:14)
+    at Module._compile (internal/modules/cjs/loader.js:1157:30)
+    at Object.Module._extensions..js (internal/modules/cjs/loader.js:1177:10)
+    at Module.load (internal/modules/cjs/loader.js:1001:32)
+    at Function.Module._load (internal/modules/cjs/loader.js:900:14)
+    at Module.require (internal/modules/cjs/loader.js:1043:19)
+    at require (internal/modules/cjs/helpers.js:77:18)
+    at Object.<anonymous> (C:\Users\Sebas\Desktop\Licencjat\Server\app.js:12:21)
+    at Module._compile (internal/modules/cjs/loader.js:1157:30)
+    at Object.Module._extensions..js (internal/modules/cjs/loader.js:1177:10)
+    at Module.load (internal/modules/cjs/loader.js:1001:32)
+    at Function.Module._load (internal/modules/cjs/loader.js:900:14)
+    at Function.executeUserEntryPoint [as runMain] (internal/modules/run_main.js:74:12)
+    at internal/main/run_main_module.js:18:47
+2020-06-01T10:09:56.612Z [error]: main - uncaughtException: opts is not defined
+ReferenceError: opts is not defined
+    at Object.<anonymous> (C:\Users\Sebas\Desktop\Licencjat\Server\middleware\auth.js:12:34)
+    at Module._compile (internal/modules/cjs/loader.js:1157:30)
+    at Object.Module._extensions..js (internal/modules/cjs/loader.js:1177:10)
+    at Module.load (internal/modules/cjs/loader.js:1001:32)
+    at Function.Module._load (internal/modules/cjs/loader.js:900:14)
+    at Module.require (internal/modules/cjs/loader.js:1043:19)
+    at require (internal/modules/cjs/helpers.js:77:18)
+    at Object.<anonymous> (C:\Users\Sebas\Desktop\Licencjat\Server\routes\index.js:3:14)
+    at Module._compile (internal/modules/cjs/loader.js:1157:30)
+    at Object.Module._extensions..js (internal/modules/cjs/loader.js:1177:10)
+    at Module.load (internal/modules/cjs/loader.js:1001:32)
+    at Function.Module._load (internal/modules/cjs/loader.js:900:14)
+    at Module.require (internal/modules/cjs/loader.js:1043:19)
+    at require (internal/modules/cjs/helpers.js:77:18)
+    at Object.<anonymous> (C:\Users\Sebas\Desktop\Licencjat\Server\app.js:12:21)
+    at Module._compile (internal/modules/cjs/loader.js:1157:30)
+    at Object.Module._extensions..js (internal/modules/cjs/loader.js:1177:10)
+    at Module.load (internal/modules/cjs/loader.js:1001:32)
+    at Function.Module._load (internal/modules/cjs/loader.js:900:14)
+    at Function.executeUserEntryPoint [as runMain] (internal/modules/run_main.js:74:12)
+    at internal/main/run_main_module.js:18:47
+2020-06-01T10:12:03.380Z [error]: main - uncaughtException: opts is not defined
+ReferenceError: opts is not defined
+    at Object.<anonymous> (C:\Users\Sebas\Desktop\Licencjat\Server\middleware\auth.js:12:34)
+    at Module._compile (internal/modules/cjs/loader.js:1157:30)
+    at Object.Module._extensions..js (internal/modules/cjs/loader.js:1177:10)
+    at Module.load (internal/modules/cjs/loader.js:1001:32)
+    at Function.Module._load (internal/modules/cjs/loader.js:900:14)
+    at Module.require (internal/modules/cjs/loader.js:1043:19)
+    at require (internal/modules/cjs/helpers.js:77:18)
+    at Object.<anonymous> (C:\Users\Sebas\Desktop\Licencjat\Server\routes\index.js:3:14)
+    at Module._compile (internal/modules/cjs/loader.js:1157:30)
+    at Object.Module._extensions..js (internal/modules/cjs/loader.js:1177:10)
+    at Module.load (internal/modules/cjs/loader.js:1001:32)
+    at Function.Module._load (internal/modules/cjs/loader.js:900:14)
+    at Module.require (internal/modules/cjs/loader.js:1043:19)
+    at require (internal/modules/cjs/helpers.js:77:18)
+    at Object.<anonymous> (C:\Users\Sebas\Desktop\Licencjat\Server\app.js:12:21)
+    at Module._compile (internal/modules/cjs/loader.js:1157:30)
+    at Object.Module._extensions..js (internal/modules/cjs/loader.js:1177:10)
+    at Module.load (internal/modules/cjs/loader.js:1001:32)
+    at Function.Module._load (internal/modules/cjs/loader.js:900:14)
+    at Function.executeUserEntryPoint [as runMain] (internal/modules/run_main.js:74:12)
+    at internal/main/run_main_module.js:18:47
+2020-06-01T10:14:08.558Z [error]: main - uncaughtException: opts is not defined
+ReferenceError: opts is not defined
+    at Object.<anonymous> (C:\Users\Sebas\Desktop\Licencjat\Server\middleware\auth.js:12:34)
+    at Module._compile (internal/modules/cjs/loader.js:1157:30)
+    at Object.Module._extensions..js (internal/modules/cjs/loader.js:1177:10)
+    at Module.load (internal/modules/cjs/loader.js:1001:32)
+    at Function.Module._load (internal/modules/cjs/loader.js:900:14)
+    at Module.require (internal/modules/cjs/loader.js:1043:19)
+    at require (internal/modules/cjs/helpers.js:77:18)
+    at Object.<anonymous> (C:\Users\Sebas\Desktop\Licencjat\Server\routes\index.js:3:14)
+    at Module._compile (internal/modules/cjs/loader.js:1157:30)
+    at Object.Module._extensions..js (internal/modules/cjs/loader.js:1177:10)
+    at Module.load (internal/modules/cjs/loader.js:1001:32)
+    at Function.Module._load (internal/modules/cjs/loader.js:900:14)
+    at Module.require (internal/modules/cjs/loader.js:1043:19)
+    at require (internal/modules/cjs/helpers.js:77:18)
+    at Object.<anonymous> (C:\Users\Sebas\Desktop\Licencjat\Server\app.js:12:21)
+    at Module._compile (internal/modules/cjs/loader.js:1157:30)
+    at Object.Module._extensions..js (internal/modules/cjs/loader.js:1177:10)
+    at Module.load (internal/modules/cjs/loader.js:1001:32)
+    at Function.Module._load (internal/modules/cjs/loader.js:900:14)
+    at Function.executeUserEntryPoint [as runMain] (internal/modules/run_main.js:74:12)
+    at internal/main/run_main_module.js:18:47
+2020-06-01T17:12:05.750Z [error]: main - uncaughtException: Route.post() requires a callback function but got a [object Object]
+Error: Route.post() requires a callback function but got a [object Object]
+    at Route.<computed> [as post] (C:\Users\Sebas\Desktop\Licencjat\Server\node_modules\express\lib\router\route.js:202:15)
+    at Function.proto.<computed> [as post] (C:\Users\Sebas\Desktop\Licencjat\Server\node_modules\express\lib\router\index.js:510:19)
+    at Object.<anonymous> (C:\Users\Sebas\Desktop\Licencjat\Server\routes\index.js:21:8)
+    at Module._compile (internal/modules/cjs/loader.js:1157:30)
+    at Object.Module._extensions..js (internal/modules/cjs/loader.js:1177:10)
+    at Module.load (internal/modules/cjs/loader.js:1001:32)
+    at Function.Module._load (internal/modules/cjs/loader.js:900:14)
+    at Module.require (internal/modules/cjs/loader.js:1043:19)
+    at require (internal/modules/cjs/helpers.js:77:18)
+    at Object.<anonymous> (C:\Users\Sebas\Desktop\Licencjat\Server\app.js:14:21)
+    at Module._compile (internal/modules/cjs/loader.js:1157:30)
+    at Object.Module._extensions..js (internal/modules/cjs/loader.js:1177:10)
+    at Module.load (internal/modules/cjs/loader.js:1001:32)
+    at Function.Module._load (internal/modules/cjs/loader.js:900:14)
+    at Function.executeUserEntryPoint [as runMain] (internal/modules/run_main.js:74:12)
+    at internal/main/run_main_module.js:18:47
+2020-06-01T17:15:21.617Z [error]: main - uncaughtException: Cannot find module 'config/config.js'
+Require stack:
+- C:\Users\Sebas\Desktop\Licencjat\Server\app.js
+Error: Cannot find module 'config/config.js'
+Require stack:
+- C:\Users\Sebas\Desktop\Licencjat\Server\app.js
+    at Function.Module._resolveFilename (internal/modules/cjs/loader.js:981:15)
+    at Function.Module._load (internal/modules/cjs/loader.js:863:27)
+    at Module.require (internal/modules/cjs/loader.js:1043:19)
+    at require (internal/modules/cjs/helpers.js:77:18)
+    at Object.<anonymous> (C:\Users\Sebas\Desktop\Licencjat\Server\app.js:9:14)
+    at Module._compile (internal/modules/cjs/loader.js:1157:30)
+    at Object.Module._extensions..js (internal/modules/cjs/loader.js:1177:10)
+    at Module.load (internal/modules/cjs/loader.js:1001:32)
+    at Function.Module._load (internal/modules/cjs/loader.js:900:14)
+    at Function.executeUserEntryPoint [as runMain] (internal/modules/run_main.js:74:12)
+2020-06-01T17:17:49.176Z [error]: main - uncaughtException: Cannot find module 'config/config.js'
+Require stack:
+- C:\Users\Sebas\Desktop\Licencjat\Server\app.js
+Error: Cannot find module 'config/config.js'
+Require stack:
+- C:\Users\Sebas\Desktop\Licencjat\Server\app.js
+    at Function.Module._resolveFilename (internal/modules/cjs/loader.js:981:15)
+    at Function.Module._load (internal/modules/cjs/loader.js:863:27)
+    at Module.require (internal/modules/cjs/loader.js:1043:19)
+    at require (internal/modules/cjs/helpers.js:77:18)
+    at Object.<anonymous> (C:\Users\Sebas\Desktop\Licencjat\Server\app.js:9:14)
+    at Module._compile (internal/modules/cjs/loader.js:1157:30)
+    at Object.Module._extensions..js (internal/modules/cjs/loader.js:1177:10)
+    at Module.load (internal/modules/cjs/loader.js:1001:32)
+    at Function.Module._load (internal/modules/cjs/loader.js:900:14)
+    at Function.executeUserEntryPoint [as runMain] (internal/modules/run_main.js:74:12)
+2020-06-01T17:18:04.180Z [error]: main - uncaughtException: Cannot find module 'config/config.js'
+Require stack:
+- C:\Users\Sebas\Desktop\Licencjat\Server\app.js
+Error: Cannot find module 'config/config.js'
+Require stack:
+- C:\Users\Sebas\Desktop\Licencjat\Server\app.js
+    at Function.Module._resolveFilename (internal/modules/cjs/loader.js:981:15)
+    at Function.Module._load (internal/modules/cjs/loader.js:863:27)
+    at Module.require (internal/modules/cjs/loader.js:1043:19)
+    at require (internal/modules/cjs/helpers.js:77:18)
+    at Object.<anonymous> (C:\Users\Sebas\Desktop\Licencjat\Server\app.js:9:14)
+    at Module._compile (internal/modules/cjs/loader.js:1157:30)
+    at Object.Module._extensions..js (internal/modules/cjs/loader.js:1177:10)
+    at Module.load (internal/modules/cjs/loader.js:1001:32)
+    at Function.Module._load (internal/modules/cjs/loader.js:900:14)
+    at Function.executeUserEntryPoint [as runMain] (internal/modules/run_main.js:74:12)
+2020-06-01T17:18:09.693Z [error]: main - uncaughtException: Cannot find module 'config/config.js'
+Require stack:
+- C:\Users\Sebas\Desktop\Licencjat\Server\app.js
+Error: Cannot find module 'config/config.js'
+Require stack:
+- C:\Users\Sebas\Desktop\Licencjat\Server\app.js
+    at Function.Module._resolveFilename (internal/modules/cjs/loader.js:981:15)
+    at Function.Module._load (internal/modules/cjs/loader.js:863:27)
+    at Module.require (internal/modules/cjs/loader.js:1043:19)
+    at require (internal/modules/cjs/helpers.js:77:18)
+    at Object.<anonymous> (C:\Users\Sebas\Desktop\Licencjat\Server\app.js:9:14)
+    at Module._compile (internal/modules/cjs/loader.js:1157:30)
+    at Object.Module._extensions..js (internal/modules/cjs/loader.js:1177:10)
+    at Module.load (internal/modules/cjs/loader.js:1001:32)
+    at Function.Module._load (internal/modules/cjs/loader.js:900:14)
+    at Function.executeUserEntryPoint [as runMain] (internal/modules/run_main.js:74:12)
+2020-06-01T17:19:09.068Z [error]: main - uncaughtException: Cannot find module 'config/config.js'
+Require stack:
+- C:\Users\Sebas\Desktop\Licencjat\Server\app.js
+Error: Cannot find module 'config/config.js'
+Require stack:
+- C:\Users\Sebas\Desktop\Licencjat\Server\app.js
+    at Function.Module._resolveFilename (internal/modules/cjs/loader.js:981:15)
+    at Function.Module._load (internal/modules/cjs/loader.js:863:27)
+    at Module.require (internal/modules/cjs/loader.js:1043:19)
+    at require (internal/modules/cjs/helpers.js:77:18)
+    at Object.<anonymous> (C:\Users\Sebas\Desktop\Licencjat\Server\app.js:9:14)
+    at Module._compile (internal/modules/cjs/loader.js:1157:30)
+    at Object.Module._extensions..js (internal/modules/cjs/loader.js:1177:10)
+    at Module.load (internal/modules/cjs/loader.js:1001:32)
+    at Function.Module._load (internal/modules/cjs/loader.js:900:14)
+    at Function.executeUserEntryPoint [as runMain] (internal/modules/run_main.js:74:12)
+2020-06-02T16:08:38.815Z [error]: main - uncaughtException: Dialect needs to be explicitly supplied as of v4.0.0
+Error: Dialect needs to be explicitly supplied as of v4.0.0
+    at new Sequelize (C:\Users\Sebas\Desktop\Licencjat\Server\node_modules\sequelize\lib\sequelize.js:265:13)
+    at Object.<anonymous> (C:\Users\Sebas\Desktop\Licencjat\Server\models\index.js:15:15)
+    at Module._compile (internal/modules/cjs/loader.js:1157:30)
+    at Object.Module._extensions..js (internal/modules/cjs/loader.js:1177:10)
+    at Module.load (internal/modules/cjs/loader.js:1001:32)
+    at Function.Module._load (internal/modules/cjs/loader.js:900:14)
+    at Module.require (internal/modules/cjs/loader.js:1043:19)
+    at require (internal/modules/cjs/helpers.js:77:18)
+    at Object.<anonymous> (C:\Users\Sebas\Desktop\Licencjat\Server\controllers\order.js:1:16)
+    at Module._compile (internal/modules/cjs/loader.js:1157:30)
+    at Object.Module._extensions..js (internal/modules/cjs/loader.js:1177:10)
+    at Module.load (internal/modules/cjs/loader.js:1001:32)
+    at Function.Module._load (internal/modules/cjs/loader.js:900:14)
+    at Module.require (internal/modules/cjs/loader.js:1043:19)
+    at require (internal/modules/cjs/helpers.js:77:18)
+    at Object.<anonymous> (C:\Users\Sebas\Desktop\Licencjat\Server\controllers\index.js:1:15)
+    at Module._compile (internal/modules/cjs/loader.js:1157:30)
+    at Object.Module._extensions..js (internal/modules/cjs/loader.js:1177:10)
+    at Module.load (internal/modules/cjs/loader.js:1001:32)
+    at Function.Module._load (internal/modules/cjs/loader.js:900:14)
+    at Module.require (internal/modules/cjs/loader.js:1043:19)
+    at require (internal/modules/cjs/helpers.js:77:18)
+2020-06-02T16:29:10.077Z [error]: main - uncaughtException: Unexpected token '{'
+C:\Users\Sebas\Desktop\Licencjat\Server\models\vehicle.js:11
+  }, {});
+     ^
+
+SyntaxError: Unexpected token '{'
+    at wrapSafe (internal/modules/cjs/loader.js:1071:16)
+    at Module._compile (internal/modules/cjs/loader.js:1121:27)
+    at Object.Module._extensions..js (internal/modules/cjs/loader.js:1177:10)
+    at Module.load (internal/modules/cjs/loader.js:1001:32)
+    at Function.Module._load (internal/modules/cjs/loader.js:900:14)
+    at Module.require (internal/modules/cjs/loader.js:1043:19)
+    at require (internal/modules/cjs/helpers.js:77:18)
+    at Sequelize.import (C:\Users\Sebas\Desktop\Licencjat\Server\node_modules\sequelize\lib\sequelize.js:481:62)
+    at C:\Users\Sebas\Desktop\Licencjat\Server\models\index.js:28:38
+    at Array.forEach (<anonymous>)
+    at Object.<anonymous> (C:\Users\Sebas\Desktop\Licencjat\Server\models\index.js:27:4)
+    at Module._compile (internal/modules/cjs/loader.js:1157:30)
+    at Object.Module._extensions..js (internal/modules/cjs/loader.js:1177:10)
+    at Module.load (internal/modules/cjs/loader.js:1001:32)
+    at Function.Module._load (internal/modules/cjs/loader.js:900:14)
+    at Module.require (internal/modules/cjs/loader.js:1043:19)
+    at require (internal/modules/cjs/helpers.js:77:18)
+    at Object.<anonymous> (C:\Users\Sebas\Desktop\Licencjat\Server\controllers\order.js:1:16)
+    at Module._compile (internal/modules/cjs/loader.js:1157:30)
+    at Object.Module._extensions..js (internal/modules/cjs/loader.js:1177:10)
+    at Module.load (internal/modules/cjs/loader.js:1001:32)
+    at Function.Module._load (internal/modules/cjs/loader.js:900:14)
+2020-06-02T16:43:15.089Z [error]: main - uncaughtException: trim is not defined
+ReferenceError: trim is not defined
+    at module.exports (C:\Users\Sebas\Desktop\Licencjat\Server\models\vehicle.js:10:62)
+    at Sequelize.import (C:\Users\Sebas\Desktop\Licencjat\Server\node_modules\sequelize\lib\sequelize.js:486:38)
+    at C:\Users\Sebas\Desktop\Licencjat\Server\models\index.js:28:38
+    at Array.forEach (<anonymous>)
+    at Object.<anonymous> (C:\Users\Sebas\Desktop\Licencjat\Server\models\index.js:27:4)
+    at Module._compile (internal/modules/cjs/loader.js:1157:30)
+    at Object.Module._extensions..js (internal/modules/cjs/loader.js:1177:10)
+    at Module.load (internal/modules/cjs/loader.js:1001:32)
+    at Function.Module._load (internal/modules/cjs/loader.js:900:14)
+    at Module.require (internal/modules/cjs/loader.js:1043:19)
+    at require (internal/modules/cjs/helpers.js:77:18)
+    at Object.<anonymous> (C:\Users\Sebas\Desktop\Licencjat\Server\controllers\order.js:1:16)
+    at Module._compile (internal/modules/cjs/loader.js:1157:30)
+    at Object.Module._extensions..js (internal/modules/cjs/loader.js:1177:10)
+    at Module.load (internal/modules/cjs/loader.js:1001:32)
+    at Function.Module._load (internal/modules/cjs/loader.js:900:14)
+    at Module.require (internal/modules/cjs/loader.js:1043:19)
+    at require (internal/modules/cjs/helpers.js:77:18)
+    at Object.<anonymous> (C:\Users\Sebas\Desktop\Licencjat\Server\controllers\index.js:1:15)
+    at Module._compile (internal/modules/cjs/loader.js:1157:30)
+    at Object.Module._extensions..js (internal/modules/cjs/loader.js:1177:10)
+    at Module.load (internal/modules/cjs/loader.js:1001:32)
+2020-06-02T16:49:51.969Z [error]: main - uncaughtException: A column called 'id' was added to the attributes of 'Orders' but not marked with 'primaryKey: true'
+Error: A column called 'id' was added to the attributes of 'Orders' but not marked with 'primaryKey: true'
+    at Function._addDefaultAttributes (C:\Users\Sebas\Desktop\Licencjat\Server\node_modules\sequelize\lib\model.js:230:15)
+    at Function.init (C:\Users\Sebas\Desktop\Licencjat\Server\node_modules\sequelize\lib\model.js:1052:10)
+    at Sequelize.define (C:\Users\Sebas\Desktop\Licencjat\Server\node_modules\sequelize\lib\sequelize.js:428:11)
+    at module.exports (C:\Users\Sebas\Desktop\Licencjat\Server\models\orders.js:3:27)
+    at Sequelize.import (C:\Users\Sebas\Desktop\Licencjat\Server\node_modules\sequelize\lib\sequelize.js:486:38)
+    at C:\Users\Sebas\Desktop\Licencjat\Server\models\index.js:28:38
+    at Array.forEach (<anonymous>)
+    at Object.<anonymous> (C:\Users\Sebas\Desktop\Licencjat\Server\models\index.js:27:4)
+    at Module._compile (internal/modules/cjs/loader.js:1157:30)
+    at Object.Module._extensions..js (internal/modules/cjs/loader.js:1177:10)
+    at Module.load (internal/modules/cjs/loader.js:1001:32)
+    at Function.Module._load (internal/modules/cjs/loader.js:900:14)
+    at Module.require (internal/modules/cjs/loader.js:1043:19)
+    at require (internal/modules/cjs/helpers.js:77:18)
+    at Object.<anonymous> (C:\Users\Sebas\Desktop\Licencjat\Server\controllers\order.js:1:16)
+    at Module._compile (internal/modules/cjs/loader.js:1157:30)
+    at Object.Module._extensions..js (internal/modules/cjs/loader.js:1177:10)
+    at Module.load (internal/modules/cjs/loader.js:1001:32)
+    at Function.Module._load (internal/modules/cjs/loader.js:900:14)
+    at Module.require (internal/modules/cjs/loader.js:1043:19)
+    at require (internal/modules/cjs/helpers.js:77:18)
+    at Object.<anonymous> (C:\Users\Sebas\Desktop\Licencjat\Server\controllers\index.js:1:15)
+2020-06-02T16:51:30.336Z [error]: main - uncaughtException: A column called 'id' was added to the attributes of 'Orders' but not marked with 'primaryKey: true'
+Error: A column called 'id' was added to the attributes of 'Orders' but not marked with 'primaryKey: true'
+    at Function._addDefaultAttributes (C:\Users\Sebas\Desktop\Licencjat\Server\node_modules\sequelize\lib\model.js:230:15)
+    at Function.init (C:\Users\Sebas\Desktop\Licencjat\Server\node_modules\sequelize\lib\model.js:1052:10)
+    at Sequelize.define (C:\Users\Sebas\Desktop\Licencjat\Server\node_modules\sequelize\lib\sequelize.js:428:11)
+    at module.exports (C:\Users\Sebas\Desktop\Licencjat\Server\models\orders.js:3:27)
+    at Sequelize.import (C:\Users\Sebas\Desktop\Licencjat\Server\node_modules\sequelize\lib\sequelize.js:486:38)
+    at C:\Users\Sebas\Desktop\Licencjat\Server\models\index.js:28:38
+    at Array.forEach (<anonymous>)
+    at Object.<anonymous> (C:\Users\Sebas\Desktop\Licencjat\Server\models\index.js:27:4)
+    at Module._compile (internal/modules/cjs/loader.js:1157:30)
+    at Object.Module._extensions..js (internal/modules/cjs/loader.js:1177:10)
+    at Module.load (internal/modules/cjs/loader.js:1001:32)
+    at Function.Module._load (internal/modules/cjs/loader.js:900:14)
+    at Module.require (internal/modules/cjs/loader.js:1043:19)
+    at require (internal/modules/cjs/helpers.js:77:18)
+    at Object.<anonymous> (C:\Users\Sebas\Desktop\Licencjat\Server\controllers\order.js:1:16)
+    at Module._compile (internal/modules/cjs/loader.js:1157:30)
+    at Object.Module._extensions..js (internal/modules/cjs/loader.js:1177:10)
+    at Module.load (internal/modules/cjs/loader.js:1001:32)
+    at Function.Module._load (internal/modules/cjs/loader.js:900:14)
+    at Module.require (internal/modules/cjs/loader.js:1043:19)
+    at require (internal/modules/cjs/helpers.js:77:18)
+    at Object.<anonymous> (C:\Users\Sebas\Desktop\Licencjat\Server\controllers\index.js:1:15)
+2020-06-02T16:52:23.524Z [error]: main - uncaughtException: A column called 'id' was added to the attributes of 'Orders' but not marked with 'primaryKey: true'
+Error: A column called 'id' was added to the attributes of 'Orders' but not marked with 'primaryKey: true'
+    at Function._addDefaultAttributes (C:\Users\Sebas\Desktop\Licencjat\Server\node_modules\sequelize\lib\model.js:230:15)
+    at Function.init (C:\Users\Sebas\Desktop\Licencjat\Server\node_modules\sequelize\lib\model.js:1052:10)
+    at Sequelize.define (C:\Users\Sebas\Desktop\Licencjat\Server\node_modules\sequelize\lib\sequelize.js:428:11)
+    at module.exports (C:\Users\Sebas\Desktop\Licencjat\Server\models\orders.js:3:27)
+    at Sequelize.import (C:\Users\Sebas\Desktop\Licencjat\Server\node_modules\sequelize\lib\sequelize.js:486:38)
+    at C:\Users\Sebas\Desktop\Licencjat\Server\models\index.js:28:38
+    at Array.forEach (<anonymous>)
+    at Object.<anonymous> (C:\Users\Sebas\Desktop\Licencjat\Server\models\index.js:27:4)
+    at Module._compile (internal/modules/cjs/loader.js:1157:30)
+    at Object.Module._extensions..js (internal/modules/cjs/loader.js:1177:10)
+    at Module.load (internal/modules/cjs/loader.js:1001:32)
+    at Function.Module._load (internal/modules/cjs/loader.js:900:14)
+    at Module.require (internal/modules/cjs/loader.js:1043:19)
+    at require (internal/modules/cjs/helpers.js:77:18)
+    at Object.<anonymous> (C:\Users\Sebas\Desktop\Licencjat\Server\controllers\order.js:1:16)
+    at Module._compile (internal/modules/cjs/loader.js:1157:30)
+    at Object.Module._extensions..js (internal/modules/cjs/loader.js:1177:10)
+    at Module.load (internal/modules/cjs/loader.js:1001:32)
+    at Function.Module._load (internal/modules/cjs/loader.js:900:14)
+    at Module.require (internal/modules/cjs/loader.js:1043:19)
+    at require (internal/modules/cjs/helpers.js:77:18)
+    at Object.<anonymous> (C:\Users\Sebas\Desktop\Licencjat\Server\controllers\index.js:1:15)
+2020-06-02T16:52:28.692Z [error]: main - uncaughtException: A column called 'id' was added to the attributes of 'Orders' but not marked with 'primaryKey: true'
+Error: A column called 'id' was added to the attributes of 'Orders' but not marked with 'primaryKey: true'
+    at Function._addDefaultAttributes (C:\Users\Sebas\Desktop\Licencjat\Server\node_modules\sequelize\lib\model.js:230:15)
+    at Function.init (C:\Users\Sebas\Desktop\Licencjat\Server\node_modules\sequelize\lib\model.js:1052:10)
+    at Sequelize.define (C:\Users\Sebas\Desktop\Licencjat\Server\node_modules\sequelize\lib\sequelize.js:428:11)
+    at module.exports (C:\Users\Sebas\Desktop\Licencjat\Server\models\orders.js:3:27)
+    at Sequelize.import (C:\Users\Sebas\Desktop\Licencjat\Server\node_modules\sequelize\lib\sequelize.js:486:38)
+    at C:\Users\Sebas\Desktop\Licencjat\Server\models\index.js:28:38
+    at Array.forEach (<anonymous>)
+    at Object.<anonymous> (C:\Users\Sebas\Desktop\Licencjat\Server\models\index.js:27:4)
+    at Module._compile (internal/modules/cjs/loader.js:1157:30)
+    at Object.Module._extensions..js (internal/modules/cjs/loader.js:1177:10)
+    at Module.load (internal/modules/cjs/loader.js:1001:32)
+    at Function.Module._load (internal/modules/cjs/loader.js:900:14)
+    at Module.require (internal/modules/cjs/loader.js:1043:19)
+    at require (internal/modules/cjs/helpers.js:77:18)
+    at Object.<anonymous> (C:\Users\Sebas\Desktop\Licencjat\Server\controllers\order.js:1:16)
+    at Module._compile (internal/modules/cjs/loader.js:1157:30)
+    at Object.Module._extensions..js (internal/modules/cjs/loader.js:1177:10)
+    at Module.load (internal/modules/cjs/loader.js:1001:32)
+    at Function.Module._load (internal/modules/cjs/loader.js:900:14)
+    at Module.require (internal/modules/cjs/loader.js:1043:19)
+    at require (internal/modules/cjs/helpers.js:77:18)
+    at Object.<anonymous> (C:\Users\Sebas\Desktop\Licencjat\Server\controllers\index.js:1:15)
+2020-06-02T16:54:10.314Z [error]: main - uncaughtException: A column called 'id' was added to the attributes of 'Orders' but not marked with 'primaryKey: true'
+Error: A column called 'id' was added to the attributes of 'Orders' but not marked with 'primaryKey: true'
+    at Function._addDefaultAttributes (C:\Users\Sebas\Desktop\Licencjat\Server\node_modules\sequelize\lib\model.js:230:15)
+    at Function.init (C:\Users\Sebas\Desktop\Licencjat\Server\node_modules\sequelize\lib\model.js:1052:10)
+    at Sequelize.define (C:\Users\Sebas\Desktop\Licencjat\Server\node_modules\sequelize\lib\sequelize.js:428:11)
+    at module.exports (C:\Users\Sebas\Desktop\Licencjat\Server\models\orders.js:3:27)
+    at Sequelize.import (C:\Users\Sebas\Desktop\Licencjat\Server\node_modules\sequelize\lib\sequelize.js:486:38)
+    at C:\Users\Sebas\Desktop\Licencjat\Server\models\index.js:28:38
+    at Array.forEach (<anonymous>)
+    at Object.<anonymous> (C:\Users\Sebas\Desktop\Licencjat\Server\models\index.js:27:4)
+    at Module._compile (internal/modules/cjs/loader.js:1157:30)
+    at Object.Module._extensions..js (internal/modules/cjs/loader.js:1177:10)
+    at Module.load (internal/modules/cjs/loader.js:1001:32)
+    at Function.Module._load (internal/modules/cjs/loader.js:900:14)
+    at Module.require (internal/modules/cjs/loader.js:1043:19)
+    at require (internal/modules/cjs/helpers.js:77:18)
+    at Object.<anonymous> (C:\Users\Sebas\Desktop\Licencjat\Server\controllers\order.js:1:16)
+    at Module._compile (internal/modules/cjs/loader.js:1157:30)
+    at Object.Module._extensions..js (internal/modules/cjs/loader.js:1177:10)
+    at Module.load (internal/modules/cjs/loader.js:1001:32)
+    at Function.Module._load (internal/modules/cjs/loader.js:900:14)
+    at Module.require (internal/modules/cjs/loader.js:1043:19)
+    at require (internal/modules/cjs/helpers.js:77:18)
+    at Object.<anonymous> (C:\Users\Sebas\Desktop\Licencjat\Server\controllers\index.js:1:15)
+2020-06-02T17:22:07.155Z [error]: main - uncaughtException: Unexpected identifier
+C:\Users\Sebas\Desktop\Licencjat\Server\controllers\semiTrailer.js:80
+                        semiTrailerType: req.body.semiTrailerType
+                        ^^^^^^^^^^^^^^^
+
+SyntaxError: Unexpected identifier
+    at wrapSafe (internal/modules/cjs/loader.js:1071:16)
+    at Module._compile (internal/modules/cjs/loader.js:1121:27)
+    at Object.Module._extensions..js (internal/modules/cjs/loader.js:1177:10)
+    at Module.load (internal/modules/cjs/loader.js:1001:32)
+    at Function.Module._load (internal/modules/cjs/loader.js:900:14)
+    at Module.require (internal/modules/cjs/loader.js:1043:19)
+    at require (internal/modules/cjs/helpers.js:77:18)
+    at Object.<anonymous> (C:\Users\Sebas\Desktop\Licencjat\Server\controllers\vehicle.js:4:31)
+    at Module._compile (internal/modules/cjs/loader.js:1157:30)
+    at Object.Module._extensions..js (internal/modules/cjs/loader.js:1177:10)
+    at Module.load (internal/modules/cjs/loader.js:1001:32)
+    at Function.Module._load (internal/modules/cjs/loader.js:900:14)
+    at Module.require (internal/modules/cjs/loader.js:1043:19)
+    at require (internal/modules/cjs/helpers.js:77:18)
+    at Object.<anonymous> (C:\Users\Sebas\Desktop\Licencjat\Server\controllers\index.js:4:17)
+    at Module._compile (internal/modules/cjs/loader.js:1157:30)
+    at Object.Module._extensions..js (internal/modules/cjs/loader.js:1177:10)
+    at Module.load (internal/modules/cjs/loader.js:1001:32)
+    at Function.Module._load (internal/modules/cjs/loader.js:900:14)
+    at Module.require (internal/modules/cjs/loader.js:1043:19)
+    at require (internal/modules/cjs/helpers.js:77:18)
+    at Object.<anonymous> (C:\Users\Sebas\Desktop\Licencjat\Server\routes\index.js:5:25)
+2020-06-02T17:53:05.185Z [error]: main - uncaughtException: Unexpected token '{'
+C:\Users\Sebas\Desktop\Licencjat\Server\models\orders.js:61
+    }, {});
+       ^
+
+SyntaxError: Unexpected token '{'
+    at wrapSafe (internal/modules/cjs/loader.js:1071:16)
+    at Module._compile (internal/modules/cjs/loader.js:1121:27)
+    at Object.Module._extensions..js (internal/modules/cjs/loader.js:1177:10)
+    at Module.load (internal/modules/cjs/loader.js:1001:32)
+    at Function.Module._load (internal/modules/cjs/loader.js:900:14)
+    at Module.require (internal/modules/cjs/loader.js:1043:19)
+    at require (internal/modules/cjs/helpers.js:77:18)
+    at Sequelize.import (C:\Users\Sebas\Desktop\Licencjat\Server\node_modules\sequelize\lib\sequelize.js:481:62)
+    at C:\Users\Sebas\Desktop\Licencjat\Server\models\index.js:28:38
+    at Array.forEach (<anonymous>)
+    at Object.<anonymous> (C:\Users\Sebas\Desktop\Licencjat\Server\models\index.js:27:4)
+    at Module._compile (internal/modules/cjs/loader.js:1157:30)
+    at Object.Module._extensions..js (internal/modules/cjs/loader.js:1177:10)
+    at Module.load (internal/modules/cjs/loader.js:1001:32)
+    at Function.Module._load (internal/modules/cjs/loader.js:900:14)
+    at Module.require (internal/modules/cjs/loader.js:1043:19)
+    at require (internal/modules/cjs/helpers.js:77:18)
+    at Object.<anonymous> (C:\Users\Sebas\Desktop\Licencjat\Server\controllers\order.js:1:16)
+    at Module._compile (internal/modules/cjs/loader.js:1157:30)
+    at Object.Module._extensions..js (internal/modules/cjs/loader.js:1177:10)
+    at Module.load (internal/modules/cjs/loader.js:1001:32)
+    at Function.Module._load (internal/modules/cjs/loader.js:900:14)
+2020-06-02T17:54:01.959Z [error]: main - uncaughtException: Unexpected token '{'
+C:\Users\Sebas\Desktop\Licencjat\Server\models\orders.js:64
+    {
+    ^
+
+SyntaxError: Unexpected token '{'
+    at wrapSafe (internal/modules/cjs/loader.js:1071:16)
+    at Module._compile (internal/modules/cjs/loader.js:1121:27)
+    at Object.Module._extensions..js (internal/modules/cjs/loader.js:1177:10)
+    at Module.load (internal/modules/cjs/loader.js:1001:32)
+    at Function.Module._load (internal/modules/cjs/loader.js:900:14)
+    at Module.require (internal/modules/cjs/loader.js:1043:19)
+    at require (internal/modules/cjs/helpers.js:77:18)
+    at Sequelize.import (C:\Users\Sebas\Desktop\Licencjat\Server\node_modules\sequelize\lib\sequelize.js:481:62)
+    at C:\Users\Sebas\Desktop\Licencjat\Server\models\index.js:28:38
+    at Array.forEach (<anonymous>)
+    at Object.<anonymous> (C:\Users\Sebas\Desktop\Licencjat\Server\models\index.js:27:4)
+    at Module._compile (internal/modules/cjs/loader.js:1157:30)
+    at Object.Module._extensions..js (internal/modules/cjs/loader.js:1177:10)
+    at Module.load (internal/modules/cjs/loader.js:1001:32)
+    at Function.Module._load (internal/modules/cjs/loader.js:900:14)
+    at Module.require (internal/modules/cjs/loader.js:1043:19)
+    at require (internal/modules/cjs/helpers.js:77:18)
+    at Object.<anonymous> (C:\Users\Sebas\Desktop\Licencjat\Server\controllers\order.js:1:16)
+    at Module._compile (internal/modules/cjs/loader.js:1157:30)
+    at Object.Module._extensions..js (internal/modules/cjs/loader.js:1177:10)
+    at Module.load (internal/modules/cjs/loader.js:1001:32)
+    at Function.Module._load (internal/modules/cjs/loader.js:900:14)
+2020-06-02T17:58:32.050Z [error]: main - uncaughtException: Unexpected token '}'
+C:\Users\Sebas\Desktop\Licencjat\Server\controllers\semiTrailer.js:62
+            }));
+            ^
+
+SyntaxError: Unexpected token '}'
+    at wrapSafe (internal/modules/cjs/loader.js:1071:16)
+    at Module._compile (internal/modules/cjs/loader.js:1121:27)
+    at Object.Module._extensions..js (internal/modules/cjs/loader.js:1177:10)
+    at Module.load (internal/modules/cjs/loader.js:1001:32)
+    at Function.Module._load (internal/modules/cjs/loader.js:900:14)
+    at Module.require (internal/modules/cjs/loader.js:1043:19)
+    at require (internal/modules/cjs/helpers.js:77:18)
+    at Object.<anonymous> (C:\Users\Sebas\Desktop\Licencjat\Server\controllers\vehicle.js:4:31)
+    at Module._compile (internal/modules/cjs/loader.js:1157:30)
+    at Object.Module._extensions..js (internal/modules/cjs/loader.js:1177:10)
+    at Module.load (internal/modules/cjs/loader.js:1001:32)
+    at Function.Module._load (internal/modules/cjs/loader.js:900:14)
+    at Module.require (internal/modules/cjs/loader.js:1043:19)
+    at require (internal/modules/cjs/helpers.js:77:18)
+    at Object.<anonymous> (C:\Users\Sebas\Desktop\Licencjat\Server\controllers\index.js:4:17)
+    at Module._compile (internal/modules/cjs/loader.js:1157:30)
+    at Object.Module._extensions..js (internal/modules/cjs/loader.js:1177:10)
+    at Module.load (internal/modules/cjs/loader.js:1001:32)
+    at Function.Module._load (internal/modules/cjs/loader.js:900:14)
+    at Module.require (internal/modules/cjs/loader.js:1043:19)
+    at require (internal/modules/cjs/helpers.js:77:18)
+    at Object.<anonymous> (C:\Users\Sebas\Desktop\Licencjat\Server\routes\index.js:5:25)
