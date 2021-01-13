@@ -1,8 +1,9 @@
-const config = require('config');
+import config from 'config';
 
-module.exports = function () {
-    if(!config.get('jwtPrivateKey')) {
+export default function () {
+    if (!config.get('jwtPrivateKey')) {
         throw new Error('FATAL ERROR: jwtPrivateKey is not defined');
         process.exit(1);
     }
 }
+

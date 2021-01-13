@@ -1,23 +1,24 @@
-const jwt = require('jsonwebtoken');
-const config = require('../config/custom-environment-variables.json');
+import jwt from 'jsonwebtoken';
+import {readFile} from 'fs/promises';
 
-module.exports = function (req, res, next) {
+const {jwtPrivateKey} = JSON.parse(await readFile('./config/custom-environment-variables.json' ,(err,data) => {
+    if (err) throw err;
+}));
+
+
+export const auth = (req, res, next) => {
 
     let token = req.header('Authorization');
     if (!token) return res.status(401).send('Access denied. No token provided.');
     try {
-
-        const decoded = jwt.verify(token, config.jwtPrivateKey);
-        req.worker = decoded;
+        req.worker = jwt.verify(token, jwtPrivateKey);
         console.log(req.worker);
         res.locals.user = req.worker;
         next();
     } catch (ex) {
         res.status(400).json({
             'msg': 'Invalid token',
-            'error': ex,
-            'token': token
+            'error': ex.message,
         });
     }
 };
-

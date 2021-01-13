@@ -1,6 +1,12 @@
-'use strict';
-module.exports = (sequelize, DataTypes) => {
-    const Customer = sequelize.define('Customer', {
+import {Sequelize} from "sequelize";
+
+const {Model, DataTypes} = Sequelize
+import {sequelize} from '../db/dbConnection.js'
+
+class Customer extends Model {
+}
+
+Customer.init({
         id: {type: DataTypes.INTEGER, primaryKey: true, autoIncrement: true, allowNull: false},
         companyName: {
             type: DataTypes.STRING,
@@ -33,12 +39,12 @@ module.exports = (sequelize, DataTypes) => {
                 }
             }
         }
-    }, {});
-    Customer.associate = function (models) {
-        Customer.hasMany(models.Order, {
-            foreignKey: 'customerId',
-            as: 'order',
-        });
-    };
-    return Customer;
-};
+    }, {
+        sequelize,
+        modelName: 'Customer'
+    }
+)
+export default Customer;
+
+
+

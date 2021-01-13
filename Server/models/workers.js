@@ -1,75 +1,79 @@
-const bcrypt = require('bcrypt');
-const jwt = require('jsonwebtoken');
-const config = require('../config/custom-environment-variables.json');
-module.exports = (sequelize, DataTypes) => {
-    const Worker = sequelize.define('Worker', {
-        id: {type: DataTypes.INTEGER, primaryKey: true, autoIncrement: true, allowNull: false},
-        username: {
-            type: DataTypes.STRING,
-            unique: true,
-            allowNull: false,
-        },
-        password: {
-            type: DataTypes.STRING,
-            allowNull: false,
-            validate: {
-                notEmpty: {
-                    args: true,
-                    msg: 'Password can not be null',
-                },
-                len: {
-                    args: [8, 255],
-                    msg: 'Length of password must be min 8 chars'
-                },
-                is: {
-                    args: /^(?=.*[a-z])(?=.*[A-Z])(?=.*\d)(?=.*[#$^+=!*()@%&]).{8,}$/,
-                    msg: 'The password must contain at least 8 characters including at least 1 uppercase, 1 lowercase and one digit'
-                }
+import {Sequelize} from 'sequelize';
+const {Model, DataTypes} = Sequelize
+import {sequelize} from '../db/dbConnection.js'
+import bcrypt from 'bcrypt';
+import jwt from 'jsonwebtoken';
+import {readFile} from "fs/promises";
+
+const {jwtPrivateKey} = JSON.parse(await readFile('./config/custom-environment-variables.json', (err, data) => {
+    if (err) throw err;
+    console.log(data);
+}));
+
+class Worker extends Model {
+
+}
+
+Worker.init({
+    id: {type: DataTypes.INTEGER, primaryKey: true, autoIncrement: true, allowNull: false},
+    username: {
+        type: DataTypes.STRING,
+        unique: true,
+        allowNull: false,
+    },
+    password: {
+        type: DataTypes.STRING,
+        allowNull: false,
+        validate: {
+            notEmpty: {
+                args: true,
+                msg: 'Password can not be null',
             },
-        },
-        firstname: {type: DataTypes.STRING, allowNull: false, trim: true},
-        lastname: {type: DataTypes.STRING, allowNull: false, trim: true},
-        role: {type: DataTypes.INTEGER, allowNull: false},
-        email: {
-            type: DataTypes.STRING,
-            allowNull: false,
-            validate: {
-                notEmpty: {
-                    arg: true,
-                    msg: 'Not be empty'
-                },
-                isEmail: {
-                    arg: true,
-                    msg: 'Must be in email format foo@bar.com'
-                },
+            len: {
+                args: [8, 255],
+                msg: 'Length of password must be min 8 chars'
+            },
+            is: {
+                args: /^(?=.*[a-z])(?=.*[A-Z])(?=.*\d)(?=.*[#$^+=!*()@%&]).{8,}$/,
+                msg: 'The password must contain at least 8 characters including at least 1 uppercase, 1 lowercase and one digit'
             }
         },
-    }, {
-        hooks: {
-            beforeCreate: function (worker) {
-                worker.password = bcrypt.hashSync(worker.password, 10);
+    },
+    firstname: {type: DataTypes.STRING, allowNull: false, trim: true},
+    lastname: {type: DataTypes.STRING, allowNull: false, trim: true},
+    role: {type: DataTypes.INTEGER, allowNull: false},
+    email: {
+        type: DataTypes.STRING,
+        allowNull: false,
+        validate: {
+            notEmpty: {
+                arg: true,
+                msg: 'Not be empty'
             },
-            beforeUpdate: function (worker) {
-                worker.password = bcrypt.hashSync(worker.password, 10);
-            }
+            isEmail: {
+                arg: true,
+                msg: 'Must be in email format foo@bar.com'
+            },
         }
-    });
-    Worker.associate = function (models) {
-        // associations can be defined here
-        Worker.hasMany(models.Order, {
-            foreignKey: 'workerId',
-            as: 'orders'
-        });
-        Worker.hasOne(models.Vehicle, {
-            foreignKey: 'workerId',
-            as: 'vehicle'
-        });
-    };
-    Worker.prototype.generateAuthToken = function () {
-        const token = jwt.sign({id: this.id, role: this.role}, config.jwtPrivateKey);
-        console.log(token);
-        return token;
-    };
-    return Worker;
-};
+    },
+}, {
+    sequelize,
+    modelName: 'worker',
+    hooks: {
+        beforeCreate: function (worker) {
+            worker.password = bcrypt.hashSync(worker.password, 10);
+        },
+        beforeUpdate: function (worker) {
+            worker.password = bcrypt.hashSync(worker.password, 10);
+        }
+    }
+});
+
+export const generateAuthToken = () => {
+    const token = jwt.sign({id: Worker.id, role: Worker.role}, jwtPrivateKey);
+    console.log(token);
+    return token;
+}
+export default Worker;
+
 

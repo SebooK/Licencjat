@@ -957,3 +957,747 @@ SyntaxError: Unexpected token '}'
     at Module.require (internal/modules/cjs/loader.js:1043:19)
     at require (internal/modules/cjs/helpers.js:77:18)
     at Object.<anonymous> (C:\Users\Sebas\Desktop\Licencjat\Server\routes\index.js:5:25)
+2021-01-12T14:07:52.524Z [error]: main - uncaughtException: Cannot use import statement outside a module
+C:\Users\Sebas\Desktop\Licencjat\Server\models\index.js:3
+import {fs} from 'fs';
+^^^^^^
+
+SyntaxError: Cannot use import statement outside a module
+    at wrapSafe (internal/modules/cjs/loader.js:979:16)
+    at Module._compile (internal/modules/cjs/loader.js:1027:27)
+    at Object.Module._extensions..js (internal/modules/cjs/loader.js:1092:10)
+    at Module.load (internal/modules/cjs/loader.js:928:32)
+    at Function.Module._load (internal/modules/cjs/loader.js:769:14)
+    at Module.require (internal/modules/cjs/loader.js:952:19)
+    at require (internal/modules/cjs/helpers.js:88:18)
+    at Object.<anonymous> (C:\Users\Sebas\Desktop\Licencjat\Server\controllers\order.js:1:16)
+    at Module._compile (internal/modules/cjs/loader.js:1063:30)
+    at Object.Module._extensions..js (internal/modules/cjs/loader.js:1092:10)
+2021-01-12T14:17:53.276Z [error]: main - uncaughtException: Cannot use import statement outside a module
+C:\Users\Sebas\Desktop\Licencjat\Server\models\index.js:3
+import {fs} from 'fs';
+^^^^^^
+
+SyntaxError: Cannot use import statement outside a module
+    at wrapSafe (internal/modules/cjs/loader.js:979:16)
+    at Module._compile (internal/modules/cjs/loader.js:1027:27)
+    at Object.Module._extensions..js (internal/modules/cjs/loader.js:1092:10)
+    at Module.load (internal/modules/cjs/loader.js:928:32)
+    at Function.Module._load (internal/modules/cjs/loader.js:769:14)
+    at Module.require (internal/modules/cjs/loader.js:952:19)
+    at require (internal/modules/cjs/helpers.js:88:18)
+    at Object.<anonymous> (C:\Users\Sebas\Desktop\Licencjat\Server\controllers\order.js:1:16)
+    at Module._compile (internal/modules/cjs/loader.js:1063:30)
+    at Object.Module._extensions..js (internal/modules/cjs/loader.js:1092:10)
+2021-01-12T20:01:40.520Z [error]: main - uncaughtException: module is not defined
+ReferenceError: module is not defined
+    at file:///C:/Users/Sebas/Desktop/Licencjat/Server/logger/logger.js:36:1
+    at ModuleJob.run (internal/modules/esm/module_job.js:146:23)
+    at async Loader.import (internal/modules/esm/loader.js:165:24)
+    at async Object.loadESM (internal/process/esm_loader.js:68:5)
+2021-01-12T20:01:54.101Z [error]: main - uncaughtException: module is not defined
+ReferenceError: module is not defined
+    at file:///C:/Users/Sebas/Desktop/Licencjat/Server/logger/logger.js:36:1
+    at ModuleJob.run (internal/modules/esm/module_job.js:146:23)
+    at async Loader.import (internal/modules/esm/loader.js:165:24)
+    at async Object.loadESM (internal/process/esm_loader.js:68:5)
+2021-01-12T20:02:27.817Z [error]: main - uncaughtException: Invalid URL: ../config/custom-environment-variables.json
+TypeError [ERR_INVALID_URL]: Invalid URL: ../config/custom-environment-variables.json
+    at onParseError (internal/url.js:258:9)
+    at new URL (internal/url.js:334:5)
+    at file:///C:/Users/Sebas/Desktop/Licencjat/Server/middleware/auth.js:3:49
+    at ModuleJob.run (internal/modules/esm/module_job.js:146:23)
+    at async Loader.import (internal/modules/esm/loader.js:165:24)
+    at async Object.loadESM (internal/process/esm_loader.js:68:5)
+2021-01-12T20:03:00.240Z [error]: main - uncaughtException: module is not defined
+ReferenceError: module is not defined
+    at file:///C:/Users/Sebas/Desktop/Licencjat/Server/logger/logger.js:36:1
+    at ModuleJob.run (internal/modules/esm/module_job.js:146:23)
+    at async Loader.import (internal/modules/esm/loader.js:165:24)
+    at async Object.loadESM (internal/process/esm_loader.js:68:5)
+2021-01-12T20:03:21.008Z [error]: main - uncaughtException: Invalid URL: ../config/custom-environment-variables.json
+TypeError [ERR_INVALID_URL]: Invalid URL: ../config/custom-environment-variables.json
+    at onParseError (internal/url.js:258:9)
+    at new URL (internal/url.js:334:5)
+    at file:///C:/Users/Sebas/Desktop/Licencjat/Server/middleware/auth.js:3:49
+    at ModuleJob.run (internal/modules/esm/module_job.js:146:23)
+    at async Loader.import (internal/modules/esm/loader.js:165:24)
+    at async Object.loadESM (internal/process/esm_loader.js:68:5)
+2021-01-12T20:04:01.570Z [error]: main - uncaughtException: Invalid URL: ../config/custom-environment-variables.json
+TypeError [ERR_INVALID_URL]: Invalid URL: ../config/custom-environment-variables.json
+    at onParseError (internal/url.js:258:9)
+    at new URL (internal/url.js:334:5)
+    at file:///C:/Users/Sebas/Desktop/Licencjat/Server/middleware/auth.js:3:49
+    at ModuleJob.run (internal/modules/esm/module_job.js:146:23)
+    at async Loader.import (internal/modules/esm/loader.js:165:24)
+    at async Object.loadESM (internal/process/esm_loader.js:68:5)
+2021-01-12T20:16:27.557Z [error]: main - uncaughtException: Invalid URL: ../config/custom-environment-variables.json
+TypeError [ERR_INVALID_URL]: Invalid URL: ../config/custom-environment-variables.json
+    at onParseError (internal/url.js:258:9)
+    at new URL (internal/url.js:334:5)
+    at file:///C:/Users/Sebas/Desktop/Licencjat/Server/middleware/auth.js:3:49
+    at ModuleJob.run (internal/modules/esm/module_job.js:146:23)
+    at async Loader.import (internal/modules/esm/loader.js:165:24)
+    at async Object.loadESM (internal/process/esm_loader.js:68:5)
+2021-01-12T20:17:00.394Z [error]: main - uncaughtException: Invalid URL: ../config/custom-environment-variables.json
+TypeError [ERR_INVALID_URL]: Invalid URL: ../config/custom-environment-variables.json
+    at onParseError (internal/url.js:258:9)
+    at new URL (internal/url.js:334:5)
+    at file:///C:/Users/Sebas/Desktop/Licencjat/Server/middleware/auth.js:3:49
+    at ModuleJob.run (internal/modules/esm/module_job.js:146:23)
+    at async Loader.import (internal/modules/esm/loader.js:165:24)
+    at async Object.loadESM (internal/process/esm_loader.js:68:5)
+2021-01-12T20:17:22.894Z [error]: main - uncaughtException: Invalid URL: ../config/custom-environment-variables.json
+TypeError [ERR_INVALID_URL]: Invalid URL: ../config/custom-environment-variables.json
+    at onParseError (internal/url.js:258:9)
+    at new URL (internal/url.js:334:5)
+    at file:///C:/Users/Sebas/Desktop/Licencjat/Server/middleware/auth.js:3:49
+    at ModuleJob.run (internal/modules/esm/module_job.js:146:23)
+    at async Loader.import (internal/modules/esm/loader.js:165:24)
+    at async Object.loadESM (internal/process/esm_loader.js:68:5)
+2021-01-12T20:17:28.556Z [error]: main - uncaughtException: Invalid URL: ../config/custom-environment-variables.json
+TypeError [ERR_INVALID_URL]: Invalid URL: ../config/custom-environment-variables.json
+    at onParseError (internal/url.js:258:9)
+    at new URL (internal/url.js:334:5)
+    at file:///C:/Users/Sebas/Desktop/Licencjat/Server/middleware/auth.js:3:49
+    at ModuleJob.run (internal/modules/esm/module_job.js:146:23)
+    at async Loader.import (internal/modules/esm/loader.js:165:24)
+    at async Object.loadESM (internal/process/esm_loader.js:68:5)
+2021-01-12T20:17:34.580Z [error]: main - uncaughtException: Invalid URL: ../config/custom-environment-variables.json
+TypeError [ERR_INVALID_URL]: Invalid URL: ../config/custom-environment-variables.json
+    at onParseError (internal/url.js:258:9)
+    at new URL (internal/url.js:334:5)
+    at file:///C:/Users/Sebas/Desktop/Licencjat/Server/middleware/auth.js:3:49
+    at ModuleJob.run (internal/modules/esm/module_job.js:146:23)
+    at async Loader.import (internal/modules/esm/loader.js:165:24)
+    at async Object.loadESM (internal/process/esm_loader.js:68:5)
+2021-01-12T20:17:56.403Z [error]: main - uncaughtException: Invalid URL: ../config/custom-environment-variables.json
+TypeError [ERR_INVALID_URL]: Invalid URL: ../config/custom-environment-variables.json
+    at onParseError (internal/url.js:258:9)
+    at new URL (internal/url.js:334:5)
+    at file:///C:/Users/Sebas/Desktop/Licencjat/Server/middleware/auth.js:3:49
+    at ModuleJob.run (internal/modules/esm/module_job.js:146:23)
+    at async Loader.import (internal/modules/esm/loader.js:165:24)
+    at async Object.loadESM (internal/process/esm_loader.js:68:5)
+2021-01-12T20:18:04.054Z [error]: main - uncaughtException: Invalid URL: ../config/custom-environment-variables.json
+TypeError [ERR_INVALID_URL]: Invalid URL: ../config/custom-environment-variables.json
+    at onParseError (internal/url.js:258:9)
+    at new URL (internal/url.js:334:5)
+    at file:///C:/Users/Sebas/Desktop/Licencjat/Server/middleware/auth.js:3:49
+    at ModuleJob.run (internal/modules/esm/module_job.js:146:23)
+    at async Loader.import (internal/modules/esm/loader.js:165:24)
+    at async Object.loadESM (internal/process/esm_loader.js:68:5)
+2021-01-12T20:18:09.588Z [error]: main - uncaughtException: Invalid URL: ../config/custom-environment-variables.json
+TypeError [ERR_INVALID_URL]: Invalid URL: ../config/custom-environment-variables.json
+    at onParseError (internal/url.js:258:9)
+    at new URL (internal/url.js:334:5)
+    at file:///C:/Users/Sebas/Desktop/Licencjat/Server/middleware/auth.js:3:49
+    at ModuleJob.run (internal/modules/esm/module_job.js:146:23)
+    at async Loader.import (internal/modules/esm/loader.js:165:24)
+    at async Object.loadESM (internal/process/esm_loader.js:68:5)
+2021-01-12T20:19:19.078Z [error]: main - uncaughtException: Invalid URL: ../config/custom-environment-variables.json
+TypeError [ERR_INVALID_URL]: Invalid URL: ../config/custom-environment-variables.json
+    at onParseError (internal/url.js:258:9)
+    at new URL (internal/url.js:334:5)
+    at file:///C:/Users/Sebas/Desktop/Licencjat/Server/middleware/auth.js:3:49
+    at ModuleJob.run (internal/modules/esm/module_job.js:146:23)
+    at async Loader.import (internal/modules/esm/loader.js:165:24)
+    at async Object.loadESM (internal/process/esm_loader.js:68:5)
+2021-01-12T20:22:25.532Z [error]: main - uncaughtException: Invalid URL: ../config/custom-environment-variables.json
+TypeError [ERR_INVALID_URL]: Invalid URL: ../config/custom-environment-variables.json
+    at onParseError (internal/url.js:258:9)
+    at new URL (internal/url.js:334:5)
+    at file:///C:/Users/Sebas/Desktop/Licencjat/Server/middleware/auth.js:3:49
+    at ModuleJob.run (internal/modules/esm/module_job.js:146:23)
+    at async Loader.import (internal/modules/esm/loader.js:165:24)
+    at async Object.loadESM (internal/process/esm_loader.js:68:5)
+2021-01-12T20:23:36.865Z [error]: main - uncaughtException: Invalid URL: ../config/custom-environment-variables.json
+TypeError [ERR_INVALID_URL]: Invalid URL: ../config/custom-environment-variables.json
+    at onParseError (internal/url.js:258:9)
+    at new URL (internal/url.js:334:5)
+    at file:///C:/Users/Sebas/Desktop/Licencjat/Server/middleware/auth.js:3:49
+    at ModuleJob.run (internal/modules/esm/module_job.js:146:23)
+    at async Loader.import (internal/modules/esm/loader.js:165:24)
+    at async Object.loadESM (internal/process/esm_loader.js:68:5)
+2021-01-12T20:29:03.574Z [error]: main - uncaughtException: Invalid URL: ../config/custom-environment-variables.json
+TypeError [ERR_INVALID_URL]: Invalid URL: ../config/custom-environment-variables.json
+    at onParseError (internal/url.js:258:9)
+    at new URL (internal/url.js:334:5)
+    at file:///C:/Users/Sebas/Desktop/Licencjat/Server/middleware/auth.js:3:49
+    at ModuleJob.run (internal/modules/esm/module_job.js:146:23)
+    at async Loader.import (internal/modules/esm/loader.js:165:24)
+    at async Object.loadESM (internal/process/esm_loader.js:68:5)
+2021-01-12T20:29:51.291Z [error]: main - uncaughtException: Invalid URL: ../config/custom-environment-variables.json
+TypeError [ERR_INVALID_URL]: Invalid URL: ../config/custom-environment-variables.json
+    at onParseError (internal/url.js:258:9)
+    at new URL (internal/url.js:334:5)
+    at file:///C:/Users/Sebas/Desktop/Licencjat/Server/middleware/auth.js:3:49
+    at ModuleJob.run (internal/modules/esm/module_job.js:146:23)
+    at async Loader.import (internal/modules/esm/loader.js:165:24)
+    at async Object.loadESM (internal/process/esm_loader.js:68:5)
+2021-01-12T20:29:54.241Z [error]: main - uncaughtException: Invalid URL: ../config/custom-environment-variables.json
+TypeError [ERR_INVALID_URL]: Invalid URL: ../config/custom-environment-variables.json
+    at onParseError (internal/url.js:258:9)
+    at new URL (internal/url.js:334:5)
+    at file:///C:/Users/Sebas/Desktop/Licencjat/Server/middleware/auth.js:3:49
+    at ModuleJob.run (internal/modules/esm/module_job.js:146:23)
+    at async Loader.import (internal/modules/esm/loader.js:165:24)
+    at async Object.loadESM (internal/process/esm_loader.js:68:5)
+2021-01-12T20:30:02.749Z [error]: main - uncaughtException: Invalid URL: ../config/custom-environment-variables.json
+TypeError [ERR_INVALID_URL]: Invalid URL: ../config/custom-environment-variables.json
+    at onParseError (internal/url.js:258:9)
+    at new URL (internal/url.js:334:5)
+    at file:///C:/Users/Sebas/Desktop/Licencjat/Server/middleware/auth.js:3:49
+    at ModuleJob.run (internal/modules/esm/module_job.js:146:23)
+    at async Loader.import (internal/modules/esm/loader.js:165:24)
+    at async Object.loadESM (internal/process/esm_loader.js:68:5)
+2021-01-12T20:32:28.983Z [error]: main - uncaughtException: Invalid URL: ../config/custom-environment-variables.json
+TypeError [ERR_INVALID_URL]: Invalid URL: ../config/custom-environment-variables.json
+    at onParseError (internal/url.js:258:9)
+    at new URL (internal/url.js:334:5)
+    at file:///C:/Users/Sebas/Desktop/Licencjat/Server/middleware/auth.js:3:49
+    at ModuleJob.run (internal/modules/esm/module_job.js:146:23)
+    at async Loader.import (internal/modules/esm/loader.js:165:24)
+    at async Object.loadESM (internal/process/esm_loader.js:68:5)
+2021-01-12T20:32:44.125Z [error]: main - uncaughtException: Invalid URL: ../config/custom-environment-variables.json
+TypeError [ERR_INVALID_URL]: Invalid URL: ../config/custom-environment-variables.json
+    at onParseError (internal/url.js:258:9)
+    at new URL (internal/url.js:334:5)
+    at file:///C:/Users/Sebas/Desktop/Licencjat/Server/middleware/auth.js:3:49
+    at ModuleJob.run (internal/modules/esm/module_job.js:146:23)
+    at async Loader.import (internal/modules/esm/loader.js:165:24)
+    at async Object.loadESM (internal/process/esm_loader.js:68:5)
+2021-01-12T20:32:54.873Z [error]: main - uncaughtException: Invalid URL: ../config/custom-environment-variables.json
+TypeError [ERR_INVALID_URL]: Invalid URL: ../config/custom-environment-variables.json
+    at onParseError (internal/url.js:258:9)
+    at new URL (internal/url.js:334:5)
+    at file:///C:/Users/Sebas/Desktop/Licencjat/Server/middleware/auth.js:3:49
+    at ModuleJob.run (internal/modules/esm/module_job.js:146:23)
+    at async Loader.import (internal/modules/esm/loader.js:165:24)
+    at async Object.loadESM (internal/process/esm_loader.js:68:5)
+2021-01-12T20:33:47.640Z [error]: main - uncaughtException: Invalid URL: ../config/custom-environment-variables.json
+TypeError [ERR_INVALID_URL]: Invalid URL: ../config/custom-environment-variables.json
+    at onParseError (internal/url.js:258:9)
+    at new URL (internal/url.js:334:5)
+    at file:///C:/Users/Sebas/Desktop/Licencjat/Server/middleware/auth.js:3:49
+    at ModuleJob.run (internal/modules/esm/module_job.js:146:23)
+    at async Loader.import (internal/modules/esm/loader.js:165:24)
+    at async Object.loadESM (internal/process/esm_loader.js:68:5)
+2021-01-12T20:33:58.761Z [error]: main - uncaughtException: Invalid URL: ../config/custom-environment-variables.json
+TypeError [ERR_INVALID_URL]: Invalid URL: ../config/custom-environment-variables.json
+    at onParseError (internal/url.js:258:9)
+    at new URL (internal/url.js:334:5)
+    at file:///C:/Users/Sebas/Desktop/Licencjat/Server/middleware/auth.js:3:49
+    at ModuleJob.run (internal/modules/esm/module_job.js:146:23)
+    at async Loader.import (internal/modules/esm/loader.js:165:24)
+    at async Object.loadESM (internal/process/esm_loader.js:68:5)
+2021-01-12T20:34:57.286Z [error]: main - uncaughtException: Invalid URL: ../config/custom-environment-variables.json
+TypeError [ERR_INVALID_URL]: Invalid URL: ../config/custom-environment-variables.json
+    at onParseError (internal/url.js:258:9)
+    at new URL (internal/url.js:334:5)
+    at file:///C:/Users/Sebas/Desktop/Licencjat/Server/middleware/auth.js:3:49
+    at ModuleJob.run (internal/modules/esm/module_job.js:146:23)
+    at async Loader.import (internal/modules/esm/loader.js:165:24)
+    at async Object.loadESM (internal/process/esm_loader.js:68:5)
+2021-01-12T20:35:11.339Z [error]: main - uncaughtException: Invalid URL: ../config/custom-environment-variables.json
+TypeError [ERR_INVALID_URL]: Invalid URL: ../config/custom-environment-variables.json
+    at onParseError (internal/url.js:258:9)
+    at new URL (internal/url.js:334:5)
+    at file:///C:/Users/Sebas/Desktop/Licencjat/Server/middleware/auth.js:3:49
+    at ModuleJob.run (internal/modules/esm/module_job.js:146:23)
+    at async Loader.import (internal/modules/esm/loader.js:165:24)
+    at async Object.loadESM (internal/process/esm_loader.js:68:5)
+2021-01-12T20:35:18.355Z [error]: main - uncaughtException: Invalid URL: ../config/custom-environment-variables.json
+TypeError [ERR_INVALID_URL]: Invalid URL: ../config/custom-environment-variables.json
+    at onParseError (internal/url.js:258:9)
+    at new URL (internal/url.js:334:5)
+    at file:///C:/Users/Sebas/Desktop/Licencjat/Server/middleware/auth.js:3:49
+    at ModuleJob.run (internal/modules/esm/module_job.js:146:23)
+    at async Loader.import (internal/modules/esm/loader.js:165:24)
+    at async Object.loadESM (internal/process/esm_loader.js:68:5)
+2021-01-12T20:36:44.027Z [error]: main - uncaughtException: Invalid URL: ../config/custom-environment-variables.json
+TypeError [ERR_INVALID_URL]: Invalid URL: ../config/custom-environment-variables.json
+    at onParseError (internal/url.js:258:9)
+    at new URL (internal/url.js:334:5)
+    at file:///C:/Users/Sebas/Desktop/Licencjat/Server/middleware/auth.js:3:49
+    at ModuleJob.run (internal/modules/esm/module_job.js:146:23)
+    at async Loader.import (internal/modules/esm/loader.js:165:24)
+    at async Object.loadESM (internal/process/esm_loader.js:68:5)
+2021-01-12T20:37:35.295Z [error]: main - uncaughtException: Invalid URL: ../config/custom-environment-variables.json
+TypeError [ERR_INVALID_URL]: Invalid URL: ../config/custom-environment-variables.json
+    at onParseError (internal/url.js:258:9)
+    at new URL (internal/url.js:334:5)
+    at file:///C:/Users/Sebas/Desktop/Licencjat/Server/middleware/auth.js:4:49
+    at ModuleJob.run (internal/modules/esm/module_job.js:146:23)
+    at async Loader.import (internal/modules/esm/loader.js:165:24)
+    at async Object.loadESM (internal/process/esm_loader.js:68:5)
+2021-01-12T20:38:22.564Z [error]: main - uncaughtException: Invalid URL: ../config/custom-environment-variables.json
+TypeError [ERR_INVALID_URL]: Invalid URL: ../config/custom-environment-variables.json
+    at onParseError (internal/url.js:258:9)
+    at new URL (internal/url.js:334:5)
+    at file:///C:/Users/Sebas/Desktop/Licencjat/Server/middleware/auth.js:4:49
+    at ModuleJob.run (internal/modules/esm/module_job.js:146:23)
+    at async Loader.import (internal/modules/esm/loader.js:165:24)
+    at async Object.loadESM (internal/process/esm_loader.js:68:5)
+2021-01-12T20:39:36.475Z [error]: main - uncaughtException: Invalid URL: ../config/custom-environment-variables.json
+TypeError [ERR_INVALID_URL]: Invalid URL: ../config/custom-environment-variables.json
+    at onParseError (internal/url.js:258:9)
+    at new URL (internal/url.js:334:5)
+    at file:///C:/Users/Sebas/Desktop/Licencjat/Server/middleware/auth.js:4:49
+    at ModuleJob.run (internal/modules/esm/module_job.js:146:23)
+    at async Loader.import (internal/modules/esm/loader.js:165:24)
+    at async Object.loadESM (internal/process/esm_loader.js:68:5)
+2021-01-12T20:40:31.685Z [error]: main - uncaughtException: Invalid URL: ./config/custom-environment-variables.json
+TypeError [ERR_INVALID_URL]: Invalid URL: ./config/custom-environment-variables.json
+    at onParseError (internal/url.js:258:9)
+    at new URL (internal/url.js:334:5)
+    at file:///C:/Users/Sebas/Desktop/Licencjat/Server/middleware/auth.js:3:13
+    at ModuleJob.run (internal/modules/esm/module_job.js:146:23)
+    at async Loader.import (internal/modules/esm/loader.js:165:24)
+    at async Object.loadESM (internal/process/esm_loader.js:68:5)
+2021-01-12T20:40:46.017Z [error]: main - uncaughtException: Invalid URL: ./config/custom-environment-variables.js
+TypeError [ERR_INVALID_URL]: Invalid URL: ./config/custom-environment-variables.js
+    at onParseError (internal/url.js:258:9)
+    at new URL (internal/url.js:334:5)
+    at file:///C:/Users/Sebas/Desktop/Licencjat/Server/middleware/auth.js:3:13
+    at ModuleJob.run (internal/modules/esm/module_job.js:146:23)
+    at async Loader.import (internal/modules/esm/loader.js:165:24)
+    at async Object.loadESM (internal/process/esm_loader.js:68:5)
+2021-01-12T20:42:29.143Z [error]: main - uncaughtException: Invalid URL: ../config/custom-environment-variables.json
+TypeError [ERR_INVALID_URL]: Invalid URL: ../config/custom-environment-variables.json
+    at onParseError (internal/url.js:258:9)
+    at new URL (internal/url.js:334:5)
+    at file:///C:/Users/Sebas/Desktop/Licencjat/Server/middleware/auth.js:4:49
+    at ModuleJob.run (internal/modules/esm/module_job.js:146:23)
+    at async Loader.import (internal/modules/esm/loader.js:165:24)
+    at async Object.loadESM (internal/process/esm_loader.js:68:5)
+2021-01-12T20:43:46.525Z [error]: main - uncaughtException: Invalid URL: ../config/custom-environment-variables.json
+TypeError [ERR_INVALID_URL]: Invalid URL: ../config/custom-environment-variables.json
+    at onParseError (internal/url.js:258:9)
+    at new URL (internal/url.js:334:5)
+    at file:///C:/Users/Sebas/Desktop/Licencjat/Server/models/workers.js:5:42
+    at ModuleJob.run (internal/modules/esm/module_job.js:146:23)
+    at async Loader.import (internal/modules/esm/loader.js:165:24)
+    at async Object.loadESM (internal/process/esm_loader.js:68:5)
+2021-01-12T20:47:58.083Z [error]: main - uncaughtException: Invalid URL: ../config/custom-environment-variables.json
+TypeError [ERR_INVALID_URL]: Invalid URL: ../config/custom-environment-variables.json
+    at onParseError (internal/url.js:258:9)
+    at new URL (internal/url.js:334:5)
+    at file:///C:/Users/Sebas/Desktop/Licencjat/Server/models/workers.js:5:42
+    at ModuleJob.run (internal/modules/esm/module_job.js:146:23)
+    at async Loader.import (internal/modules/esm/loader.js:165:24)
+    at async Object.loadESM (internal/process/esm_loader.js:68:5)
+2021-01-12T20:48:03.199Z [error]: main - uncaughtException: Invalid URL: ../config/custom-environment-variables.json
+TypeError [ERR_INVALID_URL]: Invalid URL: ../config/custom-environment-variables.json
+    at onParseError (internal/url.js:258:9)
+    at new URL (internal/url.js:334:5)
+    at file:///C:/Users/Sebas/Desktop/Licencjat/Server/models/workers.js:5:42
+    at ModuleJob.run (internal/modules/esm/module_job.js:146:23)
+    at async Loader.import (internal/modules/esm/loader.js:165:24)
+    at async Object.loadESM (internal/process/esm_loader.js:68:5)
+2021-01-12T20:48:34.970Z [error]: main - uncaughtException: Invalid URL: ../config/custom-environment-variables.json
+TypeError [ERR_INVALID_URL]: Invalid URL: ../config/custom-environment-variables.json
+    at onParseError (internal/url.js:258:9)
+    at new URL (internal/url.js:334:5)
+    at file:///C:/Users/Sebas/Desktop/Licencjat/Server/models/workers.js:5:42
+    at ModuleJob.run (internal/modules/esm/module_job.js:146:23)
+    at async Loader.import (internal/modules/esm/loader.js:165:24)
+    at async Object.loadESM (internal/process/esm_loader.js:68:5)
+2021-01-12T20:49:22.633Z [error]: main - uncaughtException: ENOENT: no such file or directory, open 'C:\Users\Sebas\Desktop\Licencjat\config\custom-environment-variables.json'
+Error: ENOENT: no such file or directory, open 'C:\Users\Sebas\Desktop\Licencjat\config\custom-environment-variables.json'
+2021-01-12T20:49:50.003Z [error]: main - uncaughtException: ENOENT: no such file or directory, open 'C:\Users\Sebas\Desktop\Licencjat\config\custom-environment-variables.json'
+Error: ENOENT: no such file or directory, open 'C:\Users\Sebas\Desktop\Licencjat\config\custom-environment-variables.json'
+2021-01-12T20:50:39.730Z [error]: main - uncaughtException: ENOENT: no such file or directory, open 'C:\Users\Sebas\Desktop\Licencjat\config\custom-environment-variables.json'
+Error: ENOENT: no such file or directory, open 'C:\Users\Sebas\Desktop\Licencjat\config\custom-environment-variables.json'
+2021-01-12T20:51:00.040Z [error]: main - uncaughtException: ENOENT: no such file or directory, open 'C:\Users\Sebas\Desktop\Licencjat\Server\Server\config\custom-environment-variables.json'
+Error: ENOENT: no such file or directory, open 'C:\Users\Sebas\Desktop\Licencjat\Server\Server\config\custom-environment-variables.json'
+2021-01-12T20:51:13.159Z [error]: main - uncaughtException: ENOENT: no such file or directory, open 'C:\Users\Sebas\Desktop\Licencjat\Server\Server\config\custom-environment-variables.json'
+Error: ENOENT: no such file or directory, open 'C:\Users\Sebas\Desktop\Licencjat\Server\Server\config\custom-environment-variables.json'
+2021-01-12T20:51:26.227Z [error]: main - uncaughtException: require is not defined
+ReferenceError: require is not defined
+    at file:///C:/Users/Sebas/Desktop/Licencjat/Server/controllers/worker.js:2:17
+    at <anonymous> (<anonymous>)
+2021-01-12T20:53:22.521Z [error]: main - uncaughtException: update is not defined
+ReferenceError: update is not defined
+    at file:///C:/Users/Sebas/Desktop/Licencjat/Server/controllers/vehicle.js:79:23
+    at <anonymous> (<anonymous>)
+2021-01-12T20:53:55.463Z [error]: main - uncaughtException: authController is not defined
+ReferenceError: authController is not defined
+    at file:///C:/Users/Sebas/Desktop/Licencjat/Server/routes/index.js:18:27
+    at <anonymous> (<anonymous>)
+2021-01-12T20:56:18.748Z [error]: main - uncaughtException: Route.post() requires a callback function but got a [object Module]
+Error: Route.post() requires a callback function but got a [object Module]
+    at Route.<computed> [as post] (C:\Users\Sebas\Desktop\Licencjat\Server\node_modules\express\lib\router\route.js:202:15)
+    at Function.proto.<computed> [as post] (C:\Users\Sebas\Desktop\Licencjat\Server\node_modules\express\lib\router\index.js:510:19)
+    at file:///C:/Users/Sebas/Desktop/Licencjat/Server/routes/index.js:25:8
+    at <anonymous> (<anonymous>)
+2021-01-12T20:56:42.017Z [error]: main - uncaughtException: Route.post() requires a callback function but got a [object Module]
+Error: Route.post() requires a callback function but got a [object Module]
+    at Route.<computed> [as post] (C:\Users\Sebas\Desktop\Licencjat\Server\node_modules\express\lib\router\route.js:202:15)
+    at Function.proto.<computed> [as post] (C:\Users\Sebas\Desktop\Licencjat\Server\node_modules\express\lib\router\index.js:510:19)
+    at file:///C:/Users/Sebas/Desktop/Licencjat/Server/routes/index.js:25:8
+    at <anonymous> (<anonymous>)
+2021-01-12T20:59:06.965Z [error]: main - uncaughtException: Route.post() requires a callback function but got a [object Module]
+Error: Route.post() requires a callback function but got a [object Module]
+    at Route.<computed> [as post] (C:\Users\Sebas\Desktop\Licencjat\Server\node_modules\express\lib\router\route.js:202:15)
+    at Function.proto.<computed> [as post] (C:\Users\Sebas\Desktop\Licencjat\Server\node_modules\express\lib\router\index.js:510:19)
+    at file:///C:/Users/Sebas/Desktop/Licencjat/Server/routes/index.js:25:8
+    at <anonymous> (<anonymous>)
+2021-01-12T20:59:29.217Z [error]: main - uncaughtException: Route.post() requires a callback function but got a [object Module]
+Error: Route.post() requires a callback function but got a [object Module]
+    at Route.<computed> [as post] (C:\Users\Sebas\Desktop\Licencjat\Server\node_modules\express\lib\router\route.js:202:15)
+    at Function.proto.<computed> [as post] (C:\Users\Sebas\Desktop\Licencjat\Server\node_modules\express\lib\router\index.js:510:19)
+    at file:///C:/Users/Sebas/Desktop/Licencjat/Server/routes/index.js:25:8
+    at <anonymous> (<anonymous>)
+2021-01-12T20:59:56.296Z [error]: main - uncaughtException: Order.findAndCountAll is not a function
+TypeError: Order.findAndCountAll is not a function
+    at Module.list (file:///C:/Users/Sebas/Desktop/Licencjat/Server/controllers/order.js:11:10)
+    at file:///C:/Users/Sebas/Desktop/Licencjat/Server/routes/index.js:23:49
+    at <anonymous> (<anonymous>)
+2021-01-13T16:00:13.862Z [error]: main - uncaughtException: config is not defined
+ReferenceError: config is not defined
+    at file:///C:/Users/Sebas/Desktop/Licencjat/Server/models/index.js:18:31
+2021-01-13T16:00:24.324Z [error]: main - uncaughtException: config is not defined
+ReferenceError: config is not defined
+    at file:///C:/Users/Sebas/Desktop/Licencjat/Server/models/index.js:18:31
+2021-01-13T16:00:57.456Z [error]: main - uncaughtException: dbConfig is not defined
+ReferenceError: dbConfig is not defined
+    at file:///C:/Users/Sebas/Desktop/Licencjat/Server/models/index.js:17:1
+2021-01-13T16:01:05.623Z [error]: main - uncaughtException: config is not defined
+ReferenceError: config is not defined
+    at file:///C:/Users/Sebas/Desktop/Licencjat/Server/models/index.js:18:31
+2021-01-13T16:01:23.830Z [error]: main - uncaughtException: config is not defined
+ReferenceError: config is not defined
+    at file:///C:/Users/Sebas/Desktop/Licencjat/Server/models/index.js:18:31
+2021-01-13T16:01:45.941Z [error]: main - uncaughtException: config is not defined
+ReferenceError: config is not defined
+    at file:///C:/Users/Sebas/Desktop/Licencjat/Server/models/index.js:18:31
+2021-01-13T16:02:11.456Z [error]: main - uncaughtException: config is not defined
+ReferenceError: config is not defined
+    at file:///C:/Users/Sebas/Desktop/Licencjat/Server/models/index.js:18:31
+2021-01-13T16:02:42.038Z [error]: main - uncaughtException: config is not defined
+ReferenceError: config is not defined
+    at file:///C:/Users/Sebas/Desktop/Licencjat/Server/models/index.js:18:31
+2021-01-13T16:04:34.989Z [error]: main - uncaughtException: config is not defined
+ReferenceError: config is not defined
+    at file:///C:/Users/Sebas/Desktop/Licencjat/Server/models/index.js:17:31
+2021-01-13T16:04:39.752Z [error]: main - uncaughtException: config is not defined
+ReferenceError: config is not defined
+    at file:///C:/Users/Sebas/Desktop/Licencjat/Server/models/index.js:17:31
+2021-01-13T16:05:24.021Z [error]: main - uncaughtException: Route.get() requires a callback function but got a [object Object]
+Error: Route.get() requires a callback function but got a [object Object]
+    at Route.<computed> [as get] (C:\Users\Sebas\Desktop\Licencjat\Server\node_modules\express\lib\router\route.js:202:15)
+    at Function.proto.<computed> [as get] (C:\Users\Sebas\Desktop\Licencjat\Server\node_modules\express\lib\router\index.js:510:19)
+    at file:///C:/Users/Sebas/Desktop/Licencjat/Server/routes/index.js:23:8
+    at <anonymous> (<anonymous>)
+2021-01-13T16:09:06.765Z [error]: main - uncaughtException: Route.get() requires a callback function but got a [object Object]
+Error: Route.get() requires a callback function but got a [object Object]
+    at Route.<computed> [as get] (C:\Users\Sebas\Desktop\Licencjat\Server\node_modules\express\lib\router\route.js:202:15)
+    at Function.proto.<computed> [as get] (C:\Users\Sebas\Desktop\Licencjat\Server\node_modules\express\lib\router\index.js:510:19)
+    at file:///C:/Users/Sebas/Desktop/Licencjat/Server/routes/index.js:23:8
+    at <anonymous> (<anonymous>)
+2021-01-13T16:09:45.813Z [error]: main - uncaughtException: Route.get() requires a callback function but got a [object Object]
+Error: Route.get() requires a callback function but got a [object Object]
+    at Route.<computed> [as get] (C:\Users\Sebas\Desktop\Licencjat\Server\node_modules\express\lib\router\route.js:202:15)
+    at Function.proto.<computed> [as get] (C:\Users\Sebas\Desktop\Licencjat\Server\node_modules\express\lib\router\index.js:510:19)
+    at file:///C:/Users/Sebas/Desktop/Licencjat/Server/routes/index.js:23:8
+    at <anonymous> (<anonymous>)
+2021-01-13T16:12:45.310Z [error]: main - uncaughtException: Route.get() requires a callback function but got a [object Object]
+Error: Route.get() requires a callback function but got a [object Object]
+    at Route.<computed> [as get] (C:\Users\Sebas\Desktop\Licencjat\Server\node_modules\express\lib\router\route.js:202:15)
+    at Function.proto.<computed> [as get] (C:\Users\Sebas\Desktop\Licencjat\Server\node_modules\express\lib\router\index.js:510:19)
+    at file:///C:/Users/Sebas/Desktop/Licencjat/Server/routes/index.js:23:8
+    at <anonymous> (<anonymous>)
+13.01.2021, 17:12:56 [error]: main - uncaughtException: Route.get() requires a callback function but got a [object Object]
+Error: Route.get() requires a callback function but got a [object Object]
+    at Route.<computed> [as get] (C:\Users\Sebas\Desktop\Licencjat\Server\node_modules\express\lib\router\route.js:202:15)
+    at Function.proto.<computed> [as get] (C:\Users\Sebas\Desktop\Licencjat\Server\node_modules\express\lib\router\index.js:510:19)
+    at file:///C:/Users/Sebas/Desktop/Licencjat/Server/routes/index.js:23:8
+    at <anonymous> (<anonymous>)
+13.01.2021, 17:13:34 [error]: main - uncaughtException: Route.get() requires a callback function but got a [object Object]
+Error: Route.get() requires a callback function but got a [object Object]
+    at Route.<computed> [as get] (C:\Users\Sebas\Desktop\Licencjat\Server\node_modules\express\lib\router\route.js:202:15)
+    at Function.proto.<computed> [as get] (C:\Users\Sebas\Desktop\Licencjat\Server\node_modules\express\lib\router\index.js:510:19)
+    at file:///C:/Users/Sebas/Desktop/Licencjat/Server/routes/index.js:23:8
+    at <anonymous> (<anonymous>)
+13.01.2021, 17:26:23 [error]: main - uncaughtException: orderController.list is not a function
+TypeError: orderController.list is not a function
+    at file:///C:/Users/Sebas/Desktop/Licencjat/Server/routes/index.js:16:49
+    at <anonymous> (<anonymous>)
+13.01.2021, 17:26:30 [error]: main - uncaughtException: Route.get() requires a callback function but got a [object Undefined]
+Error: Route.get() requires a callback function but got a [object Undefined]
+    at Route.<computed> [as get] (C:\Users\Sebas\Desktop\Licencjat\Server\node_modules\express\lib\router\route.js:202:15)
+    at Function.proto.<computed> [as get] (C:\Users\Sebas\Desktop\Licencjat\Server\node_modules\express\lib\router\index.js:510:19)
+    at file:///C:/Users/Sebas/Desktop/Licencjat/Server/routes/index.js:16:8
+    at <anonymous> (<anonymous>)
+13.01.2021, 17:26:35 [error]: main - uncaughtException: orderController.list is not a function
+TypeError: orderController.list is not a function
+    at file:///C:/Users/Sebas/Desktop/Licencjat/Server/routes/index.js:16:49
+    at <anonymous> (<anonymous>)
+13.01.2021, 17:27:41 [error]: main - uncaughtException: Route.get() requires a callback function but got a [object Undefined]
+Error: Route.get() requires a callback function but got a [object Undefined]
+    at Route.<computed> [as get] (C:\Users\Sebas\Desktop\Licencjat\Server\node_modules\express\lib\router\route.js:202:15)
+    at Function.proto.<computed> [as get] (C:\Users\Sebas\Desktop\Licencjat\Server\node_modules\express\lib\router\index.js:510:19)
+    at file:///C:/Users/Sebas/Desktop/Licencjat/Server/routes/index.js:16:8
+    at <anonymous> (<anonymous>)
+13.01.2021, 17:28:15 [error]: main - uncaughtException: Route.post() requires a callback function but got a [object Module]
+Error: Route.post() requires a callback function but got a [object Module]
+    at Route.<computed> [as post] (C:\Users\Sebas\Desktop\Licencjat\Server\node_modules\express\lib\router\route.js:202:15)
+    at Function.proto.<computed> [as post] (C:\Users\Sebas\Desktop\Licencjat\Server\node_modules\express\lib\router\index.js:510:19)
+    at file:///C:/Users/Sebas/Desktop/Licencjat/Server/routes/index.js:18:8
+    at <anonymous> (<anonymous>)
+13.01.2021, 17:28:50 [error]: main - uncaughtException: Route.post() requires a callback function but got a [object Module]
+Error: Route.post() requires a callback function but got a [object Module]
+    at Route.<computed> [as post] (C:\Users\Sebas\Desktop\Licencjat\Server\node_modules\express\lib\router\route.js:202:15)
+    at Function.proto.<computed> [as post] (C:\Users\Sebas\Desktop\Licencjat\Server\node_modules\express\lib\router\index.js:510:19)
+    at file:///C:/Users/Sebas/Desktop/Licencjat/Server/routes/index.js:18:8
+    at <anonymous> (<anonymous>)
+13.01.2021, 17:29:03 [error]: main - uncaughtException: __dirname is not defined
+ReferenceError: __dirname is not defined
+    at file:///C:/Users/Sebas/Desktop/Licencjat/Server/app.js:23:34
+    at <anonymous> (<anonymous>)
+13.01.2021, 17:30:27 [error]: main - uncaughtException: __dirname is not defined
+ReferenceError: __dirname is not defined
+    at file:///C:/Users/Sebas/Desktop/Licencjat/Server/app.js:23:34
+    at <anonymous> (<anonymous>)
+13.01.2021, 17:30:43 [error]: main - uncaughtException: __dirname is not defined
+ReferenceError: __dirname is not defined
+    at file:///C:/Users/Sebas/Desktop/Licencjat/Server/app.js:23:34
+    at <anonymous> (<anonymous>)
+13.01.2021, 17:31:57 [error]: main - uncaughtException: app.use() requires a middleware function
+TypeError: app.use() requires a middleware function
+    at Function.use (C:\Users\Sebas\Desktop\Licencjat\Server\node_modules\express\lib\application.js:210:11)
+    at file:///C:/Users/Sebas/Desktop/Licencjat/Server/app.js:32:5
+    at <anonymous> (<anonymous>)
+13.01.2021, 17:32:20 [error]: main - uncaughtException: app.use() requires a middleware function
+TypeError: app.use() requires a middleware function
+    at Function.use (C:\Users\Sebas\Desktop\Licencjat\Server\node_modules\express\lib\application.js:210:11)
+    at file:///C:/Users/Sebas/Desktop/Licencjat/Server/app.js:31:5
+    at <anonymous> (<anonymous>)
+13.01.2021, 17:34:29 [error]: main - uncaughtException: app.use() requires a middleware function
+TypeError: app.use() requires a middleware function
+    at Function.use (C:\Users\Sebas\Desktop\Licencjat\Server\node_modules\express\lib\application.js:210:11)
+    at file:///C:/Users/Sebas/Desktop/Licencjat/Server/app.js:31:5
+    at <anonymous> (<anonymous>)
+13.01.2021, 17:35:00 [error]: main - uncaughtException: app.use() requires a middleware function
+TypeError: app.use() requires a middleware function
+    at Function.use (C:\Users\Sebas\Desktop\Licencjat\Server\node_modules\express\lib\application.js:210:11)
+    at file:///C:/Users/Sebas/Desktop/Licencjat/Server/app.js:31:5
+    at <anonymous> (<anonymous>)
+13.01.2021, 17:35:11 [error]: main - uncaughtException: app.use() requires a middleware function
+TypeError: app.use() requires a middleware function
+    at Function.use (C:\Users\Sebas\Desktop\Licencjat\Server\node_modules\express\lib\application.js:210:11)
+    at file:///C:/Users/Sebas/Desktop/Licencjat/Server/app.js:31:5
+    at <anonymous> (<anonymous>)
+13.01.2021, 17:40:54 [error]: main - uncaughtException: error is not defined
+ReferenceError: error is not defined
+    at file:///C:/Users/Sebas/Desktop/Licencjat/Server/middleware/error.js:3:22
+    at ModuleJob.run (internal/modules/esm/module_job.js:146:23)
+    at async Loader.import (internal/modules/esm/loader.js:165:24)
+    at async Object.loadESM (internal/process/esm_loader.js:68:5)
+13.01.2021, 17:44:04 [error]: main - uncaughtException: __dirname is not defined
+ReferenceError: __dirname is not defined
+    at file:///C:/Users/Sebas/Desktop/Licencjat/Server/models/index.js:35:18
+13.01.2021, 17:44:24 [error]: main - uncaughtException: basename is not defined
+ReferenceError: basename is not defined
+    at file:///C:/Users/Sebas/Desktop/Licencjat/Server/models/index.js:41:55
+    at Array.filter (<anonymous>)
+    at file:///C:/Users/Sebas/Desktop/Licencjat/Server/models/index.js:40:6
+13.01.2021, 17:44:42 [error]: main - uncaughtException: Must use import to load ES Module: C:\Users\Sebas\Desktop\Licencjat\Server\models\customer.js
+require() of ES modules is not supported.
+require() of C:\Users\Sebas\Desktop\Licencjat\Server\models\customer.js from C:\Users\Sebas\Desktop\Licencjat\Server\node_modules\sequelize\lib\sequelize.js is an ES module file as it is a .js file whose nearest parent package.json contains "type": "module" which defines all .js files in that package scope as ES modules.
+Instead rename customer.js to end in .cjs, change the requiring code to use import(), or remove "type": "module" from C:\Users\Sebas\Desktop\Licencjat\Server\package.json.
+
+Error [ERR_REQUIRE_ESM]: Must use import to load ES Module: C:\Users\Sebas\Desktop\Licencjat\Server\models\customer.js
+require() of ES modules is not supported.
+require() of C:\Users\Sebas\Desktop\Licencjat\Server\models\customer.js from C:\Users\Sebas\Desktop\Licencjat\Server\node_modules\sequelize\lib\sequelize.js is an ES module file as it is a .js file whose nearest parent package.json contains "type": "module" which defines all .js files in that package scope as ES modules.
+Instead rename customer.js to end in .cjs, change the requiring code to use import(), or remove "type": "module" from C:\Users\Sebas\Desktop\Licencjat\Server\package.json.
+
+    at Object.Module._extensions..js (internal/modules/cjs/loader.js:1080:13)
+    at Module.load (internal/modules/cjs/loader.js:928:32)
+    at Function.Module._load (internal/modules/cjs/loader.js:769:14)
+    at Module.require (internal/modules/cjs/loader.js:952:19)
+    at require (internal/modules/cjs/helpers.js:88:18)
+    at Sequelize.import (C:\Users\Sebas\Desktop\Licencjat\Server\node_modules\sequelize\lib\sequelize.js:481:62)
+    at file:///C:/Users/Sebas/Desktop/Licencjat/Server/models/index.js:44:42
+    at Array.forEach (<anonymous>)
+    at file:///C:/Users/Sebas/Desktop/Licencjat/Server/models/index.js:43:6
+13.01.2021, 18:22:14 [error]: main - uncaughtException: Must use import to load ES Module: C:\Users\Sebas\Desktop\Licencjat\Server\models\customer.js
+require() of ES modules is not supported.
+require() of C:\Users\Sebas\Desktop\Licencjat\Server\models\customer.js from C:\Users\Sebas\Desktop\Licencjat\Server\node_modules\sequelize\lib\sequelize.js is an ES module file as it is a .js file whose nearest parent package.json contains "type": "module" which defines all .js files in that package scope as ES modules.
+Instead rename customer.js to end in .cjs, change the requiring code to use import(), or remove "type": "module" from C:\Users\Sebas\Desktop\Licencjat\Server\package.json.
+
+Error [ERR_REQUIRE_ESM]: Must use import to load ES Module: C:\Users\Sebas\Desktop\Licencjat\Server\models\customer.js
+require() of ES modules is not supported.
+require() of C:\Users\Sebas\Desktop\Licencjat\Server\models\customer.js from C:\Users\Sebas\Desktop\Licencjat\Server\node_modules\sequelize\lib\sequelize.js is an ES module file as it is a .js file whose nearest parent package.json contains "type": "module" which defines all .js files in that package scope as ES modules.
+Instead rename customer.js to end in .cjs, change the requiring code to use import(), or remove "type": "module" from C:\Users\Sebas\Desktop\Licencjat\Server\package.json.
+
+    at Object.Module._extensions..js (internal/modules/cjs/loader.js:1080:13)
+    at Module.load (internal/modules/cjs/loader.js:928:32)
+    at Function.Module._load (internal/modules/cjs/loader.js:769:14)
+    at Module.require (internal/modules/cjs/loader.js:952:19)
+    at require (internal/modules/cjs/helpers.js:88:18)
+    at Sequelize.import (C:\Users\Sebas\Desktop\Licencjat\Server\node_modules\sequelize\lib\sequelize.js:481:62)
+    at file:///C:/Users/Sebas/Desktop/Licencjat/Server/models/index.js:44:42
+    at Array.forEach (<anonymous>)
+    at file:///C:/Users/Sebas/Desktop/Licencjat/Server/models/index.js:43:6
+13.01.2021, 18:25:51 [error]: main - uncaughtException: Must use import to load ES Module: C:\Users\Sebas\Desktop\Licencjat\Server\models\customer.js
+require() of ES modules is not supported.
+require() of C:\Users\Sebas\Desktop\Licencjat\Server\models\customer.js from C:\Users\Sebas\Desktop\Licencjat\Server\node_modules\sequelize\lib\sequelize.js is an ES module file as it is a .js file whose nearest parent package.json contains "type": "module" which defines all .js files in that package scope as ES modules.
+Instead rename customer.js to end in .cjs, change the requiring code to use import(), or remove "type": "module" from C:\Users\Sebas\Desktop\Licencjat\Server\package.json.
+
+Error [ERR_REQUIRE_ESM]: Must use import to load ES Module: C:\Users\Sebas\Desktop\Licencjat\Server\models\customer.js
+require() of ES modules is not supported.
+require() of C:\Users\Sebas\Desktop\Licencjat\Server\models\customer.js from C:\Users\Sebas\Desktop\Licencjat\Server\node_modules\sequelize\lib\sequelize.js is an ES module file as it is a .js file whose nearest parent package.json contains "type": "module" which defines all .js files in that package scope as ES modules.
+Instead rename customer.js to end in .cjs, change the requiring code to use import(), or remove "type": "module" from C:\Users\Sebas\Desktop\Licencjat\Server\package.json.
+
+    at Object.Module._extensions..js (internal/modules/cjs/loader.js:1080:13)
+    at Module.load (internal/modules/cjs/loader.js:928:32)
+    at Function.Module._load (internal/modules/cjs/loader.js:769:14)
+    at Module.require (internal/modules/cjs/loader.js:952:19)
+    at require (internal/modules/cjs/helpers.js:88:18)
+    at Sequelize.import (C:\Users\Sebas\Desktop\Licencjat\Server\node_modules\sequelize\lib\sequelize.js:481:62)
+    at file:///C:/Users/Sebas/Desktop/Licencjat/Server/models/index.js:44:42
+    at Array.forEach (<anonymous>)
+    at file:///C:/Users/Sebas/Desktop/Licencjat/Server/models/index.js:43:6
+13.01.2021, 18:26:36 [error]: main - uncaughtException: Must use import to load ES Module: C:\Users\Sebas\Desktop\Licencjat\Server\models\customer.js
+require() of ES modules is not supported.
+require() of C:\Users\Sebas\Desktop\Licencjat\Server\models\customer.js from C:\Users\Sebas\Desktop\Licencjat\Server\node_modules\sequelize\lib\sequelize.js is an ES module file as it is a .js file whose nearest parent package.json contains "type": "module" which defines all .js files in that package scope as ES modules.
+Instead rename customer.js to end in .cjs, change the requiring code to use import(), or remove "type": "module" from C:\Users\Sebas\Desktop\Licencjat\Server\package.json.
+
+Error [ERR_REQUIRE_ESM]: Must use import to load ES Module: C:\Users\Sebas\Desktop\Licencjat\Server\models\customer.js
+require() of ES modules is not supported.
+require() of C:\Users\Sebas\Desktop\Licencjat\Server\models\customer.js from C:\Users\Sebas\Desktop\Licencjat\Server\node_modules\sequelize\lib\sequelize.js is an ES module file as it is a .js file whose nearest parent package.json contains "type": "module" which defines all .js files in that package scope as ES modules.
+Instead rename customer.js to end in .cjs, change the requiring code to use import(), or remove "type": "module" from C:\Users\Sebas\Desktop\Licencjat\Server\package.json.
+
+    at Object.Module._extensions..js (internal/modules/cjs/loader.js:1080:13)
+    at Module.load (internal/modules/cjs/loader.js:928:32)
+    at Function.Module._load (internal/modules/cjs/loader.js:769:14)
+    at Module.require (internal/modules/cjs/loader.js:952:19)
+    at require (internal/modules/cjs/helpers.js:88:18)
+    at Sequelize.import (C:\Users\Sebas\Desktop\Licencjat\Server\node_modules\sequelize\lib\sequelize.js:481:62)
+    at file:///C:/Users/Sebas/Desktop/Licencjat/Server/models/index.js:44:42
+    at Array.forEach (<anonymous>)
+    at file:///C:/Users/Sebas/Desktop/Licencjat/Server/models/index.js:43:6
+13.01.2021, 18:26:50 [error]: main - uncaughtException: Must use import to load ES Module: C:\Users\Sebas\Desktop\Licencjat\Server\models\customer.js
+require() of ES modules is not supported.
+require() of C:\Users\Sebas\Desktop\Licencjat\Server\models\customer.js from C:\Users\Sebas\Desktop\Licencjat\Server\node_modules\sequelize\lib\sequelize.js is an ES module file as it is a .js file whose nearest parent package.json contains "type": "module" which defines all .js files in that package scope as ES modules.
+Instead rename customer.js to end in .cjs, change the requiring code to use import(), or remove "type": "module" from C:\Users\Sebas\Desktop\Licencjat\Server\package.json.
+
+Error [ERR_REQUIRE_ESM]: Must use import to load ES Module: C:\Users\Sebas\Desktop\Licencjat\Server\models\customer.js
+require() of ES modules is not supported.
+require() of C:\Users\Sebas\Desktop\Licencjat\Server\models\customer.js from C:\Users\Sebas\Desktop\Licencjat\Server\node_modules\sequelize\lib\sequelize.js is an ES module file as it is a .js file whose nearest parent package.json contains "type": "module" which defines all .js files in that package scope as ES modules.
+Instead rename customer.js to end in .cjs, change the requiring code to use import(), or remove "type": "module" from C:\Users\Sebas\Desktop\Licencjat\Server\package.json.
+
+    at Object.Module._extensions..js (internal/modules/cjs/loader.js:1080:13)
+    at Module.load (internal/modules/cjs/loader.js:928:32)
+    at Function.Module._load (internal/modules/cjs/loader.js:769:14)
+    at Module.require (internal/modules/cjs/loader.js:952:19)
+    at require (internal/modules/cjs/helpers.js:88:18)
+    at Sequelize.import (C:\Users\Sebas\Desktop\Licencjat\Server\node_modules\sequelize\lib\sequelize.js:481:62)
+    at file:///C:/Users/Sebas/Desktop/Licencjat/Server/models/index.js:44:42
+    at Array.forEach (<anonymous>)
+    at file:///C:/Users/Sebas/Desktop/Licencjat/Server/models/index.js:43:6
+13.01.2021, 18:28:19 [error]: main - uncaughtException: Must use import to load ES Module: C:\Users\Sebas\Desktop\Licencjat\Server\models\customer.js
+require() of ES modules is not supported.
+require() of C:\Users\Sebas\Desktop\Licencjat\Server\models\customer.js from C:\Users\Sebas\Desktop\Licencjat\Server\node_modules\sequelize\lib\sequelize.js is an ES module file as it is a .js file whose nearest parent package.json contains "type": "module" which defines all .js files in that package scope as ES modules.
+Instead rename customer.js to end in .cjs, change the requiring code to use import(), or remove "type": "module" from C:\Users\Sebas\Desktop\Licencjat\Server\package.json.
+
+Error [ERR_REQUIRE_ESM]: Must use import to load ES Module: C:\Users\Sebas\Desktop\Licencjat\Server\models\customer.js
+require() of ES modules is not supported.
+require() of C:\Users\Sebas\Desktop\Licencjat\Server\models\customer.js from C:\Users\Sebas\Desktop\Licencjat\Server\node_modules\sequelize\lib\sequelize.js is an ES module file as it is a .js file whose nearest parent package.json contains "type": "module" which defines all .js files in that package scope as ES modules.
+Instead rename customer.js to end in .cjs, change the requiring code to use import(), or remove "type": "module" from C:\Users\Sebas\Desktop\Licencjat\Server\package.json.
+
+    at Object.Module._extensions..js (internal/modules/cjs/loader.js:1080:13)
+    at Module.load (internal/modules/cjs/loader.js:928:32)
+    at Function.Module._load (internal/modules/cjs/loader.js:769:14)
+    at Module.require (internal/modules/cjs/loader.js:952:19)
+    at require (internal/modules/cjs/helpers.js:88:18)
+    at Sequelize.import (C:\Users\Sebas\Desktop\Licencjat\Server\node_modules\sequelize\lib\sequelize.js:481:62)
+    at file:///C:/Users/Sebas/Desktop/Licencjat/Server/models/index.js:44:42
+    at Array.forEach (<anonymous>)
+    at file:///C:/Users/Sebas/Desktop/Licencjat/Server/models/index.js:43:6
+13.01.2021, 18:28:27 [error]: main - uncaughtException: Must use import to load ES Module: C:\Users\Sebas\Desktop\Licencjat\Server\models\customer.js
+require() of ES modules is not supported.
+require() of C:\Users\Sebas\Desktop\Licencjat\Server\models\customer.js from C:\Users\Sebas\Desktop\Licencjat\Server\node_modules\sequelize\lib\sequelize.js is an ES module file as it is a .js file whose nearest parent package.json contains "type": "module" which defines all .js files in that package scope as ES modules.
+Instead rename customer.js to end in .cjs, change the requiring code to use import(), or remove "type": "module" from C:\Users\Sebas\Desktop\Licencjat\Server\package.json.
+
+Error [ERR_REQUIRE_ESM]: Must use import to load ES Module: C:\Users\Sebas\Desktop\Licencjat\Server\models\customer.js
+require() of ES modules is not supported.
+require() of C:\Users\Sebas\Desktop\Licencjat\Server\models\customer.js from C:\Users\Sebas\Desktop\Licencjat\Server\node_modules\sequelize\lib\sequelize.js is an ES module file as it is a .js file whose nearest parent package.json contains "type": "module" which defines all .js files in that package scope as ES modules.
+Instead rename customer.js to end in .cjs, change the requiring code to use import(), or remove "type": "module" from C:\Users\Sebas\Desktop\Licencjat\Server\package.json.
+
+    at Object.Module._extensions..js (internal/modules/cjs/loader.js:1080:13)
+    at Module.load (internal/modules/cjs/loader.js:928:32)
+    at Function.Module._load (internal/modules/cjs/loader.js:769:14)
+    at Module.require (internal/modules/cjs/loader.js:952:19)
+    at require (internal/modules/cjs/helpers.js:88:18)
+    at Sequelize.import (C:\Users\Sebas\Desktop\Licencjat\Server\node_modules\sequelize\lib\sequelize.js:481:62)
+    at file:///C:/Users/Sebas/Desktop/Licencjat/Server/models/index.js:44:42
+    at Array.forEach (<anonymous>)
+    at file:///C:/Users/Sebas/Desktop/Licencjat/Server/models/index.js:43:6
+13.01.2021, 18:34:50 [error]: main - uncaughtException: Must use import to load ES Module: C:\Users\Sebas\Desktop\Licencjat\Server\models\customer.js
+require() of ES modules is not supported.
+require() of C:\Users\Sebas\Desktop\Licencjat\Server\models\customer.js from C:\Users\Sebas\Desktop\Licencjat\Server\node_modules\sequelize\lib\sequelize.js is an ES module file as it is a .js file whose nearest parent package.json contains "type": "module" which defines all .js files in that package scope as ES modules.
+Instead rename customer.js to end in .cjs, change the requiring code to use import(), or remove "type": "module" from C:\Users\Sebas\Desktop\Licencjat\Server\package.json.
+
+Error [ERR_REQUIRE_ESM]: Must use import to load ES Module: C:\Users\Sebas\Desktop\Licencjat\Server\models\customer.js
+require() of ES modules is not supported.
+require() of C:\Users\Sebas\Desktop\Licencjat\Server\models\customer.js from C:\Users\Sebas\Desktop\Licencjat\Server\node_modules\sequelize\lib\sequelize.js is an ES module file as it is a .js file whose nearest parent package.json contains "type": "module" which defines all .js files in that package scope as ES modules.
+Instead rename customer.js to end in .cjs, change the requiring code to use import(), or remove "type": "module" from C:\Users\Sebas\Desktop\Licencjat\Server\package.json.
+
+    at Object.Module._extensions..js (internal/modules/cjs/loader.js:1080:13)
+    at Module.load (internal/modules/cjs/loader.js:928:32)
+    at Function.Module._load (internal/modules/cjs/loader.js:769:14)
+    at Module.require (internal/modules/cjs/loader.js:952:19)
+    at require (internal/modules/cjs/helpers.js:88:18)
+    at Sequelize.import (C:\Users\Sebas\Desktop\Licencjat\Server\node_modules\sequelize\lib\sequelize.js:481:62)
+    at file:///C:/Users/Sebas/Desktop/Licencjat/Server/models/index.js:44:42
+    at Array.forEach (<anonymous>)
+    at file:///C:/Users/Sebas/Desktop/Licencjat/Server/models/index.js:43:6
+13.01.2021, 18:37:49 [error]: main - uncaughtException: db is not defined
+ReferenceError: db is not defined
+    at file:///C:/Users/Sebas/Desktop/Licencjat/Server/models/index.js:54:1
+13.01.2021, 18:37:57 [error]: main - uncaughtException: db is not defined
+ReferenceError: db is not defined
+    at file:///C:/Users/Sebas/Desktop/Licencjat/Server/models/index.js:54:1
+13.01.2021, 18:49:19 [error]: main - uncaughtException: Route.delete() requires a callback function but got a [object Undefined]
+Error: Route.delete() requires a callback function but got a [object Undefined]
+    at Route.<computed> [as delete] (C:\Users\Sebas\Desktop\Licencjat\Server\node_modules\express\lib\router\route.js:202:15)
+    at Function.proto.<computed> [as delete] (C:\Users\Sebas\Desktop\Licencjat\Server\node_modules\express\lib\router\index.js:510:19)
+    at file:///C:/Users/Sebas/Desktop/Licencjat/Server/routes/index.js:28:14
+    at <anonymous> (<anonymous>)
+13.01.2021, 19:16:12 [error]: main - uncaughtException: Cannot access 'Worker' before initialization
+ReferenceError: Cannot access 'Worker' before initialization
+    at file:///C:/Users/Sebas/Desktop/Licencjat/Server/models/vehicle.js:56:19
+    at <anonymous> (<anonymous>)
+13.01.2021, 19:16:59 [error]: main - uncaughtException: Cannot access 'Worker' before initialization
+ReferenceError: Cannot access 'Worker' before initialization
+    at file:///C:/Users/Sebas/Desktop/Licencjat/Server/models/vehicle.js:47:19
+    at <anonymous> (<anonymous>)
+13.01.2021, 19:46:54 [error]: main - uncaughtException: Cannot read property 'undefined' of undefined
+TypeError: Cannot read property 'undefined' of undefined
+    at new BelongsTo (C:\Users\Sebas\Desktop\Licencjat\Server\node_modules\sequelize\lib\associations\belongs-to.js:63:52)
+    at Function.<anonymous> (C:\Users\Sebas\Desktop\Licencjat\Server\node_modules\sequelize\lib\associations\mixin.js:105:25)
+    at file:///C:/Users/Sebas/Desktop/Licencjat/Server/models/index.js:16:7
+    at <anonymous> (<anonymous>)
+13.01.2021, 19:46:57 [error]: main - uncaughtException: Cannot read property 'undefined' of undefined
+TypeError: Cannot read property 'undefined' of undefined
+    at new BelongsTo (C:\Users\Sebas\Desktop\Licencjat\Server\node_modules\sequelize\lib\associations\belongs-to.js:63:52)
+    at Function.<anonymous> (C:\Users\Sebas\Desktop\Licencjat\Server\node_modules\sequelize\lib\associations\mixin.js:105:25)
+    at file:///C:/Users/Sebas/Desktop/Licencjat/Server/models/index.js:20:7
+    at <anonymous> (<anonymous>)
+13.01.2021, 19:50:20 [error]: main - uncaughtException: vehicle.belongsTo called with something that's not a subclass of Sequelize.Model
+Error: vehicle.belongsTo called with something that's not a subclass of Sequelize.Model
+    at Function.<anonymous> (C:\Users\Sebas\Desktop\Licencjat\Server\node_modules\sequelize\lib\associations\mixin.js:93:13)
+    at file:///C:/Users/Sebas/Desktop/Licencjat/Server/models/index.js:16:9
+    at <anonymous> (<anonymous>)
+13.01.2021, 19:55:41 [error]: main - uncaughtException: SemiTrailer is not defined
+ReferenceError: SemiTrailer is not defined
+    at file:///C:/Users/Sebas/Desktop/Licencjat/Server/models/semitrailer.js:6:6
+    at <anonymous> (<anonymous>)
+13.01.2021, 19:56:04 [error]: main - uncaughtException: No Sequelize instance passed
+Error: No Sequelize instance passed
+    at Function.init (C:\Users\Sebas\Desktop\Licencjat\Server\node_modules\sequelize\lib\model.js:926:13)
+    at file:///C:/Users/Sebas/Desktop/Licencjat/Server/models/semitrailer.js:9:13
+    at <anonymous> (<anonymous>)

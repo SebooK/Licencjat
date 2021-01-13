@@ -1,13 +1,12 @@
-const SemiTrailer = require('../models').SemiTrailer;
-const Vehicle = require('../models').Vehicle;
+import  SemiTrailer from '../models/semitrailer.js'
+import Vehicle from '../models/vehicle.js'
 
 const options = {
     offset: 0,
     limit: 15
 };
 
-module.exports = {
-    list(req, res) {
+export const list = (req, res) => {
         return SemiTrailer
             .findAndCountAll()
             .then(data => {
@@ -30,8 +29,8 @@ module.exports = {
             })
             .catch(error => res.status(500).send(error));
 
-    },
-    getById(req, res) {
+    }
+export const getById = (req, res) => {
         return SemiTrailer
             .findByPk(req.params.id, {
                 include: [{
@@ -48,9 +47,9 @@ module.exports = {
                 return res.status(200).send(semiTrailer);
             })
             .catch((error) => res.send(400).send(error));
-    },
+    }
 
-    add(req, res) {
+export const add = (req, res) => {
         return SemiTrailer
             .create({
                 registrationNumber: req.body.registrationNumber,
@@ -60,9 +59,9 @@ module.exports = {
             .catch((error) => res.status(400).send(
                 error.message
             ));
-    },
+    }
 
-    update(req, res) {
+export const update = (req, res) => {
         return SemiTrailer
             .findByPk(req.params.id, {
                 include: [{
@@ -85,9 +84,9 @@ module.exports = {
                     .catch((error) => res.status(400).send(error))
             })
             .catch((error) => res.status(400).send(error));
-    },
+    }
 
-    delete(req, res) {
+export const semiTrailerDelete = (req, res) => {
         return SemiTrailer
             .findByPk(req.params.id, {})
             .then(semiTrailer => {
@@ -102,5 +101,5 @@ module.exports = {
                     .catch((error) => res.status(400).send(error));
             })
             .catch((error) => res.status(400).send(error));
-    },
-};
+    }
+

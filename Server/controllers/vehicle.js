@@ -1,14 +1,12 @@
-const SemiTrailer = require('../models').SemiTrailer;
-const Vehicle = require('../models').Vehicle;
-const Worker = require('../models').Worker;
-const SemiTrailerController = require('./semiTrailer');
+import SemiTrailer from '../models/semitrailer.js';
+import Vehicle from '../models/vehicle.js';
+import Worker from '../models/workers.js';
 const options = {
     offset: 0,
     limit: 15
 };
 
-module.exports = {
-    list(req, res) {
+export const list = (req, res) => {
         return Vehicle
             .findAndCountAll()
             .then(data => {
@@ -37,9 +35,9 @@ module.exports = {
                     })
             })
             .catch(error => res.status(500).send(error));
-    },
+    }
 
-    getById(req, res) {
+export const getById = (req, res) => {
         return Vehicle
             .findByPk(req.params.id, {
                 include: [{
@@ -60,9 +58,9 @@ module.exports = {
                 return res.status(200).json(vehicle);
             })
             .catch((error) => res.status(400).send(error));
-    },
+    }
 
-    add(req, res) {
+export const add = (req, res) => {
 
         return Vehicle
             .create({
@@ -76,9 +74,9 @@ module.exports = {
             .then((vehicle) => res.status(201).send(vehicle))
             .catch((error) => res.status(400).send(error));
 
-    },
+    }
 
-    update(req, res) {
+export const update = (req, res) => {
         return Vehicle
             .findByPk(req.params.id)
             .then(vehicle => {
@@ -106,9 +104,9 @@ module.exports = {
                 res.status(400).send(error);
                 console.log(error)
             });
-    },
+    }
 
-    delete(req, res) {
+export const vehicleDelete = (req, res) => {
         return Vehicle
             .findByPk(req.params.id)
             .then(vehicle => {
@@ -124,4 +122,4 @@ module.exports = {
             })
             .catch((error) => res.status(400).send(error));
     }
-};
+

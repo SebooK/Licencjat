@@ -1,15 +1,15 @@
-const order = require('./order.js');
-const worker = require('./worker.js');
-const customer = require('./customer.js');
-const vehicle = require('./vehicle.js');
-const semiTrailer = require('./semiTrailer.js');
-const auth = require('./auth.js');
+import * as  orderController from './order.js';
+import * as workerController from './worker.js';
+import * as customerController from './customer.js';
+import * as vehicleController from './vehicle.js';
+import * as semiTrailerController from './semiTrailer.js';
+import * as authController from './auth.js';
 
-module.exports = {
-    order,
-    worker,
-    customer,
-    vehicle,
-    semiTrailer,
-    auth,
+export  {
+    orderController,
+    workerController,
+    customerController,
+    vehicleController,
+    semiTrailerController,
+    authController,
 }
