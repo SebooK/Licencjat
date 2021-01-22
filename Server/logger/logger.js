@@ -1,44 +1,57 @@
-import pkg from 'winston';
-import {dirname, join} from 'path';
-import {fileURLToPath} from 'url';
+import pkg from "winston";
+import { join } from "path";
 
-const {createLogger, format, transports, ExceptionHandler} = pkg;
-const {combine, label, timestamp, printf} = format;
-const myFormat = printf(info => `${info.timestamp} [${info.level}]: ${info.label} - ${info.message}`);
-const __basename = dirname(fileURLToPath(import.meta.url));
-const __dirname = __basename.split('\\', __basename.length - 1).slice(0, 7).join('\\');
+const { createLogger, format, transports } = pkg;
+const { combine, timestamp, printf, colorize } = format;
 
-const timeZone = () => {
-    return new Date().toLocaleString('pl-PL', {
-        timeZone: 'Europe/Warsaw'
-    })
-}
+const colorizer = format.colorize();
+const timeZone = () =>
+  new Date().toLocaleString("pl-PL", {
+    timeZone: "Europe/Warsaw",
+  });
 const logger = createLogger({
-    level: 'info',
-    format: combine(
-        label({label: 'main'}),
-        timestamp({format: timeZone}),
-        myFormat,
-    ),
-    defaultMeta: {service: 'user-service'},
-    transports: [
-        new transports.Console(),
-        new transports.File({
-            filename: join(__dirname, 'error.log'),
-            level: 'error',
-            format: format.json(),
-            timestamp: true,
-        }),
-    ],
-    exceptionHandlers: [
-        new transports.Console(),
-        new transports.File({
-            filename: join(__dirname, 'uncaughtExceptions.log'),
-            level: 'error',
-            format: format.json(),
-            timestamp: true,
-        })
-    ]
+  levels: {
+    error: 0,
+    warn: 1,
+    info: 2,
+    debug: 4,
+  },
+  format: combine(
+    timestamp({ format: timeZone }),
+    printf((info) =>
+      colorizer.colorize(
+        info.level,
+        `[${info.timestamp}]  [${info.level.toUpperCase()}]: ${info.message}`
+      )
+    )
+  ),
+  transports: [
+    new transports.Console({
+      level: "info",
+      format: combine(timestamp({ format: timeZone })),
+      prettyPrint: true,
+      colorize: true,
+    }),
+    new transports.File({
+      filename: join(__dirname, "error.log"),
+      level: "error",
+      format: format.json(),
+      prettyPrint: true,
+      timestamp: true,
+    }),
+  ],
+  exceptionHandlers: [
+    new transports.Console({ colorize: true, prettyPrint: true }),
+    new transports.File({
+      filename: join(__dirname, "uncaughtExceptions.log"),
+      level: "error",
+      format: format.json(),
+      timestamp: true,
+    }),
+  ],
+});
+process.on("unhandledRejection", (ex) => {
+  throw ex;
 });
 
 export default logger;
