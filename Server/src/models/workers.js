@@ -1,4 +1,5 @@
 import {Sequelize} from 'sequelize';
+
 const {Model, DataTypes} = Sequelize
 import {sequelize} from '../db/dbConnection.js'
 import bcrypt from 'bcrypt';
@@ -69,8 +70,9 @@ Worker.init({
     }
 });
 
-export const generateAuthToken = () => {
-    const token = jwt.sign({id: Worker.id, role: Worker.role}, jwtPrivateKey);
+export const generateAuthToken = (id, role) => {
+
+    const token = jwt.sign({id, role}, jwtPrivateKey);
     console.log(token);
     return token;
 }

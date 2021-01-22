@@ -1,7 +1,7 @@
 import jwt from 'jsonwebtoken';
 import {readFile} from 'fs/promises';
 
-const {jwtPrivateKey} = JSON.parse(await readFile('./config/custom-environment-variables.json' ,(err,data) => {
+const {jwtPrivateKey} = JSON.parse(await readFile('./config/custom-environment-variables.json', (err, data) => {
     if (err) throw err;
 }));
 
@@ -12,7 +12,6 @@ export const auth = (req, res, next) => {
     if (!token) return res.status(401).send('Access denied. No token provided.');
     try {
         req.worker = jwt.verify(token, jwtPrivateKey);
-        console.log(req.worker);
         res.locals.user = req.worker;
         next();
     } catch (ex) {

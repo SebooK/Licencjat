@@ -1,6 +1,7 @@
 import Joi from 'joi';
 import Worker from '../models/workers.js';
 import bcrypt from 'bcrypt';
+import {generateAuthToken} from "../models/workers.js";
 
 const login = async (req, res, next) => {
     const {error} = validate(req.body);
@@ -8,15 +9,14 @@ const login = async (req, res, next) => {
         console.log(error);
         return res.status(400).send(error)
     }
-    let user = await Worker.findOne({
+    let {id, role,password} = await Worker.findOne({
         where: {username: req.body.username}
     });
-    if (!user) return res.status(400).send('Wrong username');
+    if (!id) return res.status(400).send('Wrong username');
 
-    const validPassword = await bcrypt.compare(req.body.password, user.password);
+    const validPassword = await bcrypt.compare(req.body.password, password);
     if (!validPassword) return res.status(400).send('Invalid password');
-    const token = user.generateAuthToken();
-    console.log(token);
+    const token = generateAuthToken(id, role);
     res.json({"JSON-Web-Token": token});
     next();
 }
