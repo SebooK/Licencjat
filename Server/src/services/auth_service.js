@@ -1,7 +1,7 @@
 import bcrypt from "bcrypt";
 import Joi from "joi";
 import jwt from "jsonwebtoken";
-import privateKey from "../config/custom-environment-variables";
+import privateKey from "../config/config";
 import Worker from "../models/workers";
 
 const { jwtPrivateKey } = privateKey;

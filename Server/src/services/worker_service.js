@@ -45,7 +45,7 @@ export default class WorkerService {
         worker.password,
         worker.role
       );
-      const authToken = authService.generateAuthToken();
+      const authToken = await authService.generateAuthToken();
       return { authToken, worker };
     }
     throw new Error("Worker already registered with this username or email");
@@ -63,9 +63,9 @@ export default class WorkerService {
       const worker = await Worker.findByPk(params.id);
       worker.update(body);
       const authService = new AuthService(
-        worker.id,
         worker.username,
         worker.password,
+        worker.id,
         worker.role
       );
       const authToken = authService.generateAuthToken();
@@ -83,9 +83,9 @@ export default class WorkerService {
     return worker.fullName;
   }
 
-  static async getMyData(data) {
+  static async getMyData(workerId) {
     try {
-      return Worker.findByPk(data.worker.id, {
+      return Worker.findByPk(workerId, {
         include: [
           {
             model: Vehicle,
