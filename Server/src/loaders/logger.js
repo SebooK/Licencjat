@@ -2,8 +2,8 @@ import pkg from "winston";
 import { join } from "path";
 
 const { createLogger, format, transports } = pkg;
-const { combine, timestamp, printf, colorize } = format;
-
+const { combine, timestamp, printf } = format;
+console.log(join(__dirname, "../logger"));
 const colorizer = format.colorize();
 const timeZone = () =>
   new Date().toLocaleString("pl-PL", {

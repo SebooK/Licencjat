@@ -1,4 +1,0 @@
-{
-  "jwtPrivateKey": "lic_Jwt"
-}
-

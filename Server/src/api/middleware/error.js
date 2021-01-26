@@ -1,7 +1,8 @@
-import logger from '../logger/logger.js';
+import logger from "../../loaders/logger";
 
-export const error = (err, req, res, next) => {
-    logger.error(err.message);
-    res.status(422).send({error: err.message});
-    next();
-}
+const error = (err, req, res, next) => {
+  logger.error(err.message);
+  res.status(422).json({ error: err.message });
+  next();
+};
+export default error;

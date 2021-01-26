@@ -1,6 +1,6 @@
 import { readFileSync } from "fs";
 import { Sequelize } from "sequelize";
-import winston from "../logger/logger";
+import winston from "../../logger/logger";
 
 const env = process.env.NODE_ENV || "development";
 const dbConfig = JSON.parse(
