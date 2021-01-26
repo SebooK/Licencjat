@@ -1,50 +1,47 @@
-import {Sequelize} from "sequelize";
+import { Sequelize } from "sequelize";
+import sequelize from "../loaders/db";
 
-const {Model, DataTypes} = Sequelize
-import {sequelize} from '../db/dbConnection.js'
+const { Model, DataTypes } = Sequelize;
 
-class Vehicle extends Model {
-}
+class Vehicle extends Model {}
 
-Vehicle.init({
+Vehicle.init(
+  {
     id: {
-        type: DataTypes.INTEGER,
-        primaryKey: true,
-        autoIncrement: true,
-        allowNull: false
+      type: DataTypes.INTEGER,
+      primaryKey: true,
+      autoIncrement: true,
+      allowNull: false,
     },
     registrationNumber: {
-        type: DataTypes.STRING,
-        allowNull: false,
-        trim: true
+      type: DataTypes.STRING,
+      allowNull: false,
+      trim: true,
     },
     vehicleNumber: {
-        type: DataTypes.STRING,
-        allowNull: false,
-        trim: true
+      type: DataTypes.STRING,
+      allowNull: false,
+      trim: true,
     },
     vehicleType: {
-        type: DataTypes.STRING,
-        allowNull: false,
-        trim: true
+      type: DataTypes.STRING,
+      allowNull: false,
+      trim: true,
     },
     localization: DataTypes.STRING,
     workerId: {
-        type: DataTypes.INTEGER,
-        allowNull: false
+      type: DataTypes.INTEGER,
+      allowNull: false,
     },
     semiTrailerId: {
-        type: DataTypes.INTEGER,
-        allowNull: false
-    }
-}, {
+      type: DataTypes.INTEGER,
+      allowNull: false,
+    },
+  },
+  {
     sequelize,
-    modelName: 'vehicle'
-});
-
-Vehicle.associate = function () {
-
-
-};
+    modelName: "vehicle",
+  }
+);
 
 export default Vehicle;

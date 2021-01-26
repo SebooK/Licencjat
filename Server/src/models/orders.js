@@ -1,104 +1,111 @@
-import {Sequelize} from 'sequelize';
-const {Model,DataTypes} = Sequelize
-import {sequelize} from '../db/dbConnection.js'
-class Order extends Model {
-}
+import { Sequelize } from "sequelize";
+import sequelize from "../loaders/db";
 
-Order.init({
-        id: {type: Sequelize.INTEGER, primaryKey: true, autoIncrement: true, allowNull: false},
-        workerId: {
-            type: Sequelize.INTEGER,
-            allowNull: false,
-            validate: {
-                notEmpty: {
-                    arg: true,
-                    msg: 'WorkerId can not be empty'
-                },
-                isNumeric: {
-                    arg: true,
-                    msg: 'WorkerId must be numeric'
-                }
-            }
+const { Model, DataTypes } = Sequelize;
+class Order extends Model {}
+
+Order.init(
+  {
+    id: {
+      type: DataTypes.INTEGER,
+      primaryKey: true,
+      autoIncrement: true,
+      allowNull: false,
+    },
+    workerId: {
+      type: DataTypes.INTEGER,
+      allowNull: false,
+      validate: {
+        notEmpty: {
+          arg: true,
+          msg: "WorkerId can not be empty",
         },
-        orderNumber: {
-            type: Sequelize.INTEGER,
-            allowNull: false,
-            validate: {
-                notEmpty: {
-                    arg: true,
-                    msg: 'WorkerId can not be empty'
-                },
-                isNumeric: {
-                    arg: true,
-                    msg: 'WorkerId must be numeric'
-                }
-            }
+        isNumeric: {
+          arg: true,
+          msg: "WorkerId must be numeric",
         },
-        cargo: {
-            type: Sequelize.STRING,
-            allowNull: false,
-            trim: true,
-            validate: {
-                notEmpty: {
-                    arg: true,
-                    msg: 'WorkerId can not be empty'
-                }
-            }
+      },
+    },
+    orderNumber: {
+      type: DataTypes.INTEGER,
+      allowNull: false,
+      validate: {
+        notEmpty: {
+          arg: true,
+          msg: "WorkerId can not be empty",
         },
-        vehicle: {
-            type: Sequelize.INTEGER,
-            allowNull: false,
-            validate: {
-                notEmpty: {
-                    arg: true,
-                    msg: 'WorkerId can not be empty'
-                },
-                isNumeric: {
-                    arg: true,
-                    msg: 'WorkerId must be numeric'
-                }
-            }
+        isNumeric: {
+          arg: true,
+          msg: "WorkerId must be numeric",
         },
-        customerId: {
-            type: Sequelize.INTEGER,
-            allowNull: false,
-            validate: {
-                notEmpty: {
-                    arg: true,
-                    msg: 'WorkerId can not be empty'
-                },
-                isNumeric: {
-                    arg: true,
-                    msg: 'WorkerId must be numeric'
-                }
-            }
+      },
+    },
+    cargo: {
+      type: DataTypes.STRING,
+      allowNull: false,
+      trim: true,
+      validate: {
+        notEmpty: {
+          arg: true,
+          msg: "WorkerId can not be empty",
         },
-        loadingPlace: {
-            type: Sequelize.STRING,
-            allowNull: false,
-            trim: true,
-            validate: {
-                notEmpty: {
-                    arg: true,
-                    msg: 'WorkerId can not be empty'
-                },
-            }
+      },
+    },
+    vehicle: {
+      type: DataTypes.INTEGER,
+      allowNull: false,
+      validate: {
+        notEmpty: {
+          arg: true,
+          msg: "WorkerId can not be empty",
         },
-        unloadingPlace: {
-            type: Sequelize.STRING,
-            allowNull: false,
-            trim: true,
-            validate: {
-                notEmpty: {
-                    arg: true,
-                    msg: 'WorkerId can not be empty'
-                },
-            }
-        }
-    }, {
-        sequelize,
-        modelName: 'Order'
-    }
-)
+        isNumeric: {
+          arg: true,
+          msg: "WorkerId must be numeric",
+        },
+      },
+    },
+    customerId: {
+      type: DataTypes.INTEGER,
+      allowNull: false,
+      validate: {
+        notEmpty: {
+          arg: true,
+          msg: "WorkerId can not be empty",
+        },
+        isNumeric: {
+          arg: true,
+          msg: "WorkerId must be numeric",
+        },
+      },
+    },
+    loadingPlace: {
+      type: DataTypes.STRING,
+      allowNull: false,
+      trim: true,
+      validate: {
+        notEmpty: {
+          arg: true,
+          msg: "WorkerId can not be empty",
+        },
+      },
+    },
+    unloadingPlace: {
+      type: DataTypes.STRING,
+      allowNull: false,
+      trim: true,
+      validate: {
+        notEmpty: {
+          arg: true,
+          msg: "WorkerId can not be empty",
+        },
+      },
+    },
+  },
+  {
+    sequelize,
+    modelName: "Order",
+  }
+);
 
 export default Order;
