@@ -1,29 +1,20 @@
 import asyncHandler from "express-async-handler";
-import express from "express";
+import { Router } from "express";
 import WorkerService from "../../services/worker_service";
-import { auth } from "../middleware/auth";
+import auth from "../middleware/auth";
 import role from "../middleware/role";
 
-const router = express.Router();
-
-router.get(
-  "/:id",
-  asyncHandler(async (req, res) => {
-    const user = await WorkerService.getWorker(req.params.id);
-
-    res.send(user);
-  })
-);
+const router = Router();
 
 /* Worker Router */
 
 router.get(
-  "/api/workers/me",
+  "/me",
   auth,
   asyncHandler(async (req, res) => {
     try {
-      const worker = req;
-      const me = await WorkerService.getMyData(worker);
+      const { worker } = req;
+      const me = await WorkerService.getMyData(worker.id);
       res.json({
         success: true,
         message: "Your information fetch successfully",
@@ -35,7 +26,7 @@ router.get(
   })
 );
 router.get(
-  "/api/workers/:page",
+  "/:page",
   asyncHandler(async (req, res) => {
     const workers = await WorkerService.getWorkers();
     res.json({
@@ -46,7 +37,7 @@ router.get(
   })
 );
 router.get(
-  "/api/worker/:id",
+  "/worker/:id",
   asyncHandler(async (req, res) => {
     const data = req.params.id;
     const worker = await WorkerService.getWorker(data);
@@ -59,23 +50,23 @@ router.get(
 );
 
 router.post(
-  "/api/workers",
-  asyncHandler(async (req, res, next) => {
+  "/",
+  asyncHandler(async (req, res) => {
     const data = req.body;
 
     const workerData = await WorkerService.createWorker(data);
-
-    const { token, worker } = workerData;
-    res.set("x-auth-token", token).json({
+    const { authToken, worker } = workerData;
+    res.set("Authorization", authToken).json({
       success: true,
       message: "User created Successfully",
       data: worker,
+      authToken,
     });
   })
 );
 
 router.put(
-  "/api/workers/:id",
+  "/:id",
   asyncHandler(async (req, res) => {
     const { body, params } = req;
 
@@ -89,7 +80,7 @@ router.put(
   })
 );
 router.delete(
-  "/api/workers/:id",
+  "/:id",
   [auth, role],
   asyncHandler(async (req, res) => {
     const workerId = req.params.id;
