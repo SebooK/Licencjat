@@ -3,7 +3,6 @@ import { join } from "path";
 
 const { createLogger, format, transports } = pkg;
 const { combine, timestamp, printf } = format;
-console.log(join(__dirname, "../logger"));
 const colorizer = format.colorize();
 const timeZone = () =>
   new Date().toLocaleString("pl-PL", {
@@ -33,7 +32,7 @@ const logger = createLogger({
       colorize: true,
     }),
     new transports.File({
-      filename: join(__dirname, "error.log"),
+      filename: join(__dirname, "../logs/error.log"),
       level: "error",
       format: format.json(),
       prettyPrint: true,
@@ -43,7 +42,7 @@ const logger = createLogger({
   exceptionHandlers: [
     new transports.Console({ colorize: true, prettyPrint: true }),
     new transports.File({
-      filename: join(__dirname, "uncaughtExceptions.log"),
+      filename: join(__dirname, "../logs/uncaughtExceptions.log"),
       level: "error",
       format: format.json(),
       timestamp: true,

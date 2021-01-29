@@ -1,17 +1,13 @@
-import { readFileSync } from "fs";
 import { Sequelize } from "sequelize";
-import winston from "../../logger/logger";
+import winston from "./logger";
+import config from "../config/config";
 
 const env = process.env.NODE_ENV || "development";
-const dbConfig = JSON.parse(
-  readFileSync("../Server/src/config/config.json", (err, data) => {
-    if (err) throw err;
-    winston.info(data);
-  })
-);
 
-const { development } = dbConfig;
-const { production } = dbConfig;
+const { database } = config;
+
+const { development, production } = database;
+
 let sequelize;
 if (env === "development") {
   sequelize = new Sequelize(
