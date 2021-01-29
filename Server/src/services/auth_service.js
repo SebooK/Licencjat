@@ -52,7 +52,13 @@ export default class AuthService {
     if (!validPassword) {
       throw new Error("Invalid password");
     }
-    const token = this.generateAuthToken(userRecord.id, userRecord.role);
+    this.username = userRecord.username;
+    this.password = userRecord.password;
+    this.id = userRecord.id;
+    this.role = userRecord.role;
+
+    const token = this.generateAuthToken();
+
     return { token };
   }
 }
